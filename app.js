@@ -6,6 +6,10 @@ let sliderList = slider.querySelector('.slider .list')
 let thumbnail = document.querySelector('.slider .thumbnail')
 let thumbnailItems = thumbnail.querySelectorAll('.item')
 
+const filterTab = document.querySelectorAll("#filter-tab button");
+const filterableItems = document.querySelectorAll("#filter-items .element");
+
+
 thumbnail.appendChild(thumbnailItems[0])
 
 // Function for next button 
@@ -71,3 +75,23 @@ function addAnimation() {
     });
   });
 }
+
+
+
+const filterItems = (item) => {
+    document.querySelector("#filter-tab .active").classList.remove("active");
+    item.target.classList.add("active");
+    console.log(item.target.dataset.filter );
+    filterableItems.forEach(image => {
+        
+        if(image.dataset.name === item.target.dataset.filter  || item.target.dataset.filter  === "all"){
+            console.log(image.dataset.name );
+            return image.classList.replace("hide", "show");
+        } 
+        console.log(image.dataset.name );
+        image.classList.add("hide");
+        
+    });
+}
+
+filterTab.forEach(tab => tab.addEventListener ("click", filterItems));
