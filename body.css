@@ -1,5 +1,6 @@
 :root {
   --linearred--: linear-gradient(135deg, #3b0202, #910d0d);
+  --alternativeback--: linear-gradient(135deg, #3b021d, #910d0d);
   --bgcolor--: black;
 }
 
@@ -25,6 +26,8 @@
 }
 .services {
   display: flex;
+  width: 1900px;
+  height: 600px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 50px 20px;
@@ -36,26 +39,28 @@
   align-items: center;
 }
 .service-card {
-  background: linear-gradient(135deg, #3b0202, #910d0d);
+  background: var(--alternativeback--);
   border-color: rgb(248, 248, 248);
   box-shadow: black;
   box-sizing: 100px 10px 20px;
   padding: 20px;
-  margin: 190px 10px;
+  margin: -110px 10px;
   border-radius: 10px;
   width: 250px;
   height: 400px;
   justify-items: center;
 }
 
-.container {
-  max-width: 1450px;
+.container-services {
+  max-width: 1000px;
   flex-wrap: wrap;
   padding-top: 5%;
   margin: auto;
-  margin-top: 18%;
+  margin-top: 5%;
   text-align: center;
   padding: 50px 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-title {
@@ -80,7 +85,7 @@
 }
 
 .card-grid {
-  background: linear-gradient(135deg, #3b0202, #910d0d);
+  background: linear-gradient(135deg, #3b021d, #910d0d);
   padding: 30px;
   border-radius: 10px;
   width: 300px;
@@ -122,10 +127,13 @@
 }
 
 /* carrossel container*/
+
+section.carousel h1 {
+  color: black;
+}
 .scroller {
   margin-left: 27%;
   max-width: 900px;
-  background-color: linear-gradient(135deg, #3b0202, #910d0d);
 }
 
 .scroller__inner {
@@ -175,6 +183,31 @@
     transform: translate(calc(-50% - 0.5rem));
   }
 }
+/* about */
+section.about {
+  width: 100vw;
+  height: 800px;
+  max-height: 800px;
+  background: var(--alternativeback--);
+}
+section.about .container {
+  padding-top: 10% !important;
+  width: 1200px;
+  height: 500px;
+  margin-top: -1px;
+  background-color: linear-gradient(135deg, #3b021d, #910d0d) !important;
+}
+.movie img {
+  width: 600px;
+  height: 400px;
+  background-color: #910d0d;
+  float: inline-start;
+}
+.descmovie {
+  margin-top: 0%;
+  margin-right: 20%;
+  color: black;
+}
 
 /* general styles */
 
@@ -204,9 +237,6 @@
   background: rgb(255, 0, 242) !important;
 }
 
-
-
-
 /* 
 <!----------Services Section------------->
  */
@@ -216,7 +246,6 @@
 }
 
 .center-btn a {
-
   padding: 16px 38px 16px 38px;
 }
 
@@ -231,9 +260,6 @@
   flex-wrap: wrap;
 }
 
-
-
-
 .portifolio-center h5 {
   color: white;
   letter-spacing: 1px;
@@ -241,14 +267,14 @@
   text-align: left;
 }
 
-.portifolio-center h2{
+.portifolio-center h2 {
   display: inline;
   color: #fff;
 }
 
 .portifolio-center p {
   color: #d3c9c1;
- 
+
   margin-top: 1rem;
 }
 
@@ -267,14 +293,13 @@
   height: 0.5px;
   color: #461f72;
   background-color: #461f72;
-  border: 1px solid ;
+  border: 1px solid;
 }
 
 .portifolio-section .btn-hover {
   padding: 5px 25px;
   border: 1px solid #ff7557;
 }
-
 
 .btn-hover {
   display: inline-block;
@@ -288,7 +313,7 @@
 }
 
 .btn-hover::before {
-  content: '';
+  content: "";
   border-radius: 50px;
   position: absolute;
   width: 0;
@@ -309,7 +334,6 @@
 .portifolio-center .w-100 {
   width: 33%;
 }
-
 
 /**Gallery*/
 
@@ -338,7 +362,6 @@
 }
 
 .tab button {
-  
 }
 
 .tab button {
@@ -352,8 +375,7 @@
   color: white;
 }
 
-#filter-tab{
-
+#filter-tab {
 }
 #filter-tab .active {
   background: linear-gradient(180deg, #ff7527 0%, #fabf28 100%);
@@ -362,13 +384,11 @@
 }
 
 #filter-items {
-
 }
 
-#filter-items  .element.hide {
+#filter-items .element.hide {
   display: none;
 }
-
 
 /**---Work steps section-----*/
 
@@ -400,7 +420,7 @@
 .work-line div {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(11deg, #7436bb, 0.01%,#b520a3 100%);
+  background: linear-gradient(11deg, #7436bb, 0.01%, #b520a3 100%);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -412,28 +432,27 @@
 .work-line div:first-child {
   top: -66px;
   left: -30px;
-  width: 196px; 
+  width: 196px;
   min-height: 196px;
 }
 
 .work-line div:nth-child(2) {
   bottom: -70px;
   left: 260px;
-  width: 180px; 
+  width: 180px;
   min-height: 180px;
 }
 
 .work-line div:nth-child(3) {
   right: 260px;
   top: -66px;
-  width: 196px; 
+  width: 196px;
   min-height: 196px;
 }
-
 
 .work-line div:last-child {
   right: -49px;
   bottom: -70px;
-  width: 180px; 
+  width: 180px;
   min-height: 180px;
 }

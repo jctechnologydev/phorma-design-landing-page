@@ -2,7 +2,7 @@
 
 body {
   margin: 0 0 0 0;
-  background-color: #000;
+  background-color: #ffffff;
   color: #eee;
   font-family: Poppins;
   font-size: 12px;
@@ -154,12 +154,11 @@ header a:hover {
   font-size: x-large;
 }
 .nextPrevArrows button {
-  width: 40px;
+  width: 60px;
   height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3b0202, #910d0d);
+  border-radius: 7%;
   border: none;
-  color: #fff;
+  background-color: #0000004b;
   font-family: monospace;
   font-weight: bold;
   transition: 0.5s;
@@ -305,13 +304,11 @@ header a:hover {
   }
 }
 
-
 .portifolio-center a {
   text-decoration: none;
 }
 
 .center-btn a {
-
   padding: 16px 38px 16px 38px;
 }
 
@@ -326,9 +323,6 @@ header a:hover {
   flex-wrap: wrap;
 }
 
-
-
-
 .portifolio-center h5 {
   color: white;
   letter-spacing: 1px;
@@ -336,14 +330,14 @@ header a:hover {
   text-align: left;
 }
 
-.portifolio-center h2{
+.portifolio-center h2 {
   display: inline;
   color: #fff;
 }
 
 .portifolio-center p {
   color: #d3c9c1;
- 
+
   margin-top: 1rem;
 }
 
@@ -362,14 +356,13 @@ header a:hover {
   height: 0.5px;
   color: #461f72;
   background-color: #461f72;
-  border: 1px solid ;
+  border: 1px solid;
 }
 
 .portifolio-section .btn-hover {
   padding: 5px 25px;
   border: 1px solid #ff7557;
 }
-
 
 .btn-hover {
   display: inline-block;
@@ -383,7 +376,7 @@ header a:hover {
 }
 
 .btn-hover::before {
-  content: '';
+  content: "";
   border-radius: 50px;
   position: absolute;
   width: 0;
