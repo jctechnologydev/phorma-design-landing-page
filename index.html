@@ -17,10 +17,15 @@
     <link rel="stylesheet" href="body.css" />
     <link rel="stylesheet" href="dimensions.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="swipe.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   </head>
   <body>
     <header>
@@ -209,16 +214,40 @@
     <section class="carousel">
       <h1 style="text-align: center">our clients</h1>
 
-      <div class="scroller" data-direction="right" data-speed="slow">
-        <div class="scroller__inner">
-          <img src="./assets/ah_aspenhome.svg" alt="" />
-          <img src="./assets/alpine.svg" alt="" />
-          <img src="./assets/Bedtech.svg" alt="" />
-          <img src="./assets/CHROMCRAFT.svg" alt="" />
-          <img src="./assets/DIMPLEX.svg" alt="" />
-          <img src="./assets/euro-style.svg" alt="" />
+      <div class="container swiper">
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <img src="/assets/klaussner.jpg" alt="User Image" class="user-image">
+            </div>
+    
+            <div class="card-item swiper-slide">
+              <img src="/assets/MY-HOME-FURNISHINGS.jpg" alt="User Image" class="user-image">
+            </div>
+    
+            <div class="card-item swiper-slide">
+              <img src="/assets/Logo-Hudson.jpg" alt="User Image" class="user-image">
+            </div>
+    
+            <div class="card-item swiper-slide">
+              <img src="/assets/klaussner.jpg" alt="User Image" class="user-image">
+            </div>
+    
+            <div class="card-item swiper-slide">
+              <img src="/assets/jeffan.jpg" alt="User Image" class="user-image">
+            </div>
+    
+            <div class="card-item swiper-slide">
+              <img src="/assets/HORIZON-HOME-FURNITURE.jpg" alt="User Image" class="user-image">
+            </div>
+          </div>
+    
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
         </div>
       </div>
+    
     </section>
     <section class="services-window">
       <div class="container-services">
@@ -437,6 +466,8 @@
 
           </div>
   </section>
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="app.js"></script>
   </body>
