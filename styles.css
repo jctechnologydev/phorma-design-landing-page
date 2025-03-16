@@ -112,7 +112,6 @@ button {
 }
 
 .portifolio-bg {
-  background-color: #150725;
   padding: 10px 0 120px 0;
 }
 
@@ -144,8 +143,6 @@ button {
   display: inline;
   opacity: 1.25;
   height: 1px;
-  color: #b520a3;
-
   border: 1px solid;
 }
 
@@ -153,8 +150,6 @@ button {
   width: 100%;
   opacity: 1.25;
   height: 0.5px;
-  color: #461f72;
-  background-color: #461f72;
   border: 1px solid;
 }
 
@@ -163,7 +158,25 @@ button {
   border: 1px solid #ff7557;
 }
 
+.contact {
+  margin-bottom: 4rem;
+}
 
+.contact-form {
+  width: 90%;
+  margin: 1rem;
+}
+
+.map {
+  width: 100%;
+
+}
+
+
+.contact iframe {
+  width: 90%;
+  border-radius: 16px;
+}
 
 .contact-btn .btn-hover {
   padding: 5px 50px;
@@ -171,9 +184,18 @@ button {
   color: #000;
 }
 
-.send-btn .btn-hover {
-  padding: 5px 50px;
-  border: 1px solid #e6e2e1;
+.send-btn {
+  background: linear-gradient(to right, #7436bb, #b520a3);
+  color: white;
+  width: 200px;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  background: linear-gradient(to right, #920181, #7436bb);
+  color: white;
 }
 
 .btn-hover {
@@ -287,7 +309,6 @@ button {
 /**Gallery*/
 
 .gallery-bg {
-  background-color: #150725;
   padding: 20px 0 120px 0;
 }
 
@@ -349,6 +370,13 @@ button {
 
 #filter-items .element.hide {
   display: none;
+}
+
+.section {
+  background: #150725;
+  background-position: center center;
+  padding: 120px 0;
+  margin-top: -2px;
 }
 
 /**---Work steps section-----*/
