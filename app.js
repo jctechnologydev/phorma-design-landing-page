@@ -1,14 +1,11 @@
-let nextBtn = document.querySelector('.next')
-let prevBtn = document.querySelector('.prev')
+let nextBtn = document.querySelector('.next');
+let prevBtn = document.querySelector('.prev');
 
-let slider = document.querySelector('.slider')
-let sliderList = slider.querySelector('.slider .list')
-let thumbnail = document.querySelector('.slider .thumbnail')
-let thumbnailItems = thumbnail.querySelectorAll('.item')
+let slider = document.querySelector('.slider');
+let sliderList = slider.querySelector('.slider .list');
+let thumbnail = document.querySelector('.slider .thumbnail');
+let thumbnailItems = thumbnail.querySelectorAll('.item');
 
-const filterTab = document.querySelectorAll("#filter-tab button");
-const filterSubcategory = document.querySelectorAll("#subcategory .tablinks");
-const filterableItems = document.querySelectorAll("#filter-items .element");
 
 
 thumbnail.appendChild(thumbnailItems[0])
@@ -49,25 +46,12 @@ function moveSlider(direction) {
     }, {once: true}) // Remove the event listener after it's triggered once
 }
 
-const filterItems = (item) => {
-    document.querySelector("#filter-tab .active").classList.remove("active");
-    item.target.classList.add("active");
-    console.log(item.target.dataset.filter );
-    filterSubcategory.forEach(image => {
-        
-        if(image.dataset.name === item.target.dataset.filter  /*|| item.target.dataset.filter  === "all"*/){
-            console.log(image.dataset.name );
-            console.log(item.target.dataset.filter );
-            return image.classList.remove("hidden");
-            //return image.classList.replace("hidden", "show");
-        } 
-        console.log(image.dataset.name );
-        image.classList.add("hidden");
-        
-    });
-}
 
-filterTab.forEach(tab => tab.addEventListener ("click", filterItems));
+
+
+
+
+
 
 const swiper = new Swiper('.slider-wrapper', {
     loop: true,

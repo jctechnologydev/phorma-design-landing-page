@@ -163,9 +163,12 @@ button {
   border: 1px solid #ff7557;
 }
 
+
+
 .contact-btn .btn-hover {
   padding: 5px 50px;
   border: 1px solid #e6e2e1;
+  color: #000;
 }
 
 .send-btn .btn-hover {
@@ -183,6 +186,48 @@ button {
   z-index: 1;
   letter-spacing: 0.8px;
 }
+
+
+.filter-btn-all {
+  justify-content: center;
+  background: linear-gradient(to right, #7436bb, #b520a3);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.filter-btn-all:hover {
+  background: linear-gradient(to right, #920181, #7436bb);
+  border-radius: 1rem 0rem 0rem 1rem;
+  color: white;
+}
+
+
+
+.filter-btn-category {
+  justify-content: center;
+  background: linear-gradient(to right, #7436bb, #b520a3);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0rem 1rem 1rem 0rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+
+
+.filter-btn-category:hover {
+  background: linear-gradient(to right, #920181, #7436bb);
+  color: white;
+}
+
+.filter-btn.active {
+  background: linear-gradient(180deg, #920181 0%, #fabf28 100%) !important; 
+
+}
+
 
 .btn-hover::before {
   content: "";
@@ -269,10 +314,11 @@ button {
   justify-content: center;
   background: linear-gradient(to right, #7436bb, #b520a3);
   color: white;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 0.7rem;
   border-radius: 8px;
   transition: all 0.3s ease;
   border-radius: 1rem;
+  font-size: 12px;
 }
 
 #subcategory button {
@@ -293,16 +339,13 @@ button {
   color: white;
 }
 
-#filter-tab {
-}
+
 #filter-tab .active {
   background: linear-gradient(180deg, #920181 0%, #fabf28 100%);
   border-radius: 1rem;
   color: white;
 }
 
-#filter-items {
-}
 
 #filter-items .element.hide {
   display: none;
