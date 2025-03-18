@@ -1,6 +1,10 @@
 :root {
   --gap-x: ;
   --gap-y: 1rem;
+  --linearred--: linear-gradient(135deg, #3b0202, #910d0d);
+  --alternativeback--: linear-gradient(135deg, #3b021d, #910d0d);
+  --bgcolor--: black;
+  --colorbgmaster--: linear-gradient(135deg, #fffcfc, #d4bbaf);
 }
 
 body {
@@ -169,9 +173,7 @@ button {
 
 .map {
   width: 100%;
-
 }
-
 
 .contact iframe {
   width: 90%;
@@ -209,7 +211,6 @@ button {
   letter-spacing: 0.8px;
 }
 
-
 .filter-btn-all {
   justify-content: center;
   background: linear-gradient(to right, #7436bb, #b520a3);
@@ -226,8 +227,6 @@ button {
   color: white;
 }
 
-
-
 .filter-btn-category {
   justify-content: center;
   background: linear-gradient(to right, #7436bb, #b520a3);
@@ -238,18 +237,14 @@ button {
   margin-bottom: 1rem;
 }
 
-
-
 .filter-btn-category:hover {
   background: linear-gradient(to right, #920181, #7436bb);
   color: white;
 }
 
 .filter-btn.active {
-  background: linear-gradient(180deg, #920181 0%, #fabf28 100%) !important; 
-
+  background: linear-gradient(180deg, #920181 0%, #fabf28 100%) !important;
 }
-
 
 .btn-hover::before {
   content: "";
@@ -360,20 +355,17 @@ button {
   color: white;
 }
 
-
 #filter-tab .active {
   background: linear-gradient(180deg, #920181 0%, #fabf28 100%);
   border-radius: 1rem;
   color: white;
 }
 
-
 #filter-items .element.hide {
   display: none;
 }
 
 .section {
-  background: #150725;
   background-position: center center;
   padding: 120px 0;
   margin-top: -2px;
@@ -382,7 +374,7 @@ button {
 /**---Work steps section-----*/
 
 .work {
-  background: #150725;
+  background: var(--alternativeback--);
   background-position: center center;
   padding: 120px 0;
   margin-top: -2px;
@@ -408,7 +400,7 @@ button {
 .steps div {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(11deg, #7436bb, 0.01%, #b520a3 100%);
+  background: var(--colorbgmaster--);
   color: #fff;
   display: flex;
   flex-direction: column;

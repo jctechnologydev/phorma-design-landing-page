@@ -1,35 +1,30 @@
 .slider-wrapper {
   overflow: hidden;
-  width: 1200px;
-  height: 325px;
-  margin: 0 60px 55px;
+  max-width: 1200px;
+  margin: 0 195px 55px;
 }
 
 .card-list .card-item {
-  height: 150px;
-  width: 0px;
+  height: auto;
   color: #fff;
   user-select: none;
-  margin-top: 7%;
-  padding: 50px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  backdrop-filter: blur(50px);
-  background: rgba(255, 255, 255, 0.055); /* Transparência do vidro */
-  box-shadow: 0 14px 16px rgba(0, 0, 0, 0.1),
-    /* Sombra leve */ 0 0 30px rgba(255, 255, 255, 0); /* Glow externo */
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-list .card-item .user-image {
   width: 150px;
   height: 150px;
-  border-radius: 0%;
-  margin-bottom: 8px;
-  border: none;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 3px solid #fff;
   padding: 4px;
 }
 
@@ -43,7 +38,7 @@
 .card-list .card-item .message-button {
   font-size: 1.25rem;
   padding: 10px 35px;
-  color: #000105;
+  color: #030728;
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
@@ -59,7 +54,7 @@
 }
 
 .slider-wrapper .swiper-pagination-bullet {
-  background: #ffffff;
+  background: #fff;
   height: 13px;
   width: 13px;
   opacity: 0.5;
@@ -76,15 +71,5 @@
 }
 
 .slider-wrapper .swiper-slide-button:hover {
-  color: #000002;
-}
-
-@media (max-width: 768px) {
-  .slider-wrapper {
-    margin: 0 10px 40px;
-  }
-
-  .slider-wrapper .swiper-slide-button {
-    display: none;
-  }
+  color: #4658ff;
 }

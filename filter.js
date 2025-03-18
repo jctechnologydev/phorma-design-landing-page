@@ -223,4 +223,4 @@ function renderFilters(data) {
     } else{
         console.error("No filter tab buttons found.");
     } 
-}
+} 
