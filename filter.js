@@ -18,31 +18,60 @@ const filtersDataAll = {
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] }
     ],
     "3D Product Modeling": [
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/"]},
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: [""]},
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] }
     ],
     "Photo Fusion": [
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
         { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] }
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
     ],
     "3D Animations": [
-        { name: "3D Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Products Assembly Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] }
+        { name: "3D Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Products Assembly Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
     ],
     "Videos": [
-        { name: "Home and Rack", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Others", count: 12,content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] }
+        { name: "Home and Rack", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Others", count: 12,content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
     ]
 };
 
