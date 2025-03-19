@@ -250,6 +250,19 @@ section.about .container-about {
   color: black;
 }
 
+.container-about {
+  opacity: 0;
+  filter: blur(50px);
+  transition: all 1s;
+  transform: translateX(-50%);
+}
+.scontainerabout {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1s;
+  transform: translateX(0%);
+}
+
 /* general styles */
 
 :root {

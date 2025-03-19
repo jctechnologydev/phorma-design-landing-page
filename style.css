@@ -88,7 +88,9 @@ header a:hover {
   line-height: 1.3em;
 }
 .slider .list .item .type {
-  color: rgb(70, 0, 3);
+  background: linear-gradient(90deg, #3b021d, #910d0d);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .slider .list .item .button {
   display: grid;

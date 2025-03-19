@@ -85,5 +85,18 @@ const swiper = new Swiper('.slider-wrapper', {
     }
   });
 
+  // about //
 
+  const myObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scontainerabout');
+            // Desativa o observer após a primeira execução
+            observer.unobserve(entry.target);
+        }
+    });
+});
 
+const elements = document.querySelectorAll('.container-about');
+
+elements.forEach((element) => myObserver.observe(element));
