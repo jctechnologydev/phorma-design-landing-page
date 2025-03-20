@@ -1,8 +1,8 @@
 :root {
-  --linearred--: linear-gradient(135deg, #3b0202, #910d0d);
-  --alternativeback--: linear-gradient(135deg, #3b021d, #910d0d);
+  --linearred--: linear-gradient(135deg, #ffffff04, #910d0d);
+  --alternativeback--: linear-gradient(135deg, #3b021d00, #910d0d00);
   --bgcolor--: black;
-  --colorbgmaster--: linear-gradient(135deg, #fffcfc, #d4bbaf);
+  --colorbgmaster--: linear-gradient(135deg, #fffcfc00, #d4bbaf00);
 }
 
 .buttons {
