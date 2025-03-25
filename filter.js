@@ -9,8 +9,7 @@ let selectedData = {};
 
 const filtersDataAll = {
     "3D Environment": [
-        { /*message : "Creating virtual lifestyles to insert a previously modeled product, in order to show it and allow the final consumer to visualize it in a home lifestyle. The latest trends in decoration in harmony with the product are used in each scene, to bring reality, beauty and modernity.",*/
-            name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" ]},
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" ]},
         { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] },
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] },
         { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" , "", "" , "", "" ] },
@@ -27,7 +26,24 @@ const filtersDataAll = {
         { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/"]},
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: [""]},
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] }
     ],
     "Photo Fusion": [
         { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
@@ -36,7 +52,15 @@ const filtersDataAll = {
         { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
         { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www"]},
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
         { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
     ],
     "3D Animations": [
         { name: "3D Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
@@ -62,21 +86,14 @@ for (const category in filtersDataAll) {
         if (!groupedByCategory[name]) {
             groupedByCategory[name] = [];
         }
-
-        const isDuplicate = groupedByCategory[name].some(
-            entry => entry.name === category
-        );
-
-        if (!isDuplicate) {
-            groupedByCategory[name].push({
-                name: category,
-                count: item.count,
-                content: item.content
-            });
-        }
+        
+        groupedByCategory[name].push({
+            name: category,
+            count: item.count,
+            content: item.content
+        });
     });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -292,7 +309,7 @@ function renderFilters(data) {
 
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
-    galleryContainer.innerHTML = "Creating virtual lifestyles to insert a previously modeled product, in order to show it and allow the final consumer to visualize it in a home lifestyle. The latest trends in decoration in harmony with the product are used in each scene, to bring reality, beauty and modernity."; 
+    galleryContainer.innerHTML = ""; 
     let auxSecondSeleted = secondSeleted.replace(firstSeleted,"");
     filteredVideos[firstSeleted].forEach(item => {
         
@@ -301,7 +318,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                 const image = document.createElement("div");
                 image.className = "w-33 element";
                 image.setAttribute("data-name", firstSeleted + secondSeleted);
-                
+
                 const imageFrame = document.createElement("img");
                 imageFrame.src = "./assets/img/img1.webp"; //FIXME NOT WORKING
                 imageFrame.setAttribute("height", "350px")

@@ -100,3 +100,10 @@ const swiper = new Swiper('.slider-wrapper', {
 const elements = document.querySelectorAll('.container-about');
 
 elements.forEach((element) => myObserver.observe(element));
+
+/* Efeito de rolagem suave */
+window.addEventListener("scroll", function() {
+  let scrollPosition = window.scrollY;
+  document.querySelector("section.about::before").style.transform = `translateY(${scrollPosition * 0.3}px)`;
+});
+
