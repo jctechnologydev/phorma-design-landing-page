@@ -6,11 +6,3 @@
   --bgcolor--: black;
   --colorbgmaster--: linear-gradient(135deg, #fffcfc, #d4bbaf);
 }
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(252, 252, 252);
-  color: white;
-  overflow-x: hidden;
-}
