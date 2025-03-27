@@ -50,40 +50,37 @@ const messageData = {
 
 const filtersDataAll = {
     "3D Environment": [
-        {
-            name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens3D/232878600_Guarda-roupa Casal Modulado com Espelho - 4 Portas de Correr 4 Gavetas Kappesberg Mônaco_ok.jpg", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""]
-        },
-        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
-        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", "", "", "", "", ""] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
-        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", "", "", "", "", ""] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] }
+        { name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ]},
+        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] }
     ],
     "3D Product Modeling": [
-        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"] },
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]},
+        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        
     ],
     "Photo Fusion": [
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]},
+        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
     ],
     "3D Animations": [
         { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "5Q2RufAKtSo", "uLQ5G8_nAb8"] },
         { name: "Products Assembly Animations", count: 6, content: ["IjwlW_hbMOs", "IhE4gQoi1_k", "YG9pMUFSWGI", "3E6HfOqGHEg", "TMm-gSnEASE", "HG9sdARThb8"] }
-    ],
+     ],
     "Videos": [
         { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0"] },
         { name: "Living Room", count: 1, content: ["_avjE_AQbN0"] },
@@ -126,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     filterButtonContainer.appendChild(byCategoryButton);
 
     let i = 0;
-    let a = "";
     for (const category in selectedData) {
         const buttonClass = i === 0 ? "tablinks active" : "tablinks";
         const button = createButtonWithCount(category, buttonClass, category,
@@ -243,19 +239,6 @@ function filterContent(event) {
 
     // Render the filtered gallery items
     renderGallery(selectedData, firstSeleted, secondSeleted);
-
-    /*filterableItems.forEach(image => {
-                
-        if(image.dataset.name === (firstSeleted + secondSeleted)){
-            console.log(image.dataset.name );
-            
-            return image.classList.replace("hide", "show");
-        } 
-        console.log(image.dataset.name );
-        image.classList.add("hide");
-
-        
-    });*/
 }
 
 
@@ -275,9 +258,6 @@ function mainFilter(event) {
 function renderFilters(data) {
     const filterTabContainer = document.getElementById('filter-tab');
     const subcategoryContainer = document.getElementById('subcategory');
-
-
-
     let i = 0;
     filterTabContainer.innerHTML = "";
     subcategoryContainer.innerHTML = "";
@@ -326,41 +306,52 @@ function renderFilters(data) {
 
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
-    galleryContainer.innerHTML = "";
-    console.log(firstSeleted);
-    galleryContainer.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageExternal}</div>`;
-
-
+    const cardContainer = document.getElementById("filter-content-card");
+    galleryContainer.innerHTML = "";    
+    cardContainer.innerHTML = "";  
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     filteredVideos[firstSeleted].forEach(item => {
+        
+        if(item.name === auxSecondSeleted){
 
-        if (item.name === auxSecondSeleted) {
-            item.content.forEach(videoId => {
-                const image = document.createElement("div");
-                image.className = "w-33 element";
-                image.setAttribute("data-name", firstSeleted + secondSeleted);
+            item.content.forEach(contentData => {
+                if(contentData.includes("assets")){
 
-                /*const imageFrame = document.createElement("img");
-                imageFrame.src = "./assets/img/img1.webp"; //FIXME NOT WORKING
-                imageFrame.setAttribute("height", "150px")
-
-                imageFrame.height = "150px";
-                imageFrame.width = "150px";*/
-                const imageFrame = document.createElement("iframe");
-                imageFrame.src = `https://www.youtube.com/embed/VOTWEIgbKSKQI-ky?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0`;
-                imageFrame.style.border = "none";
-                imageFrame.style.width = "420px";
-                imageFrame.style.height = "315px";
-                imageFrame.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
-                imageFrame.setAttribute("allowfullscreen", "");
-
-                image.appendChild(imageFrame);
-                galleryContainer.appendChild(image);
-            });
+                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+                        <div class="grid">
+                        <div class="col-6 flex items-center height-100%">
+                            <div class="text-component padding-md ">
+                            <h2>${secondSeleted}</h2>
+                            <p class="display@xs">${messageData[firstSeleted].messageInternal}</p>
+                            </div>
+                        </div>
+            
+                        <div class="col-6 height-100%">
+                            <img class="block width-100% height-100% object-cover" src="${contentData}" alt="Image description">
+                        </div>
+                        </div>
+                    </li>`;
+                } else {
+                    const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
+                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+                    <div class="grid">
+                    <div class="col-6 flex items-center height-100%">
+                        <div class="text-component padding-md ">
+                        <h2>${secondSeleted}</h2>
+                        <p class="display@xs">${messageData[firstSeleted].messageInternal}</p>
+                        </div>
+                    </div>
+        
+                    <div class="col-6 height-100%">
+                        <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                    </div>
+                </li>`;
+                }
+                
+            }); 
         }
 
     });
-    const internalMessage = document.createElement("div");
-    internalMessage.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageInternal}</div>`;
-    galleryContainer.appendChild(internalMessage);
+
 }

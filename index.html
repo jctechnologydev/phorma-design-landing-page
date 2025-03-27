@@ -10,14 +10,15 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
-  <script src="JS/app.js" defer></script>
-  <script src="JS/filter.js"></script>
-  <script src="JS/anim-menu-btn.min.js" defer></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/dimensions.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/swipe.css">
-  <link rel="stylesheet" href="css/anim-menu-btn.css">
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/filter.js"></script>
+  <script src="assets/js/anim-menu-btn.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dimensions.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/stackscroll.css">
+  <link rel="stylesheet" href="assets/css/swipe.css">
+  <link rel="stylesheet" href="assets/css/anim-menu-btn.css">
 
 </head>
 
@@ -395,55 +396,19 @@
             <svg class="search-icon">...</svg>
           </div>-->
 
+          <!--aA-->
+
+          <div class="container-card mt-4" >
+            <ul class="stack-cards js-stack-cards" id="filter-content-card">
+              
+            </ul>
+          </div>
+          <!--aA-->
+
           <div id="all" class="tabcontent">
             <div class="pt-4">
               <div class="gallery-center" id="filter-items">
-                  
-                <!--<div class="w-33 element" data-name="bedroom">
-                  <img src="assets/img/img1.webp" alt="" height="350px">
-                </div>
-
-                <div class="w-33 element" data-name="bedroom">
-                  <img src="assets/img/img1.webp" alt="" height="350px">
-                </div>
-
-                <div class="w-33 element" data-name="kitchen">
-                  <img src="assets/img/img1.webp" alt="" height="350px">
-                </div>
-                <div class="w-33 element" data-name="kitchen">
-                  <img src="assets/img/img1.webp" alt="" height="350px">
-                </div>
-
-                <div class="w-33 element" data-name="kitchen">
-                  <img src="assets/img/img1.webp" alt="" height="350px">
-                </div>
-
-
-                <div class="w-33 element" data-name="bathroom">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-
-                <div class="w-33 element" data-name="bathroom">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-                <div class="w-33 element" data-name="table">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-                <div class="w-33 element" data-name="design">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-                <div class="w-33 element" data-name="design">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-
-                <div class="w-33 element" data-name="house">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>
-
-                <div class="w-33 element" data-name="house">
-                  <img src="assets/img/img1.webp" alt="" height="350px" class="src">
-                </div>-->
-
+                
 
               </div>
             </div>
@@ -522,7 +487,34 @@
     </div>
   </section>
 
+  <footer>
+    <div class="footer-logo">
+      <div class="logo">
+        <img src="./assets/Phorma-Design-Logo.png" height="36px" />
+      </div>
+      <div class="redes-sociais">
+        <a href="" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sattushorizon?igsh=cm82ZHR2czg2djIy" target="_blank" class="instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="footer-links">
+      Links
+      <ul class="footer-links">
+        <li><a href="#home" id="menu-home" class="menu-item active">HOME</a></li>
+        <li><a href="#home" id="menu-about" class="menu-item">SOBRE</a></li>
+        <li><a href="#services" id="menu-services" class="menu-item">SERVIÇOS</a></li>
+        <li><a href="#porifolio" id="menu-portifolio" class="menu-item">PORTIFOLIO</a></li>
+        <li><a href="#ofertas" id="menu-ofertas" class="menu-item">OFERTAS</a></li>
+      </ul>
+    </div>
+
+  </footer>
+
   <!-- Linking SwiperJS script -->
+  <script src="assets/js/scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
