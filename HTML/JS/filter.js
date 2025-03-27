@@ -7,9 +7,45 @@ let secondSeleted = "Kitchen";
 
 let selectedData = {};
 
+const messageData = {
+    "3D Environment" : 
+        {
+            messageExternal : "The latest trends in decoration in harmony with the product are used in each scene, to bring reality, beauty and modernity.",
+            messageInternal : "Creating virtual lifestyles to insert a previously modeled product, in order to show it and allow the final consumer to visualize it in a home lifestyle. The latest trends in decoration in harmony with the product are used in each scene, to bring reality, beauty and modernity.",}
+    ,
+    "3D Product Modeling" : 
+        {
+            messageExternal : "Your product is completely modeled (drawn) through a 3D software, which allows to bring the same reality of a photograph, with absolute fidelity to details, textures, colors and finish.",
+            messageInternal : "Based on the product’s project or a photgraph and all its dimensions, the product is completely modeled (drawn) using a 3D software, which allows to bring the same reality of a photograph, with absolute fidelity to details, textures, colors and finish.",}
+    ,
+    "Photo Fusion" : 
+        {
+            messageExternal : "Apply your product’s photograph in a perfect virtual lifestyle, making it part of the scene.",
+            messageInternal : "Apply your product’s photograph in a perfect virtual lifestyle, making it part of the scene.",}
+    ,
+    "3D Animations" : 
+        {
+            messageExternal : "We develop 3D animations, in order to optimize demonstration and understanding of all details, differentials, colors and functions of a particular product.",
+            messageInternal : "We develop 3D animations and videos in order to optimize demonstration and understanding of all details, differentials, colors and functions of a particular product. Furthermore, we also produce instructional videos with step-by-step instructions for the assembly process, in order to help the final customer.",}
+    ,
+    "Videos" : 
+        {
+            messageExternal : "We create institutional, promotional and product-assembly videos. We give movement to your product, showing all its functionalities and differentials.",
+            messageInternal : "We create institutional, promotional and product-assembly videos. We give movement to your product, showing all its functionalities and differentials.",}
+    ,
+    "Graphic Design" : 
+        {
+            messageExternal : "We create and develop catalogs, brochures and promotional materials, in order to better introduce your products to your customers.",
+            messageInternal : "We create and develop catalogs, brochures and promotional materials, in order to better introduce your products to your customers. The art is produced with harmony, using modern and different layouts that stand out among other competitors.",}
+    
+};
+
+
+
 const filtersDataAll = {
     "3D Environment": [
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" ]},
+        { 
+            name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" ]},
         { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] },
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] },
         { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" , "", "" , "", "" ] },
@@ -18,7 +54,6 @@ const filtersDataAll = {
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "" , "", "" ] }
     ],
     "3D Product Modeling": [
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
         { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
         { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
         { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
@@ -63,15 +98,15 @@ const filtersDataAll = {
         { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
     ],
     "3D Animations": [
-        { name: "3D Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Products Assembly Animations", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
+        { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "5Q2RufAKtSo", "uLQ5G8_nAb8"] },
+        { name: "Products Assembly Animations", count: 6, content: ["IjwlW_hbMOs", "IhE4gQoi1_k", "YG9pMUFSWGI", "3E6HfOqGHEg", "TMm-gSnEASE", "HG9sdARThb8"] }
     ],
     "Videos": [
-        { name: "Home and Rack", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
-        { name: "Others", count: 12,content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] }
+        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0"] },
+        { name: "Living Room", count: 1, content: ["_avjE_AQbN0"] },
+        { name: "Dining Room", count: 1, content: ["7X8p4VyUUSM"] },
+        { name: "Kitchen", count: 12, content: ["SHoLLLgNonA"] },
+        { name: "Others", count: 12,content: ["JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390"] }
     ]
 };
 
@@ -309,22 +344,33 @@ function renderFilters(data) {
 
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
-    galleryContainer.innerHTML = ""; 
+    galleryContainer.innerHTML = "";    
+    console.log(firstSeleted);
+    galleryContainer.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageExternal}</div>`;
+
+
     let auxSecondSeleted = secondSeleted.replace(firstSeleted,"");
     filteredVideos[firstSeleted].forEach(item => {
         
         if(item.name === auxSecondSeleted){
-            item.content.forEach(videoUrl => {
+            item.content.forEach(videoId => {
                 const image = document.createElement("div");
                 image.className = "w-33 element";
                 image.setAttribute("data-name", firstSeleted + secondSeleted);
-
-                const imageFrame = document.createElement("img");
+                
+                /*const imageFrame = document.createElement("img");
                 imageFrame.src = "./assets/img/img1.webp"; //FIXME NOT WORKING
-                imageFrame.setAttribute("height", "350px")
+                imageFrame.setAttribute("height", "150px")
 
-                imageFrame.height = "350px";
-                imageFrame.width = "250px";
+                imageFrame.height = "150px";
+                imageFrame.width = "150px";*/
+                const imageFrame = document.createElement("iframe");
+                imageFrame.src = `https://www.youtube.com/embed/VOTWEIgbKSKQI-ky?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0`;
+                imageFrame.style.border = "none";
+                imageFrame.style.width = "420px";
+                imageFrame.style.height = "315px";
+                imageFrame.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                imageFrame.setAttribute("allowfullscreen", "");
 
                 image.appendChild(imageFrame);
                 galleryContainer.appendChild(image);
@@ -332,4 +378,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
         }
            
     });
+    const internalMessage = document.createElement("div");
+    internalMessage.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageInternal}</div>`;
+    galleryContainer.appendChild(internalMessage);
 }
