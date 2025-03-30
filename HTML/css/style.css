@@ -75,8 +75,65 @@ header a:hover {
   background: rgb(70, 0, 3);
   border-radius: 2px;
 }*/
+/* titles and subitles*/
+.titles h1 {
+  font-size: 10em;
+  line-height: 0.7em;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+}
+.titles2 h1 {
+  font-size: 10em;
+  line-height: 0.7em;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+}
+.style {
+  font-size: 10em;
+  line-height: 0.7em;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+}
+.stitle {
+  background: linear-gradient(90deg, #3b021d, #910d0d);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 0.7em;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+}
+.stitle-service {
+  background: linear-gradient(90deg, #3b021d, #910d0d);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  font-size: 10em;
+}
+.stitle-port {
+  background: linear-gradient(90deg, #3b021d, #910d0d);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 0.3em;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  font-size: 10em;
+}
+/* menu header*/
 .top-line {
-  padding: 3.2em 0;
+  width: 113%;
+  height: 100px;
+  padding: 2.2em 3em;
   z-index: 9999;
   position: relative;
 }
@@ -132,7 +189,7 @@ header a:hover {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  font-size: 0.725em;
+  font-size: 1em;
   letter-spacing: 0.25em;
   position: relative;
 }
@@ -156,6 +213,12 @@ header a:hover {
 .main-menu li.active > *,
 .main-menu li:hover > * {
   color: var(--white-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+.active a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .main-menu li.active > *::before,
@@ -172,16 +235,16 @@ header a:hover {
   border-radius: 10em 0 10em 10em;
   font-weight: 600;
   text-decoration: none;
-  letter-spacing: 0.21em;
+  letter-spacing: 0.8em;
   text-transform: uppercase;
-  font-size: 0.65em;
+  font-size: 0.9em;
   cursor: pointer;
 }
 
 .button--top {
   background-color: transparent;
   border-color: var(--green-color);
-  margin: 0 2em 0 3em;
+  margin: 0em 1em 2em 3em;
 }
 
 .button--main {
@@ -190,9 +253,9 @@ header a:hover {
 }
 
 .button:hover {
-  background-color: var(--green-color);
+  background-color: var(--alternativeback--);
 }
-
+/* potifolio section*/
 .portifolio-center a {
   text-decoration: none;
 }
@@ -286,12 +349,6 @@ header a:hover {
 }
 
 /*body antigo. */
-:root {
-  --linearred--: linear-gradient(135deg, #3b0202, #910d0d);
-  --alternativeback--: linear-gradient(135deg, #3b021d, #910d0d);
-  --bgcolor--: black;
-  --colorbgmaster--: linear-gradient(135deg, #fffcfc, #d4bbaf);
-}
 
 .buttons {
   margin-top: 20px;
@@ -321,6 +378,8 @@ header a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+  position: relative;
 }
 
 .container-wrapper {
@@ -328,6 +387,42 @@ header a:hover {
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
+  overflow: visible;
+}
+.wrapper {
+  opacity: 0;
+  filter: blur(50px);
+  transition: all 1s;
+  transform: translateY(50%);
+}
+.scontainer-wrapper {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+.titles2 * {
+  opacity: 0;
+  filter: blur(100px);
+  transition: all 3s;
+  transform: translateX(50%);
+}
+.stitles2 * {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 3s;
+  transform: translateX(0%);
+}
+.vertical-line {
+  width: 2px; /* Espessura da linha */
+  height: 700px; /* 100% da altura da tela */
+  background: var(--alternativeback--); /* Cor da linha */
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  position: absolute; /* Fixa a linha na tela */
+  left: 43.3%; /* Centraliza horizontalmente */
+  margin-top: 7%;
+  z-index: -1;
 }
 
 .cardrow {
@@ -431,15 +526,6 @@ input:checked + label .descriptionrow {
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-.section-title span {
-  color: #d12b;
-}
-
 .section-description {
   margin-bottom: 40px;
 }
@@ -497,7 +583,7 @@ input:checked + label .descriptionrow {
 /* carrossel container*/
 
 section.carousel h1 {
-  color: black;
+  color: whitesmoke;
 }
 /* slider section  */
 
@@ -534,8 +620,8 @@ section.carousel h1 {
 
 .slider .list .item .content .title,
 .slider .list .item .content .type {
-  font-size: 5em;
-  line-height: 1.3em;
+  font-size: 10em;
+  line-height: 0.7em;
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
