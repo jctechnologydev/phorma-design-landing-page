@@ -34,18 +34,10 @@ img, video, svg {
   --max-width-xxxl:  120rem;
   --max-width-xxxxl: 150rem; }
 
-.container-card {
-  width: calc(80% - 2*var(--component-padding));
+.container {
+  width: calc(100% - 2*var(--component-padding));
   margin-left: auto;
   margin-right: auto; }
-
-.container-card h2{
-  color: black;
-}
-
-.container-card p {
-  color: black;
-}
 
 .max-width-xxxxs {
   max-width: var(--max-width-xxxxs); }
@@ -4831,20 +4823,19 @@ u {
 .stack-cards {
   --stack-cards-gap: var(--space-sm); }
 
-  .stack-cards__item {
-    position: relative;
-    position: -webkit-sticky;
-    position: sticky;
-    top: var(--space-md);
-    height: 0;
-    padding-bottom: 40%;
-    -webkit-transform-origin: center top;
-            transform-origin: center top;
-    overflow: hidden; }
-    .stack-cards__item > * {
-      position: absolute;
-      top: 2;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-  
+.stack-cards__item {
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--space-md);
+  height: 0;
+  padding-bottom: 40%;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  overflow: hidden; }
+  .stack-cards__item > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

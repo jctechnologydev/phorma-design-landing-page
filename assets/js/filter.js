@@ -50,13 +50,13 @@ const messageData = {
 
 const filtersDataAll = {
     "3D Environment": [
-        { name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ]},
-        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] }
+        { name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg","./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ]},
+        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] }
     ],
     "3D Product Modeling": [
         { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
@@ -320,9 +320,9 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                         <div class="grid">
                         <div class="col-6 flex items-center height-100%">
-                            <div class="text-component padding-md ">
+                            <div class="text-component padding-md " style="color:black">
                             <h2>${secondSeleted}</h2>
-                            <p class="display@xs">${messageData[firstSeleted].messageInternal}</p>
+                            <p class="display@xs">${messageData[firstSeleted].messageInternal} style="color:black"</p>
                             </div>
                         </div>
             
@@ -337,8 +337,8 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     <div class="grid">
                     <div class="col-6 flex items-center height-100%">
                         <div class="text-component padding-md ">
-                        <h2>${secondSeleted}</h2>
-                        <p class="display@xs">${messageData[firstSeleted].messageInternal}</p>
+                        <h2 style="color:black">${secondSeleted}</h2>
+                        <p class="display@xs" style="color:black">${messageData[firstSeleted].messageInternal}</p>
                         </div>
                     </div>
         
