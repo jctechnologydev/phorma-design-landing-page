@@ -87,69 +87,53 @@ const swiper = new Swiper('.slider-wrapper', {
 
 // about //
 
-const myObserver = new IntersectionObserver((entries, observer) => {
+const myObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('scontainerabout');
-      // Desativa o observer após a primeira execução
-      observer.unobserve(entry.target);
+      entry.target.classList.add('scontainerabout')
+    } else {
+      entry.target.classList.remove('scontainerabout')
     }
-  });
+  })
 });
 
-const elements = document.querySelectorAll('.container-about');
+const elements = document.querySelectorAll('.container-about')
 
-elements.forEach((element) => myObserver.observe(element));
+elements.forEach((element) => myObserver.observe(element))
 
-/* Efeito de rolagem suave */
-window.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-  document.querySelector("section.about::before").style.transform = `translateY(${scrollPosition * 0.3}px)`;
-});
 
 // container-wrapper//
-const contObserver = new IntersectionObserver((entries, observer) => {
+
+const sover = new IntersectionObserver((entries,) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('scontainer-wrapper');
-      // Desativa o observer após a primeira execução
-
+      entry.target.classList.add('stitles2')
+    } else {
+      entry.target.classList.remove('stitles2')
     }
   });
 });
 
-const contelements = document.querySelectorAll('.wrapper');
+const elementum = document.querySelectorAll('.titles2');
 
-contelements.forEach((element) => contObserver.observe(element));
-
-/* Efeito de rolagem suave */
-window.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-  document.querySelector("scontainer-wrapper::before").style.transform = `translateY(${scrollPosition * 0.3}px)`;
-});
+elementum.forEach((element) => sover.observe(element));
 
 
-//------------------------------------------------------//
-
-const titleObserver = new IntersectionObserver((entries, observer) => {
+const sovers = new IntersectionObserver((entries,) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('stitles2');
-      // Desativa o observer após a primeira execução
-
+      entry.target.classList.add('stitles')
+    } else {
+      entry.target.classList.remove('stitles')
     }
   });
 });
 
-const titleelements = document.querySelectorAll('.titles2');
+const elementums = document.querySelectorAll('.titles');
 
-contelements.forEach((element) => titleObserver.observe(element));
+elementums.forEach((element) => sovers.observe(element));
 
-/* Efeito de rolagem suave */
-window.addEventListener("scroll", function () {
-  let scrollPosition = window.scrollY;
-  document.querySelector("stitles2::before").style.transform = `translateY(${scrollPosition * 0.3}px)`;
-});
+
 
 //teste scroll//
 

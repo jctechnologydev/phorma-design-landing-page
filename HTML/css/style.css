@@ -91,6 +91,22 @@ header a:hover {
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  z-index: -2;
+  animation: animeimg 2s ease-in-out infinite alternate;
+}
+@keyframes animeimg {
+  0% {
+    right: 0;
+  }
+  30% {
+    left: 5px;
+  }
+  70% {
+    left: 10px;
+  }
+  100% {
+    left: 20;
+  }
 }
 .style {
   font-size: 10em;
@@ -253,7 +269,7 @@ header a:hover {
 }
 
 .button:hover {
-  background-color: var(--alternativeback--);
+  background: var(--alternativeback--);
 }
 /* potifolio section*/
 .portifolio-center a {
@@ -380,6 +396,7 @@ header a:hover {
   justify-content: center;
   overflow: visible;
   position: relative;
+  z-index: 4;
 }
 
 .container-wrapper {
@@ -389,30 +406,30 @@ header a:hover {
   justify-content: start;
   overflow: visible;
 }
-.wrapper {
+
+.titles2 {
   opacity: 0;
-  filter: blur(50px);
+  filter: blur(15px);
   transition: all 1s;
-  transform: translateY(50%);
+  transform: translateX(25%);
 }
-.scontainer-wrapper {
+.stitles2 {
+  opacity: 1;
+  filter: blur(0px);
+  transition: all 1s;
+  transform: translateX(0%);
+}
+.titles {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1s;
+  transform: translateY(25%);
+}
+.stitles {
   opacity: 1;
   filter: blur(0px);
   transition: all 1s;
   transform: translateY(0%);
-}
-
-.titles2 * {
-  opacity: 0;
-  filter: blur(100px);
-  transition: all 3s;
-  transform: translateX(50%);
-}
-.stitles2 * {
-  opacity: 1;
-  filter: blur(0px);
-  transition: all 3s;
-  transform: translateX(0%);
 }
 .vertical-line {
   width: 2px; /* Espessura da linha */
@@ -492,16 +509,16 @@ input:checked + label .descriptionrow {
 }
 
 .cardrow[for="c1"] {
-  background-image: url("/assets/Imagens/Imagens3D/Poltrona\ Cacau\ e\ Mini\ Cama\ Cacau_Bouclê\ Cinza\ -\ Freijó-Off\ White_Amb_ok\ copy.jpg");
+  background-image: url("/assets/Imagens/Imagens3D/Poltrona\ Cacau\ e\ Mini\ Cama\ Cacau_Bouclê\ Cinza\ -\ Freijó-Off\ White_Amb_ok\ copy.webp");
 }
 .cardrow[for="c2"] {
-  background-image: url("/assets/Imagens/Imagens3D/Sofá\ Ágape_791029_Amb_ok2\ copy.jpg");
+  background-image: url("/assets/Imagens/Imagens3D/Sofá\ Ágape_791029_Amb_ok2\ copy.webp");
 }
 .cardrow[for="c3"] {
-  background-image: url("/assets/Imagens/Imagens3D/Cozinha\ Innova_Completa_Comp\ 01_Montana-Grafite_Amb_ok\ copy.jpg");
+  background-image: url("/assets/Imagens/Imagens3D/Cozinha\ Innova_Completa_Comp\ 01_Montana-Grafite_Amb_ok\ copy.webp");
 }
 .cardrow[for="c4"] {
-  background-image: url("/assets/Imagens/Imagens3D/Planet\ Firm_1\,58\ -\ 2.jpg");
+  background-image: url("/assets/Imagens/Imagens3D/Planet\ Firm_1\,58\ -\ 2.webp");
 }
 /*service grid*/
 
@@ -853,19 +870,17 @@ section.carousel h1 {
 /* about */
 section.about {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 1100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 1100px;
   background: var(--alternativeback--);
   box-shadow: 0 0 20px 2px #3b0202, 0 0 40px 1px #910d0d;
   z-index: 2;
 }
-
-section.about .container-about {
+.container-about {
   width: 1200px;
   height: 500px;
   border-radius: 10px 55px;
@@ -892,9 +907,9 @@ section.about .container-about {
 
 .container-about {
   opacity: 0;
-  filter: blur(50px);
-  transition: all 1s;
-  transform: translateX(-50%);
+  filter: blur(15px);
+  transition: all 1.25s;
+  transform: translateX(50%);
 }
 .scontainerabout {
   opacity: 1;
@@ -934,6 +949,11 @@ section.about .container-about {
 /* 
 <!----------Services Section------------->
  */
+
+.services {
+  width: 100%;
+  height: 100vh;
+}
 
 .portifolio-center a {
   text-decoration: none;
