@@ -76,6 +76,60 @@ header a:hover {
   border-radius: 2px;
 }*/
 /* titles and subitles*/
+
+.redes-sociais-top {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  font-size: xx-large;
+  margin-left: 3%;
+  width: 80px;
+  height: 400px;
+  z-index: 999999999;
+  text-decoration: none;
+  color: white;
+}
+.redes-sociais-top a.facebook-top {
+  background: linear-gradient(225deg, #ffffff8a 30%, #3b5998 35%, #3b5998 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  background-size: 200% 800%;
+  background-position: 0 0%;
+  transition: background-position 0.3s ease-in-out;
+}
+.redes-sociais-top a.instagram-top {
+  background: linear-gradient(225deg, #ffffff8a 30%, #bc2a8d 40%, #fccc63 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  background-size: 200% 800%;
+  background-position: 0 0%;
+  transition: background-position 0.3s ease-in-out;
+}
+.redes-sociais-top a.youtube-top {
+  background: linear-gradient(225deg, #ffffff8a 30%, #c4302b 35%, #c4302b 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  background-size: 200% 800%;
+  background-position: 0 0%;
+  transition: background-position 0.3s ease-in-out;
+}
+
+.redes-sociais-top a:hover {
+  background-position: 0% 35%;
+}
+
 .titles h1 {
   font-size: 10em;
   line-height: 0.7em;
@@ -1631,8 +1685,6 @@ button {
 .hidden {
   display: none;
 }
-
-
 
 .separator {
   display: block;
