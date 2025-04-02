@@ -13,6 +13,7 @@
   --colorbtn--: #910d0d;
   --white-color: #fff;
   --gray-color: #aeb4a6;
+  --newcolorsubmenu: #ff7527;
   --green-color: #910d0d;
   --index: calc(1vw + 1vh);
   --transition: ease-in-out;
@@ -125,6 +126,17 @@ header a:hover {
   background-position: 0 0%;
   transition: background-position 0.3s ease-in-out;
 }
+.redes-sociais-top a.pinterest-top {
+  background: linear-gradient(225deg, #ffffff8a 30%, #c4422b 35%, #c4352b 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  background-size: 200% 800%;
+  background-position: 0 0%;
+  transition: background-position 0.3s ease-in-out;
+}
 
 .redes-sociais-top a:hover {
   background-position: 0% 35%;
@@ -206,6 +218,7 @@ header a:hover {
   padding: 2.2em 3em;
   z-index: 9999;
   position: relative;
+  font-family: montserrat-g;
 }
 .row {
   display: flex;
@@ -234,7 +247,7 @@ header a:hover {
   justify-content: right;
 }
 .submenu {
-  --anim-menu-btn-color: var(--gray-color);
+  --anim-menu-btn-color: var(--newcolorsubmenu);
   --anim-menu-btn-gap: 0.195em;
   --anim-menu-btn-width: 1.08em;
 }
@@ -1786,6 +1799,17 @@ footer .redes-sociais a.instagram {
 }
 footer .redes-sociais a.youtube {
   background: linear-gradient(225deg, #ffffff 30%, #c4302b 35%, #c4302b 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.2rem;
+  background-size: 200% 800%;
+  background-position: 0 0%;
+  transition: background-position 0.3s ease-in-out;
+}
+footer .redes-sociais a.pinterest {
+  background: linear-gradient(225deg, #ffffff 30%, #c4422b 35%, #c4352b 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
