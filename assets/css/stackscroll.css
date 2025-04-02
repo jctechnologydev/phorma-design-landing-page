@@ -786,6 +786,12 @@ small,
   font-size: var(--text-xs, 0.694em);
 }
 
+a,
+.link {
+  color: var(--color-primary, #2a6df4);
+  text-decoration: underline;
+}
+
 strong {
   font-weight: bold;
 }
