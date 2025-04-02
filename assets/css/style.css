@@ -89,7 +89,7 @@ header a:hover {
   margin-left: 3%;
   width: 80px;
   height: 400px;
-  z-index: 999999999;
+  z-index: 9999999999999999999999;
   text-decoration: none;
   color: white;
 }
@@ -621,6 +621,8 @@ input:checked + label .descriptionrow {
   gap: 20px;
   justify-content: center;
 }
+
+
 
 .card-grid {
   background: var(--linearred--);
