@@ -947,6 +947,15 @@ section.about {
   box-shadow: 0 0 20px 2px #3b0202, 0 0 40px 1px #910d0d;
   z-index: 2;
 }
+video {
+  width: 50%;
+  height: 50%;
+  margin-top: 5%;
+  margin-left: 5%;
+  object-fit: cover;
+  float: left;
+  gap: 10px;
+}
 .container-about {
   width: 1200px;
   height: 500px;
@@ -957,15 +966,9 @@ section.about {
 .logophorma {
   margin-bottom: 5%;
 }
-.movie img {
-  width: 600px;
-  height: 400px;
-  margin-top: 3%;
-  margin-left: 7%;
-  background-color: #910d0d;
-  float: inline-start;
-}
 .descmovie {
+  padding-top: 5%;
+  padding-left: 53%;
   margin-top: 3%;
   margin-left: 3%;
   margin-right: 10%;
