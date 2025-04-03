@@ -264,7 +264,7 @@ header a:hover {
 }
 .main-menu li {
   list-style-type: none;
-  display: inline-block;
+  display: inline;
 }
 
 .main-menu li > * {
@@ -276,6 +276,70 @@ header a:hover {
   letter-spacing: 0.25em;
   position: relative;
 }
+
+
+
+
+.main-menu ul {
+  display: inline-block; /* Makes the ul inline */
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.main-menu li {
+  display: inline-block; /* Makes list items inline */
+  margin-right: 15px; /* Adds spacing between items */
+}
+
+
+
+.main-menu .button--top {
+  display: inline-block; /* Makes the contact button inline */
+  margin-left: 15px; /* Adds spacing between last menu item and button */
+}
+
+.main-menu {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  gap: 15px; /* Adds spacing between items */
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px; /* Spacing between li items */
+}
+
+.main-menu .button--top {
+  margin-left: auto; /* Pushes button to the right (optional) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main-menu li > *::before,
 .main-menu li > *::after {
@@ -710,6 +774,18 @@ section.carousel h1 {
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
 }
+
+.description {
+  display: none; /*Hide description on first page*/
+}
+
+
+
+
+.slider .list {}
+
+.slider.list{}
+
 .slider .list .item .type {
   background: linear-gradient(90deg, #3b021d, #910d0d);
   -webkit-background-clip: text;
@@ -1864,4 +1940,17 @@ footer .footer-links ul li a {
 
 footer .footer-links ul li a:hover {
   color: #eeeeee;
+}
+
+/**Resposiveness*/
+
+@media screen and (max-width: 2512px){
+  .slider .list .item .content .title,
+  .slider .list .item .content .type {
+    font-size: 7em;
+    line-height: 0.7em;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  }
 }
