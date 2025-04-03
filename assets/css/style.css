@@ -967,12 +967,15 @@ video {
   margin-bottom: 5%;
 }
 .descmovie {
-  padding-top: 5%;
+  padding-top: 3%;
   padding-left: 53%;
   margin-top: 3%;
   margin-left: 3%;
   margin-right: 10%;
-  color: black;
+  color: rgb(141, 137, 137);
+  font-size: 1em;
+  font-weight: bolder;
+  font-family: montserrat-g;
 }
 
 .container-about {

@@ -50,13 +50,60 @@ const messageData = {
 
 const filtersDataAll = {
     "3D Environment": [
-        { name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg","./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ]},
-        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg", "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg" ] }
+        {
+            name: "Kitchen", count: 12, content: [
+                "../assets/Imagens/Imagens3D/Cozinha Esmeralda - Composição 01_Lâmina Mel - Cinza Supremo_Amb_ok copy.jpg",
+                "./assets/Imagens/Imagens3D/Cozinha Ibiza_Lamina Mel - Ripado - Branco_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Cozinha Innova_Comp 03_Montana-Branco_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Cozinha Innova_Completa_Comp 01_Montana-Grafite_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Cozinha KIT LIVIA 2MT 8P 2G_Amb_ok.jpg",
+                "../assets/Imagens/Imagens3D/Cozinha Prisma_Amb_ok.jpg"]
+        },
+        {
+            name: "Bath", count: 12, content: [
+            ]
+        },
+        {
+            name: "Bedroom", count: 12, content: [
+                "../assets/Imagens/Imagens3D/Armário Duna + Painel Ripado + Espelheira Lua_Amb_ok.jpg",
+                "../assets/Imagens/Imagens3D/Balcão Marina 2P_Montana-Grafite_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/JP25 - Ambiente - ok ok.jpg",
+                "../assets/Imagens/Imagens3D/Linha Elements - Armario Vittta & Espelheira Ori_Amb_ok.jpg"]
+        },
+        {
+            name: "Living Room", count: 12, content: [
+                "../assets/Imagens/Imagens3D/Sofá Itália - Canto_E.4.00.11 - E.4.00.10_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Sofá Gálatas_791014_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Sofá Singapura_E.4.00.05_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Sofá Quebec - 2 mód_D.1.00.07_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Sofá Quebec_3 mód_F.7.00.07_Amb_ok copy.jpg",
+                "../assets/Imagens/Imagens3D/Sofá Singapura_E.4.00.05_Amb_ok copy.jpg"]
+        },
+        {
+            name: "Dining Room", count: 12, content: [
+                "../assets/Imagens/Imagens3D/Ambiente 4 - Mesa Heloisa - Cad Aguinez.jpg",
+                "./assets/Imagens/Imagens3D/Ambiente 6 - Mesa Jade - Cad Malu - Banq Lavínia_3.jpg",
+                "../assets/Imagens/Imagens3D/Ambiente 7 - Mesa Rafaela - Cad Lavínia - Cad, Banq Rafaela_2.jpg",
+                "../assets/Imagens/Imagens3D/Ambiente 10 - Mesa Stilo - Cad Yasmim_amb.jpg",
+                "../assets/Imagens/Imagens3D/Ambiente 12 - Bistro Rafaela - Banq Marina.jpg",
+                "../assets/Imagens/Imagens3D/Ambiente Novo  .jpg",
+                "../assets/Imagens/Imagens3D/Conjunto Valencia 1,70 + 6 Cad Kieve_Cobre - H.9.00.00_Amb_ok copy.jpg"]
+        },
+        {
+            name: "Mattress", count: 12, content: [
+                "../assets/Imagens/Imagens3D/Eminence_1,58 - 3.jpg",
+                "./assets/Imagens/Imagens3D/Gran Master_1,58_Ambiente.jpg",
+                "../assets/Imagens/Imagens3D/Granite Expressive_Amb_ok.jpg",
+                "../assets/Imagens/Imagens3D/Light Stress Euro One Face_Amb_ok3.jpg",
+                "../assets/Imagens/Imagens3D/Planet Firm_1,58 - 2.jpg",
+                "../assets/Imagens/Imagens3D/Velvet_1,58_Base nova.jpg"]
+        },
+        {
+            name: "Home Appliances & Electronics", count: 12, content: [
+                "../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg",
+                "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg",
+                "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]
+        }
     ],
     "3D Product Modeling": [
         { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
@@ -64,23 +111,39 @@ const filtersDataAll = {
         { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
         { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
         { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]},
+        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
         { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        
+
     ],
     "Photo Fusion": [
-        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Living Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]},
-        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
+        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Banqueta Home_Amb_ok"] },
+        { name: "Bath", count: 12, content: [""] },
+        { name: "Bedroom", count: 12, content: [""] },
+        {
+            name: "Living Room", count: 12, content: [
+                "../assets/Imagens/Imagens Fotofusão/Ambiente_Sofá Lutz  .jpg",
+                "../assets/Imagens/Imagens Fotofusão/Jogo de Cadeira Barbante_2.jpg",
+                "Poltrona Home 2106 Pés pretos.jpg", "../assets/Imagens/Imagens Fotofusão/Sofá 01.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Sofá 02.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Grumari 90+90 2372.jpg"]
+        },
+        { name: "Dining Room", count: 12, content: [""] },
+        { name: "Home Appliances & Electronics", count: 12, content: [""] },
+        {
+            name: "Mattress", count: 12, content: [
+                "../assets/Imagens/Imagens Fotofusão/Colchão Alaska.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Los Angeles.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Nano Fiber.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Los Angeles.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Nano Fiber.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Perfect Sleep.jpg",
+                "../assets/Imagens/Imagens Fotofusão/Colchão Texas.jpg"]
+        },
     ],
     "3D Animations": [
         { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "5Q2RufAKtSo", "uLQ5G8_nAb8"] },
         { name: "Products Assembly Animations", count: 6, content: ["IjwlW_hbMOs", "IhE4gQoi1_k", "YG9pMUFSWGI", "3E6HfOqGHEg", "TMm-gSnEASE", "HG9sdARThb8"] }
-     ],
+    ],
     "Videos": [
         { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0"] },
         { name: "Living Room", count: 1, content: ["_avjE_AQbN0"] },
@@ -307,15 +370,15 @@ function renderFilters(data) {
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
     const cardContainer = document.getElementById("filter-content-card");
-    galleryContainer.innerHTML = "";    
-    cardContainer.innerHTML = "";  
+    galleryContainer.innerHTML = "";
+    cardContainer.innerHTML = "";
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     filteredVideos[firstSeleted].forEach(item => {
-        
-        if(item.name === auxSecondSeleted){
+
+        if (item.name === auxSecondSeleted) {
 
             item.content.forEach(contentData => {
-                if(contentData.includes("assets")){
+                if (contentData.includes("assets")) {
 
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                         <div class="grid">
@@ -348,8 +411,8 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     </div>
                 </li>`;
                 }
-                
-            }); 
+
+            });
         }
 
     });
