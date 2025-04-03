@@ -213,7 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (filter.length > 0) {
-        console.log(filter);
         filter.forEach(tab => tab.addEventListener("click", mainFilter));
         filter[0].click();
     } else {
@@ -253,7 +252,6 @@ function createButtonWithCount(text, className, dataFilter, count) {
 
 
 function createSubcategoryButtonWithCount(text, className, dataFilter, count) {
-    console.log(`${dataFilter}`);
     const button = document.createElement("button");
     button.className = className;
     button.setAttribute("data-name", dataFilter);
@@ -352,14 +350,12 @@ function renderFilters(data) {
     }
 
     if (filterSubcategory.length > 0) {
-        console.log(filterSubcategory);
         filterSubcategory.forEach(tab => tab.addEventListener("click", filterContent));
     } else {
         console.error("No filter tab buttons found.");
     }
 
     if (filter.length > 0) {
-        console.log(filter);
         filter.forEach(tab => tab.addEventListener("click", mainFilter));
     } else {
         console.error("No filter tab buttons found.");
@@ -383,9 +379,9 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                         <div class="grid">
                         <div class="col-6 flex items-center height-100%">
-                            <div class="text-component padding-md " style="color:black">
+                            <div class="text-component padding-md" style="color:black">
                             <h2>${secondSeleted}</h2>
-                            <p class="display@xs">${messageData[firstSeleted].messageInternal} style="color:black"</p>
+                            <p class="display@xs">${messageData[firstSeleted].messageInternal} style="color:black"></p>
                             </div>
                         </div>
             
@@ -397,7 +393,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                 } else {
                     const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                    <div class="grid">
+                <div class="grid">
                     <div class="col-6 flex items-center height-100%">
                         <div class="text-component padding-md ">
                         <h2 style="color:black">${secondSeleted}</h2>
@@ -408,7 +404,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     <div class="col-6 height-100%">
                         <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
-                    </div>
+                </div>
                 </li>`;
                 }
 
@@ -418,3 +414,32 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     });
 
 }
+
+
+function toggleSocialsOnScroll(contactSelector, socialsSelector) {
+  $(document).ready(function() {
+    var $contact = $(contactSelector);
+    var $socials = $(socialsSelector);
+
+    if ($contact.length === 0) {
+      console.error(`Element ${contactSelector} not found!`);
+      return;
+    }
+
+    $(window).on("scroll", function() {
+      var top_of_element = $contact.offset().top;
+      var bottom_of_element = top_of_element + $contact.outerHeight();
+      var top_of_screen = $(window).scrollTop();
+      var bottom_of_screen = top_of_screen + $(window).innerHeight();
+
+      if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+        $socials.hide();
+      } else {
+        $socials.show();
+      }
+    });
+  });
+}
+
+// Usage
+toggleSocialsOnScroll("#contact", ".redes-sociais-top");

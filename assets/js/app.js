@@ -137,8 +137,8 @@ elementums.forEach((element) => sovers.observe(element));
 
 //teste scroll//
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
+//gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+/*
 if (ScrollTrigger.isTouch !== 1) {
 
   ScrollSmoother.create({
@@ -186,6 +186,6 @@ if (ScrollTrigger.isTouch !== 1) {
       }
     })
   })
+}*/
 
-}
 

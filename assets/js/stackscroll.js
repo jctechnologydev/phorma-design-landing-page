@@ -321,6 +321,7 @@ Math.easeInOutQuad = function (t, b, c, d) {
     element.elementHeight = element.element.offsetHeight;
 
     // store card properties
+    console.log(element.items[0]);
     var cardStyle = getComputedStyle(element.items[0]);
     element.cardTop = Math.floor(parseFloat(cardStyle.getPropertyValue('top')));
     element.cardHeight = Math.floor(parseFloat(cardStyle.getPropertyValue('height')));
