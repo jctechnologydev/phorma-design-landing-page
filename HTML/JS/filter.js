@@ -51,94 +51,34 @@ const messageData = {
 const filtersDataAll = {
     "3D Environment": [
         {
-            name: "Kitchen", count: 12, content: [
-                "../assets/Imagens/Imagens3D/Cozinha Esmeralda - Composição 01_Lâmina Mel - Cinza Supremo_Amb_ok copy.jpg",
-                "./assets/Imagens/Imagens3D/Cozinha Ibiza_Lamina Mel - Ripado - Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Comp 03_Montana-Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Completa_Comp 01_Montana-Grafite_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha KIT LIVIA 2MT 8P 2G_Amb_ok.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Prisma_Amb_ok.jpg"]
+            name: "Kitchen", count: 12, content: ["./assets/Imagens/Imagens3D/232878600_Guarda-roupa Casal Modulado com Espelho - 4 Portas de Correr 4 Gavetas Kappesberg Mônaco_ok.jpg", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""]
         },
-        {
-            name: "Bath", count: 12, content: [
-            ]
-        },
-        {
-            name: "Bedroom", count: 12, content: [
-                "../assets/Imagens/Imagens3D/Armário Duna + Painel Ripado + Espelheira Lua_Amb_ok.jpg",
-                "../assets/Imagens/Imagens3D/Balcão Marina 2P_Montana-Grafite_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/JP25 - Ambiente - ok ok.jpg",
-                "../assets/Imagens/Imagens3D/Linha Elements - Armario Vittta & Espelheira Ori_Amb_ok.jpg"]
-        },
-        {
-            name: "Living Room", count: 12, content: [
-                "../assets/Imagens/Imagens3D/Sofá Itália - Canto_E.4.00.11 - E.4.00.10_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Sofá Gálatas_791014_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Sofá Singapura_E.4.00.05_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Sofá Quebec - 2 mód_D.1.00.07_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Sofá Quebec_3 mód_F.7.00.07_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Sofá Singapura_E.4.00.05_Amb_ok copy.jpg"]
-        },
-        {
-            name: "Dining Room", count: 12, content: [
-                "../assets/Imagens/Imagens3D/Ambiente 4 - Mesa Heloisa - Cad Aguinez.jpg",
-                "./assets/Imagens/Imagens3D/Ambiente 6 - Mesa Jade - Cad Malu - Banq Lavínia_3.jpg",
-                "../assets/Imagens/Imagens3D/Ambiente 7 - Mesa Rafaela - Cad Lavínia - Cad, Banq Rafaela_2.jpg",
-                "../assets/Imagens/Imagens3D/Ambiente 10 - Mesa Stilo - Cad Yasmim_amb.jpg",
-                "../assets/Imagens/Imagens3D/Ambiente 12 - Bistro Rafaela - Banq Marina.jpg",
-                "../assets/Imagens/Imagens3D/Ambiente Novo  .jpg",
-                "../assets/Imagens/Imagens3D/Conjunto Valencia 1,70 + 6 Cad Kieve_Cobre - H.9.00.00_Amb_ok copy.jpg"]
-        },
-        {
-            name: "Mattress", count: 12, content: [
-                "../assets/Imagens/Imagens3D/Eminence_1,58 - 3.jpg",
-                "./assets/Imagens/Imagens3D/Gran Master_1,58_Ambiente.jpg",
-                "../assets/Imagens/Imagens3D/Granite Expressive_Amb_ok.jpg",
-                "../assets/Imagens/Imagens3D/Light Stress Euro One Face_Amb_ok3.jpg",
-                "../assets/Imagens/Imagens3D/Planet Firm_1,58 - 2.jpg",
-                "../assets/Imagens/Imagens3D/Velvet_1,58_Base nova.jpg"]
-        },
-        {
-            name: "Home Appliances & Electronics", count: 12, content: [
-                "../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg",
-                "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg",
-                "./assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"]
-        }
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", "", "", "", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", "", "", "", "", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", "", "", ""] }
     ],
     "3D Product Modeling": [
-        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Bath", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Dining Room", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Mattress", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Home Appliances & Electronics", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-        { name: "Bedroom", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Ambiente 03_ Ok.jpg"] },
-
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www"] },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
     ],
     "Photo Fusion": [
-        { name: "Kitchen", count: 12, content: ["../assets/Imagens/Imagens Fotofusão/Banqueta Home_Amb_ok"] },
-        { name: "Bath", count: 12, content: [""] },
-        { name: "Bedroom", count: 12, content: [""] },
-        {
-            name: "Living Room", count: 12, content: [
-                "../assets/Imagens/Imagens Fotofusão/Ambiente_Sofá Lutz  .jpg",
-                "../assets/Imagens/Imagens Fotofusão/Jogo de Cadeira Barbante_2.jpg",
-                "Poltrona Home 2106 Pés pretos.jpg", "../assets/Imagens/Imagens Fotofusão/Sofá 01.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Sofá 02.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Grumari 90+90 2372.jpg"]
-        },
-        { name: "Dining Room", count: 12, content: [""] },
-        { name: "Home Appliances & Electronics", count: 12, content: [""] },
-        {
-            name: "Mattress", count: 12, content: [
-                "../assets/Imagens/Imagens Fotofusão/Colchão Alaska.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Los Angeles.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Nano Fiber.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Los Angeles.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Nano Fiber.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Perfect Sleep.jpg",
-                "../assets/Imagens/Imagens Fotofusão/Colchão Texas.jpg"]
-        },
+        { name: "Kitchen", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bath", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI"] },
+        { name: "Living Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Bedroom", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Mattress", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
+        { name: "Home Appliances & Electronics", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", "", ""] },
+        { name: "Dining Room", count: 12, content: ["https://www.youtube.com/watch?v=6Q3pBMtJclI", "https://www.youtube.com/watch?v=6Q3pBMtJclI", ""] },
     ],
     "3D Animations": [
         { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "5Q2RufAKtSo", "uLQ5G8_nAb8"] },
@@ -186,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filterButtonContainer.appendChild(byCategoryButton);
 
     let i = 0;
+    let a = "";
     for (const category in selectedData) {
         const buttonClass = i === 0 ? "tablinks active" : "tablinks";
         const button = createButtonWithCount(category, buttonClass, category,
@@ -213,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (filter.length > 0) {
+        console.log(filter);
         filter.forEach(tab => tab.addEventListener("click", mainFilter));
         filter[0].click();
     } else {
@@ -252,6 +194,7 @@ function createButtonWithCount(text, className, dataFilter, count) {
 
 
 function createSubcategoryButtonWithCount(text, className, dataFilter, count) {
+    console.log(`${dataFilter}`);
     const button = document.createElement("button");
     button.className = className;
     button.setAttribute("data-name", dataFilter);
@@ -300,6 +243,19 @@ function filterContent(event) {
 
     // Render the filtered gallery items
     renderGallery(selectedData, firstSeleted, secondSeleted);
+
+    /*filterableItems.forEach(image => {
+                
+        if(image.dataset.name === (firstSeleted + secondSeleted)){
+            console.log(image.dataset.name );
+            
+            return image.classList.replace("hide", "show");
+        } 
+        console.log(image.dataset.name );
+        image.classList.add("hide");
+
+        
+    });*/
 }
 
 
@@ -319,6 +275,9 @@ function mainFilter(event) {
 function renderFilters(data) {
     const filterTabContainer = document.getElementById('filter-tab');
     const subcategoryContainer = document.getElementById('subcategory');
+
+
+
     let i = 0;
     filterTabContainer.innerHTML = "";
     subcategoryContainer.innerHTML = "";
@@ -350,12 +309,14 @@ function renderFilters(data) {
     }
 
     if (filterSubcategory.length > 0) {
+        console.log(filterSubcategory);
         filterSubcategory.forEach(tab => tab.addEventListener("click", filterContent));
     } else {
         console.error("No filter tab buttons found.");
     }
 
     if (filter.length > 0) {
+        console.log(filter);
         filter.forEach(tab => tab.addEventListener("click", mainFilter));
     } else {
         console.error("No filter tab buttons found.");
@@ -365,81 +326,41 @@ function renderFilters(data) {
 
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
-    const cardContainer = document.getElementById("filter-content-card");
     galleryContainer.innerHTML = "";
-    cardContainer.innerHTML = "";
+    console.log(firstSeleted);
+    galleryContainer.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageExternal}</div>`;
+
+
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     filteredVideos[firstSeleted].forEach(item => {
 
         if (item.name === auxSecondSeleted) {
+            item.content.forEach(videoId => {
+                const image = document.createElement("div");
+                image.className = "w-33 element";
+                image.setAttribute("data-name", firstSeleted + secondSeleted);
 
-            item.content.forEach(contentData => {
-                if (contentData.includes("assets")) {
+                /*const imageFrame = document.createElement("img");
+                imageFrame.src = "./assets/img/img1.webp"; //FIXME NOT WORKING
+                imageFrame.setAttribute("height", "150px")
 
-                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                        <div class="grid">
-                        <div class="col-6 flex items-center height-100%">
-                            <div class="text-component padding-md" style="color:black">
-                            <h2>${secondSeleted}</h2>
-                            <p class="display@xs">${messageData[firstSeleted].messageInternal} style="color:black"></p>
-                            </div>
-                        </div>
-            
-                        <div class="col-6 height-100%">
-                            <img class="block width-100% height-100% object-cover" src="${contentData}" alt="Image description">
-                        </div>
-                        </div>
-                    </li>`;
-                } else {
-                    const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
-                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                <div class="grid">
-                    <div class="col-6 flex items-center height-100%">
-                        <div class="text-component padding-md ">
-                        <h2 style="color:black">${secondSeleted}</h2>
-                        <p class="display@xs" style="color:black">${messageData[firstSeleted].messageInternal}</p>
-                        </div>
-                    </div>
-        
-                    <div class="col-6 height-100%">
-                        <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-                </li>`;
-                }
+                imageFrame.height = "150px";
+                imageFrame.width = "150px";*/
+                const imageFrame = document.createElement("iframe");
+                imageFrame.src = `https://www.youtube.com/embed/VOTWEIgbKSKQI-ky?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0`;
+                imageFrame.style.border = "none";
+                imageFrame.style.width = "420px";
+                imageFrame.style.height = "315px";
+                imageFrame.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+                imageFrame.setAttribute("allowfullscreen", "");
 
+                image.appendChild(imageFrame);
+                galleryContainer.appendChild(image);
             });
         }
 
     });
-
+    const internalMessage = document.createElement("div");
+    internalMessage.innerHTML = `<div class="w-100 flex-center card" style="margin:10px; padding:10px;">${messageData[firstSeleted].messageInternal}</div>`;
+    galleryContainer.appendChild(internalMessage);
 }
-
-
-function toggleSocialsOnScroll(contactSelector, socialsSelector) {
-  $(document).ready(function() {
-    var $contact = $(contactSelector);
-    var $socials = $(socialsSelector);
-
-    if ($contact.length === 0) {
-      console.error(`Element ${contactSelector} not found!`);
-      return;
-    }
-
-    $(window).on("scroll", function() {
-      var top_of_element = $contact.offset().top;
-      var bottom_of_element = top_of_element + $contact.outerHeight();
-      var top_of_screen = $(window).scrollTop();
-      var bottom_of_screen = top_of_screen + $(window).innerHeight();
-
-      if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
-        $socials.hide();
-      } else {
-        $socials.show();
-      }
-    });
-  });
-}
-
-// Usage
-toggleSocialsOnScroll("#contact", ".redes-sociais-top");
