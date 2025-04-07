@@ -135,6 +135,9 @@ elementums.forEach((element) => sovers.observe(element));
 
 
 
+
+
+
 //teste scroll//
 
 //gsap.registerPlugin(ScrollTrigger, ScrollSmoother)

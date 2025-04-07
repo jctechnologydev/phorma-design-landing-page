@@ -281,6 +281,7 @@ Math.easeInOutQuad = function (t, b, c, d) {
 
   function initStackCardsEffect(element) { // use Intersection Observer to trigger animation
     setStackCards(element); // store cards CSS properties
+    console.log(element);
 		var observer = new IntersectionObserver(stackCardsCallback.bind(element), { threshold: [0, 1] });
 		observer.observe(element.element);
   };
@@ -355,11 +356,13 @@ Math.easeInOutQuad = function (t, b, c, d) {
 
   function animateStackCards() {
     if(isNaN(this.marginY)) { // --stack-cards-gap not defined - do not trigger the effect
+
       this.scrolling = false;
       return; 
     }
 
     var top = this.element.getBoundingClientRect().top;
+
 
     if( this.cardTop - top + this.element.windowHeight - this.elementHeight - this.cardHeight + this.marginY + this.marginY*this.items.length > 0) { 
       this.scrolling = false;

@@ -1866,6 +1866,108 @@ footer .footer-links ul li a {
 footer .footer-links ul li a:hover {
   color: #eeeeee;
 }
+
+/**Image viewer*/
+
+.img-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+
+#view-img{
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.icons-btns {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+.icon-bar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1001;
+}
+
+.icon-bar i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-bar i:hover {
+  transform: scale(1.2);
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+}
+
+.left-arrow {
+  left: 100px;
+}
+
+.left-arrow:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.right-arrow {
+  right: 100px;
+}
+
+.right-arrow:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+
+
+/**END image viewer*/
+
+/* Media Screen */
+@media screen and (max-width: 1000px) {
 /* Media Screen portateis*/
 @media screen and (max-width: 1440px) {
   body {

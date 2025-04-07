@@ -4,6 +4,7 @@ const filterableItems = document.querySelectorAll("#filter-items .element");
 const filterMain = document.querySelectorAll("#main-filter button");
 let firstSeleted = "3D Environment";
 let secondSeleted = "Kitchen";
+let reverse = false;
 
 let selectedData = {};
 
@@ -351,6 +352,7 @@ function renderFilters(data) {
 
     if (filterSubcategory.length > 0) {
         filterSubcategory.forEach(tab => tab.addEventListener("click", filterContent));
+        reverse = false;
     } else {
         console.error("No filter tab buttons found.");
     }
@@ -359,6 +361,7 @@ function renderFilters(data) {
         filter.forEach(tab => tab.addEventListener("click", mainFilter));
     } else {
         console.error("No filter tab buttons found.");
+        reverse = true;
     }
 }
 
@@ -366,42 +369,38 @@ function renderFilters(data) {
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
     const cardContainer = document.getElementById("filter-content-card");
+    const internalMessage = document.getElementById("internal-message");
     galleryContainer.innerHTML = "";
     cardContainer.innerHTML = "";
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
+    internalMessage.innerHTML = "";
+    if(!reverse) {
+        internalMessage.innerHTML = `<p class="card col-9 p-2"> ${messageData[firstSeleted].messageInternal}</p>`;
+    }else{
+        internalMessage.innerHTML = `<p class="card col-9 p-2"> ${messageData[secondSeleted].messageInternal}</p>`;
+    }
+ 
+
     filteredVideos[firstSeleted].forEach(item => {
 
         if (item.name === auxSecondSeleted) {
 
             item.content.forEach(contentData => {
                 if (contentData.includes("assets")) {
-
+                    //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                         <div class="grid">
-                        <div class="col-6 flex items-center height-100%">
-                            <div class="text-component padding-md" style="color:black">
-                            <h2>${secondSeleted}</h2>
-                            <p class="display@xs">${messageData[firstSeleted].messageInternal} style="color:black"></p>
+                            <div class="col-12 height-100%">
+                                <img class="block width-100% height-100% object-cover" src="${contentData}" onclick="openImage(this);" alt="Image description">
                             </div>
-                        </div>
-            
-                        <div class="col-6 height-100%">
-                            <img class="block width-100% height-100% object-cover" src="${contentData}" alt="Image description">
-                        </div>
                         </div>
                     </li>`;
                 } else {
+                    //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
                     const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                 <div class="grid">
-                    <div class="col-6 flex items-center height-100%">
-                        <div class="text-component padding-md ">
-                        <h2 style="color:black">${secondSeleted}</h2>
-                        <p class="display@xs" style="color:black">${messageData[firstSeleted].messageInternal}</p>
-                        </div>
-                    </div>
-        
-                    <div class="col-6 height-100%">
+                    <div class="col-12 height-100%">
                         <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                 </div>
@@ -440,6 +439,40 @@ function toggleSocialsOnScroll(contactSelector, socialsSelector) {
     });
   });
 }
+function closeImage() {
+    const container = document.querySelector(".container-card");
+    const overlay = document.querySelector(".img-background");
+    const closeBtn = document.querySelector(".closebtn");
+    const viewImg = document.getElementById("view-img");
+
+    viewImg.style.display = "none";
+    container.style.display = "block";
+    overlay.style.display = "none";
+    closeBtn.style.display = "none";
+
+
+    document.body.style.overflow = "auto";
+    document.body.style.pointerEvents = "auto"; 
+}
+
+function openImage(imgs) {
+    const container = document.querySelector(".container-card");
+    const overlay = document.querySelector(".img-background");
+    const closeBtn = document.querySelector(".closebtn");
+    const viewImg = document.getElementById("view-img");
+
+    viewImg.style.display = "block";
+    viewImg.src = imgs.src;
+
+    overlay.style.display = "flex"; 
+    container.style.display = "none";
+    closeBtn.style.display = "block";
+
+    document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none"; 
+}
+
+
 
 // Usage
 toggleSocialsOnScroll("#contact", ".redes-sociais-top");
