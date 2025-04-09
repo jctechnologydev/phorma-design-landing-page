@@ -2,8 +2,14 @@ const filterTab = document.querySelectorAll("#filter-tab button");
 const filterSubcategory = document.querySelectorAll("#subcategory .tablinks");
 const filterableItems = document.querySelectorAll("#filter-items .element");
 const filterMain = document.querySelectorAll("#main-filter button");
+
 let firstSeleted = "3D Environment";
 let secondSeleted = "Kitchen";
+
+let currentFirstSeleted = "";
+let currentSecondSeleted = "";
+
+let currentIndex = 0;
 let reverse = false;
 
 let selectedData = {};
@@ -180,9 +186,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const subcategoryContainer = document.getElementById('subcategory');
     const filterButtonContainer = document.getElementById('main-filter');
     const filterContent = document.getElementById('filter-items');
+    const zoomInBtn = document.getElementById("zoom-in");
+    const zoomOutBtn = document.getElementById("zoom-out");
+
+    zoomInBtn.style.display = "block";
+    zoomOutBtn.style.display = "none";
 
     const allButton = createButton("All", "filter-btn filter-btn-all", "all", "all");
-    const byCategoryButton = createButton("By Category", "filter-btn filter-btn-category", "category", "category");
+    const byCategoryButton = createButton("By Category", "filter-btn2 filter-btn-category", "category", "category");
     filterButtonContainer.appendChild(allButton);
     filterButtonContainer.appendChild(byCategoryButton);
 
@@ -194,8 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filterTabContainer.appendChild(button);
         i++;
 
-        selectedData[category].forEach(subcategory => {
-            const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name, "tablinks", category + subcategory.name, subcategory.count);
+        selectedData[category].forEach((subcategory, index) => {
+            const buttonActive = i === 0 ? "tablinks active" : "tablinks";
+            const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name, buttonActive, category + subcategory.name, subcategory.count);
             subcategoryContainer.appendChild(subcategoryButton);
             const imgContens = createImgGallery("w-33 element", category + subcategory.name, "assets/img/img1.webp");
             filterContent.appendChild(imgContens);
@@ -219,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("No filter tab buttons found.");
     }
-
+    
     renderGallery(selectedData, firstSeleted, secondSeleted);
 });
 
@@ -233,13 +245,6 @@ function createButton(text, className, dataFilter, id) {
 }
 
 
-function createImgGallery(className, dataFilter, url) {
-    const div = document.createElement("div");
-    div.className = className;
-    div.setAttribute("data-filter", dataFilter);
-    div.innerHTML = `<img src="${url}" alt="" height="350px"></img>`;
-    return div;
-}
 
 
 function createButtonWithCount(text, className, dataFilter, count) {
@@ -259,6 +264,15 @@ function createSubcategoryButtonWithCount(text, className, dataFilter, count) {
     button.innerHTML = `${text} <span class="count-badge" style="pointer-events: none;">${count}</span>`;
     return button;
 }
+
+function createImgGallery(className, dataFilter, url) {
+    const div = document.createElement("div");
+    div.className = className;
+    div.setAttribute("data-filter", dataFilter);
+    div.innerHTML = `<img src="${url}" alt="" height="350px"></img>`;
+    return div;
+}
+
 
 function filterItems(event) {
     const activeTab = document.querySelector("#filter-tab .active");
@@ -369,15 +383,29 @@ function renderFilters(data) {
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
     const cardContainer = document.getElementById("filter-content-card");
-    const internalMessage = document.getElementById("internal-message");
+    const imageViewer = document.getElementById("img-portifolio");
     galleryContainer.innerHTML = "";
     cardContainer.innerHTML = "";
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
-    internalMessage.innerHTML = "";
+    imageViewer.innerHTML = "";
     if(!reverse) {
-        internalMessage.innerHTML = `<p class="card col-9 p-2"> ${messageData[firstSeleted].messageInternal}</p>`;
-    }else{
-        internalMessage.innerHTML = `<p class="card col-9 p-2"> ${messageData[secondSeleted].messageInternal}</p>`;
+        imageViewer.innerHTML = `
+            <!--<p class="card col-9 p-2"> ${messageData[firstSeleted].messageInternal}</p>-->
+            <img id="view-img">
+
+            <p id="img-description">${messageData[firstSeleted].messageInternal}</p>
+        `;
+        
+    }
+    else
+    {
+        imageViewer.innerHTML = `
+            <!--<p class="card col-9 p-2"> ${messageData[secondSeleted].messageInternal}</p>-->
+            <img id="view-img">
+            <span class="nav-arrow left-arrow" onclick="prevImage()">&#10094;</span>
+            <p id="img-description">${messageData[secondSeleted].messageInternal}</p>
+        `;
+        
     }
  
 
@@ -385,13 +413,16 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
         if (item.name === auxSecondSeleted) {
 
-            item.content.forEach(contentData => {
+            item.content.forEach((contentData,index) => {
                 if (contentData.includes("assets")) {
                     //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
                         <div class="grid">
                             <div class="col-12 height-100%">
-                                <img class="block width-100% height-100% object-cover" src="${contentData}" onclick="openImage(this);" alt="Image description">
+                                <img class="block width-100% height-100% object-cover" src="${contentData}" onclick="openImage(this);" alt="Image description",
+                                data-index="${parseInt(index)}" 
+                                data-first="${firstSeleted}" 
+                                data-second="${auxSecondSeleted}">
                             </div>
                         </div>
                     </li>`;
@@ -399,12 +430,12 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
                     //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
                     const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
                     cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                <div class="grid">
-                    <div class="col-12 height-100%">
-                        <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <div class="grid">
+                        <div class="col-12 height-100%">
+                            <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        </div>
                     </div>
-                </div>
-                </li>`;
+                    </li>`;
                 }
 
             });
@@ -439,16 +470,19 @@ function toggleSocialsOnScroll(contactSelector, socialsSelector) {
     });
   });
 }
+
+
 function closeImage() {
     const container = document.querySelector(".container-card");
     const overlay = document.querySelector(".img-background");
-    const closeBtn = document.querySelector(".closebtn");
+    //const closeBtn = document.querySelector(".closebtn");
     const viewImg = document.getElementById("view-img");
+
 
     viewImg.style.display = "none";
     container.style.display = "block";
     overlay.style.display = "none";
-    closeBtn.style.display = "none";
+    //closeBtn.style.display = "none";
 
 
     document.body.style.overflow = "auto";
@@ -456,23 +490,175 @@ function closeImage() {
 }
 
 function openImage(imgs) {
+
+
     const container = document.querySelector(".container-card");
     const overlay = document.querySelector(".img-background");
-    const closeBtn = document.querySelector(".closebtn");
+
     const viewImg = document.getElementById("view-img");
 
     viewImg.style.display = "block";
-    viewImg.src = imgs.src;
+
+    currentFirstSeleted = imgs.dataset.first;
+    currentSecondSeleted = imgs.dataset.second;
+    currentIndex = imgs.dataset.index;
+
+   if(parseInt(currentIndex) === 0){
+        leftArrowOpacity();
+   }
+
+    src = "";
+    selectedData[imgs.dataset.first].forEach(item => {
+
+        if (item.name === imgs.dataset.second) {
+            src = item.content[imgs.dataset.index];
+            if(parseInt(currentIndex) === selectedData[imgs.dataset.first].length - 1){
+                rightArrowOpacity();
+            }
+            else if(parseInt(currentIndex) > 0 &&  parseInt(currentIndex) < selectedData[imgs.dataset.first].length ){
+                BothArrowsColored();
+            }
+        }});
+    viewImg.src = src;
+    
 
     overlay.style.display = "flex"; 
     container.style.display = "none";
-    closeBtn.style.display = "block";
+
 
     document.body.style.overflow = "hidden";
-    document.body.style.pointerEvents = "none"; 
+ 
+}
+
+function prevImage() {
+    
+    if (parseInt(currentIndex) - 1 >= 0) {  
+
+        const viewImg = document.getElementById("view-img");
+        currentIndex = parseInt(currentIndex) - 1; 
+        
+        selectedData[currentFirstSeleted].forEach(item => {
+            if (item.name === currentSecondSeleted) {
+                console.log(currentIndex);
+                viewImg.src = item.content[currentIndex];
+            }
+        });
+        
+    } else {
+        leftArrowOpacity();
+    }
+}
+
+
+function nextImage(){
+    console.log(currentIndex);
+    const viewImg = document.getElementById("view-img");
+    currentIndex = parseInt(currentIndex) + 1;
+    selectedData[currentFirstSeleted].forEach(item => {
+
+        if (item.name === currentSecondSeleted && currentIndex < item.content.length) {
+            console.log(currentIndex);
+            viewImg.src = item.content[currentIndex];
+        } 
+        else if(currentIndex === item.content.length - 1)
+        {
+            RightArrowOpacity();
+        }
+    });
+}
+
+function leftArrowOpacity(){
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    rightArrow.style.color = "#FFFFFF";
+    rightArrow.style.opacity = "1"; 
+
+    leftArrow.style.color = "#808080";
+    leftArrow.style.opacity = "0.5"; 
+}
+
+
+function RightArrowOpacity(){
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    rightArrow.style.color = "#808080";
+    rightArrow.style.opacity = "0.5"; 
+
+    leftArrow.style.color = "#FFFFFF";
+    leftArrow.style.opacity = "1"; 
+}
+
+function BothArrowsColored(){
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    rightArrow.style.color = "#FFFFFF";
+    rightArrow.style.opacity = "1"; 
+
+    leftArrow.style.color = "#FFFFFF";
+    leftArrow.style.opacity = "1"; 
+}
+
+function zoomInImage(){
+    const viewImg = document.getElementById("view-img");
+    const zoomInBtn = document.getElementById("zoom-in");
+    const zoomOutBtn = document.getElementById("zoom-out");
+
+    zoomInBtn.style.display = "none";
+    zoomOutBtn.style.display = "block";
+    viewImg.style.transform = "scale(1.5)";
+
+}
+
+function zoomOutImage(){
+    const viewImg = document.getElementById("view-img");
+    const zoomInBtn = document.getElementById("zoom-in");
+    const zoomOutBtn = document.getElementById("zoom-out");
+
+    zoomInBtn.style.display = "block";
+    zoomOutBtn.style.display = "none";
+    viewImg.style.transform = "scale(1)";
 }
 
 
 
-// Usage
+function toggleFullscreen() {
+    const viewImg = document.getElementById("view-img");
+    const textDescription = document.getElementById("img-description");
+    const container = viewImg.parentElement;
+    
+    if (!document.fullscreenElement) {
+        if (container.requestFullscreen) {
+            container.requestFullscreen()
+                .then(() => {
+                    viewImg.style.transform = "scale(1.5)";
+                    textDescription.style.display = "none";
+                });
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen()
+                .then(() => {
+                    viewImg.style.transform = "scale(1)";
+                    textDescription.style.display = "block";
+                });
+        }
+    }
+}
+
+document.addEventListener('fullscreenchange', () => {
+    const viewImg = document.getElementById("view-img");
+    const textDescription = document.getElementById("img-description");
+    if (!document.fullscreenElement) {
+        viewImg.style.transform = "scale(1)";
+        textDescription.style.display = "block";
+    }
+});
+
+
+
 toggleSocialsOnScroll("#contact", ".redes-sociais-top");
+
+

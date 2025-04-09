@@ -1435,6 +1435,8 @@ button {
   transition: all 0.3s ease;
 }
 
+
+
 .btn-hover::before {
   content: "";
   border-radius: 50px;
@@ -1831,7 +1833,6 @@ footer .footer-links ul li a:hover {
 }
 
 /**Image viewer*/
-
 .img-background {
   display: none;
   position: fixed;
@@ -1845,21 +1846,26 @@ footer .footer-links ul li a:hover {
   z-index: 1000;
 }
 
-#view-img {
-  max-width: 85%;
-  max-height: 85%;
+/* Expanding image text */
+#img-description {
+  background-color: #00000069;
+  margin: 42% 0 0 0;
+  max-width: 65%;
+  position: absolute;
+
+  color: white;
+  font-size: 20px;
+  text-align: jus;
+}
+
+
+#view-img{
+  display: block;
+  max-width: 65%;
   object-fit: contain;
 }
 
-.closebtn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
+
 
 .icons-btns {
   position: absolute;
@@ -2154,5 +2160,33 @@ footer .footer-links ul li a:hover {
 
   .vertical-line {
     display: none; /* Oculta a linha em telas menores para evitar sobreposição */
+  }
+
+
+  .cardrow {
+    width: 90vw;
+    margin: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardrow > .rowd {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cardrow > .rowd > .icond {
+    margin: 10px auto;
+  }
+
+  .cardrow > .rowd > .descriptionrow {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    height: auto;
+  }
+
+  input:checked + label {
+    width: 100% !important;
   }
 }

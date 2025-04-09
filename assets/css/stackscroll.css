@@ -6942,9 +6942,9 @@ u {
   position: absolute;
   position: -webkit-sticky;
   position: sticky;
-  top: calc(var(--space-md) + 230px);
+  top: calc(var(--space-md) + 150px);
   height: 0;
-  padding-bottom: 35%;
+  padding-bottom: 40%;
   -webkit-transform-origin: center top;
   transform-origin: center top;
   overflow: hidden;

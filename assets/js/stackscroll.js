@@ -281,7 +281,6 @@ Math.easeInOutQuad = function (t, b, c, d) {
 
   function initStackCardsEffect(element) { // use Intersection Observer to trigger animation
     setStackCards(element); // store cards CSS properties
-    console.log(element);
 		var observer = new IntersectionObserver(stackCardsCallback.bind(element), { threshold: [0, 1] });
 		observer.observe(element.element);
   };
@@ -322,7 +321,6 @@ Math.easeInOutQuad = function (t, b, c, d) {
     element.elementHeight = element.element.offsetHeight;
 
     // store card properties
-    console.log(element.items[0]);
     var cardStyle = getComputedStyle(element.items[0]);
     element.cardTop = Math.floor(parseFloat(cardStyle.getPropertyValue('top')));
     element.cardHeight = Math.floor(parseFloat(cardStyle.getPropertyValue('height')));
