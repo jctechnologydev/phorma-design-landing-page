@@ -136,6 +136,23 @@ elementums.forEach((element) => sovers.observe(element));
 
 
 
+let btnMenu = document.getElementById('btn-abrirmenu')
+let menu = document.getElementById('menu-mobile')
+let overlay = document.getElementById('over-lay-btmenu')
+
+btnMenu.addEventListener('click', () => {
+  menu.classList.add('abrir-menu')
+})
+
+
+menu.addEventListener('click', () => {
+  menu.classList.remove('abrir-menu')
+})
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('abrir-menu')
+})
+
 
 
 //teste scroll//
