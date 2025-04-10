@@ -1,5 +1,5 @@
-const filterTab = document.querySelectorAll("#filter-tab button");
-const filterSubcategory = document.querySelectorAll("#subcategory .tablinks");
+const filterTab = document.querySelectorAll("#filter-category button");
+const filterSubcategory = document.querySelectorAll("#filter-subcategory .tablinks");
 const filterableItems = document.querySelectorAll("#filter-items .element");
 const filterMain = document.querySelectorAll("#main-filter button");
 
@@ -182,10 +182,10 @@ for (const category in filtersDataAll) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const filterTabContainer = document.getElementById('filter-tab');
-    const subcategoryContainer = document.getElementById('subcategory');
+    const filterTabContainer = document.getElementById('filter-category');
+    const subcategoryContainer = document.getElementById('filter-subcategory');
     const filterButtonContainer = document.getElementById('main-filter');
-    const filterContent = document.getElementById('filter-items');
+    const filterSubcategories = document.getElementById('filter-items');
     const zoomInBtn = document.getElementById("zoom-in");
     const zoomOutBtn = document.getElementById("zoom-out");
 
@@ -193,33 +193,33 @@ document.addEventListener("DOMContentLoaded", () => {
     zoomOutBtn.style.display = "none";
 
     const allButton = createButton("All", "filter-btn filter-btn-all", "all", "all");
-    const byCategoryButton = createButton("By Category", "filter-btn2 filter-btn-category", "category", "category");
+    const byCategoryButton = createButton("By Category", "filter-btn-category", "category", "category");
     filterButtonContainer.appendChild(allButton);
     filterButtonContainer.appendChild(byCategoryButton);
 
     let i = 0;
     for (const category in selectedData) {
-        const buttonClass = i === 0 ? "tablinks active" : "tablinks";
+        const buttonClass = i === 0 ? "tablinks category active" : "tablinks";
         const button = createButtonWithCount(category, buttonClass, category,
             selectedData[category].length);
         filterTabContainer.appendChild(button);
         i++;
 
         selectedData[category].forEach((subcategory, index) => {
-            const buttonActive = i === 0 ? "tablinks active" : "tablinks";
+            const buttonActive = i === 0 ? "tablinks  active" : "tablinks";
             const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name, buttonActive, category + subcategory.name, subcategory.count);
             subcategoryContainer.appendChild(subcategoryButton);
             const imgContens = createImgGallery("w-33 element", category + subcategory.name, "assets/img/img1.webp");
-            filterContent.appendChild(imgContens);
+            filterSubcategories.appendChild(imgContens);
         });
     }
 
     // 2 Query the filter tab buttons after append to DOM
-    const filterTab = document.querySelectorAll("#filter-tab button");
+    const filterTab = document.querySelectorAll("#filter-category button");
     const filter = document.querySelectorAll("#main-filter button");
 
     if (filterTab.length > 0) {
-        filterTab.forEach(tab => tab.addEventListener("click", filterItems));
+        filterTab.forEach(tab => tab.addEventListener("click", filterCategories));
         filterTab[0].click();
     } else {
         console.error("No filter tab buttons found.");
@@ -274,8 +274,8 @@ function createImgGallery(className, dataFilter, url) {
 }
 
 
-function filterItems(event) {
-    const activeTab = document.querySelector("#filter-tab .active");
+function filterCategories(event) {
+    const activeTab = document.querySelector("#filter-category .active");
 
 
     if (activeTab) {
@@ -284,7 +284,7 @@ function filterItems(event) {
     event.target.classList.add("active");
 
 
-    const filterSubcategory = document.querySelectorAll("#subcategory .tablinks");
+    const filterSubcategory = document.querySelectorAll("#filter-subcategory .tablinks");
     filterSubcategory.forEach(subcategory => {
         if (subcategory.dataset.name.includes(event.target.dataset.filter)) {
             subcategory.classList.remove("hidden");
@@ -295,7 +295,6 @@ function filterItems(event) {
     });
 
     const selectedCategory = event.target.dataset.filter;
-    const filteredVideos = filtersDataAll[selectedCategory];
     firstSeleted = selectedCategory;
 
 
@@ -303,8 +302,8 @@ function filterItems(event) {
 }
 
 
-function filterContent(event) {
-    const activeTab = document.querySelector("#filter-tab .active");
+function filterSubcategories(event) {
+    const activeTab = document.querySelector("#filter-subcategory .active");
 
 
     if (activeTab) {
@@ -324,6 +323,9 @@ function mainFilter(event) {
     document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
     event.target.classList.add("active");
 
+    document.querySelectorAll(".filter-btn-category").forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
     activeFilter = event.target.dataset.filter;
     selectedData = activeFilter === "category" ? groupedByCategory : filtersDataAll;
 
@@ -332,8 +334,8 @@ function mainFilter(event) {
 
 // Function to update my filters options
 function renderFilters(data) {
-    const filterTabContainer = document.getElementById('filter-tab');
-    const subcategoryContainer = document.getElementById('subcategory');
+    const filterTabContainer = document.getElementById('filter-category');
+    const subcategoryContainer = document.getElementById('filter-subcategory');
     let i = 0;
     filterTabContainer.innerHTML = "";
     subcategoryContainer.innerHTML = "";
@@ -345,27 +347,29 @@ function renderFilters(data) {
         i++;
 
 
-        selectedData[category].forEach(subcategory => {
+        selectedData[category].forEach((subcategory, index) => {
+            const buttonActive = index === 0 && i === 0 ? "tablinks active" : "tablinks";   
             const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name,
-                "tablinks", category + subcategory.name, subcategory.count);
+                buttonActive, category + subcategory.name, subcategory.count);
 
             subcategoryContainer.appendChild(subcategoryButton);
         });
     }
 
-    const filterTab = document.querySelectorAll("#filter-tab button");
+    const filterTab = document.querySelectorAll("#filter-category button");
     const filter = document.querySelectorAll("#main-filter button");
-    const filterSubcategory = document.querySelectorAll("#subcategory button");
+    const filterSubcategory = document.querySelectorAll("#filter-subcategory button");
 
     if (filterTab.length > 0) {
-        filterTab.forEach(tab => tab.addEventListener("click", filterItems));
+        filterTab.forEach(tab => tab.addEventListener("click", filterCategories));
         filterTab[0].click();
     } else {
         console.error("No filter tab buttons found.");
     }
 
     if (filterSubcategory.length > 0) {
-        filterSubcategory.forEach(tab => tab.addEventListener("click", filterContent));
+        filterSubcategory.forEach(tab => tab.addEventListener("click", filterSubcategories));
+        filterSubcategory[0].click();
         reverse = false;
     } else {
         console.error("No filter tab buttons found.");
