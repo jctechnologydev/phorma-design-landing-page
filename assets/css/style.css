@@ -933,14 +933,18 @@ video {
 .descmovie {
   padding-top: 3%;
   padding-left: 53%;
-  margin-top: 3%;
-  margin-left: 3%;
+  margin-top: 1%;
+  margin-left: 5%;
   margin-right: 10%;
   color: rgb(141, 137, 137);
-  font-size: 1em;
+  font-size: 1.05em;
   font-weight: bolder;
   font-family: montserrat-g;
+  text-align: justify;
+  float:inherit;
 }
+
+
 
 .container-about {
   opacity: 0;
@@ -1860,11 +1864,27 @@ footer .footer-links ul li a:hover {
   margin: 42% 0 0 0;
   max-width: 65%;
   position: absolute;
-
+  padding: 1%;
   color: white;
-  font-size: 20px;
-  text-align: jus;
+  font-size: 1.05em;
+  font-family: montserrat-g;
+  text-align: justify;
 }
+
+.descmovie {
+  padding-top: 3%;
+  padding-left: 53%;
+  margin-top: 1%;
+  margin-left: 5%;
+  margin-right: 10%;
+  color: rgb(141, 137, 137);
+  font-size: 1.05em;
+  font-weight: bolder;
+  font-family: montserrat-g;
+  text-align: justify;
+}
+
+
 
 
 #view-img{
@@ -2014,7 +2034,7 @@ footer .footer-links ul li a:hover {
   }
 
   /*-- section about--*/
-  section.about {
+ /* section.about {
     height: auto;
     padding: 2em 1em;
     text-align: center;
@@ -2052,7 +2072,7 @@ footer .footer-links ul li a:hover {
 
   .scontainerabout {
     transform: none;
-  }
+  }*/
 
   /* -- Service -- */
   .container-services,
