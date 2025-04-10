@@ -26,36 +26,27 @@
 </head>
 
 <body>
-  <header>
-  
-      <div class="top-line">
-        <div class="row">
-          <div class="col col--center">
-            <a href="#" class="logo">
-              <img src="/assets/Phorma-Design-Logo.png" alt="Grow" />
-            </a>
-          </div>
-
-          <div class="col col--center col--right col--lead">
-            <nav class="main-menu">
-              <ul>
-                <li><a href="#services">Services</a></li>
-                <li class="active"><span><a href="#portifolio">Portifolio</a></span></li>
-                <li><a href="#about">about</a></li>
-              </ul>
-            </nav>
-            <a href="#contact" class="button button--top">Contact</a>
-          </div>
-
-          <div class="col col--center">
-            <button class="submenu anim-menu-btn" id="btn-abrirmenu">
-              <i class="anim-menu-btn__icon anim-menu-btn__icon--close"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+  <header id="home">
+    
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portifolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <div class="animation start-home"></div>
+  </nav>
+  <div class="col col--center">
+    <button class="submenu anim-menu-btn" id="btn-abrirmenu">
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close"id="btn-abrirmenu"></i>
+    </button>
+  </div>
+  <div class="logo-top">
+    <img src="./assets/Phorma-Design-Logo.png"/>
+  </div>
   </header>
   
+
   <div class="menu-mobile" id="menu-mobile">
     <div class="mbmenu" href="#contato"> 
       <a href="#contato"><ul>
@@ -173,8 +164,6 @@
       <button class="next"><i class="bi bi-arrow-right-short"></i></button>
     </div>
   </div>
-  
-
   <section class="about section" id="about">
 
     <img src="/assets/Phorma-Design-Logo.png" alt="" class="logophorma">
@@ -258,7 +247,7 @@
       </div>
     </div>
   </section>
-  <section class="carousel section ">
+  <section class="carousel section " id="carousel">
     <div class="titles"><h1 style="text-align: center">our <span class="stitle">clients</span></h1></div>
 
     <div class="container swiper">

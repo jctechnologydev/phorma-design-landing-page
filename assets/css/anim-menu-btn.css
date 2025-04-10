@@ -8,6 +8,10 @@
   --anim-menu-btn-icon-stroke: 1.5px;
 }
 .anim-menu-btn {
+  position: absolute; /* ou absolute, dependendo do layout */
+  top: 43px; /* ou onde você quiser */
+  right: 180px;
+  z-index: 99999998999;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -17,6 +21,23 @@
   align-items: center;
   width: var(--anim-menu-btn-size);
   height: var(--anim-menu-btn-size);
+}
+@media screen and (max-width: 1024px) {
+  .anim-menu-btn {
+    position: absolute; /* ou absolute, dependendo do layout */
+    top: 33px; /* ou onde você quiser */
+    right: 40px;
+    z-index: 99999998999;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--anim-menu-btn-size);
+    height: var(--anim-menu-btn-size);
+  }
 }
 .anim-menu-btn__icon {
   border-radius: 10em;
