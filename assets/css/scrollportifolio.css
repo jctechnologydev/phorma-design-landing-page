@@ -1,0 +1,46 @@
+.container-portfolio-slider {
+  width: 100vw;
+  height: 80vh;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.portifolio-slider {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+
+.portifolio-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.firstSlide {
+    animation: firstChild 1s forwards;
+}
+
+.lastSlide {
+    animation: lastChild 1s forwards;
+}
+
+@keyframes firstChild {
+  0% {
+    left: 100%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+  100% {
+    left: -13%;
+    transform: scale(0.2) translate(-50%, -50%);
+  }
+}
+
+@keyframes lastChild {
+    0% { left: -13%; transform: scale(0.2) translate(-50%, -50%); }
+    100% { left: 100%; transform: scale(0.2) translate(-50%, -50%); }
+}

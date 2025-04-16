@@ -1,0 +1,8 @@
+# Ignorar arquivos pesados
+*.mp4
+*.psd
+*.zip
+*.rar
+
+# Ignorar pasta com assets pesados (exemplo)
+/assets/video/Video TV Phorma.mp4
