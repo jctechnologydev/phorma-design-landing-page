@@ -4,22 +4,12 @@ const filterableItems = document.querySelectorAll("#filter-items .element");
 const filterMain = document.querySelectorAll("#main-filter button");
 let sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
-const images = [
-    'https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg',
-    'https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg',
-    'https://images.pexels.com/photos/2356059/pexels-photo-2356059.jpeg',
-    'https://images.pexels.com/photos/3274903/pexels-photo-3274903.jpeg',
-    'https://images.pexels.com/photos/3618162/pexels-photo-3618162.jpeg',
-    'https://images.pexels.com/photos/4256852/pexels-photo-4256852.jpeg',
-    'https://images.pexels.com/photos/1891234/pexels-photo-1891234.jpeg'
-];
-
-console.log(images);
 
 let isAnimating = false;
 let wheelTimeout;
 let currentInd = 3; 
 let wheelHandler = null;
+let intitialLength = 7;
 
 
 let firstSeleted = "3D Environment";
@@ -86,7 +76,7 @@ const filtersDataAll = {
                 "../assets/Imagens/Imagens3D/Cozinha Prisma_Amb_ok.jpg"]
         },
         {
-            name: "Bath", count: 12, content: [
+            name: "Bath", count: 0, content: [
             ]
         },
         {
@@ -168,15 +158,15 @@ const filtersDataAll = {
         },
     ],
     "3D Animations": [
-        { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "5Q2RufAKtSo", "uLQ5G8_nAb8"] },
+        { name: "3D Animations", count: 6, content: ["n1CxOlidEaU", "RU1vQA5HTAQ", "h2pPyhutP6w", "2uxaGPSy6e0", "../assets/Imagens/Imagens Fotofusão/Colchão Alaska.jpg","5Q2RufAKtSo", "uLQ5G8_nAb8"] },
         { name: "Products Assembly Animations", count: 6, content: ["IjwlW_hbMOs", "IhE4gQoi1_k", "YG9pMUFSWGI", "3E6HfOqGHEg", "TMm-gSnEASE", "HG9sdARThb8"] }
     ],
     "Videos": [
-        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0"] },
-        { name: "Living Room", count: 1, content: ["_avjE_AQbN0"] },
-        { name: "Dining Room", count: 1, content: ["7X8p4VyUUSM"] },
-        { name: "Kitchen", count: 1, content: ["SHoLLLgNonA"] },
-        { name: "Others", count: 3, content: ["JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390"] }
+        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0"] },
+        { name: "Living Room", count: 1, content: ["_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0"] },
+        { name: "Dining Room", count: 1, content: ["7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM"] },
+        { name: "Kitchen", count: 1, content: ["SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA"] },
+        { name: "Others", count: 3, content: ["JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390", "mQN7zFab390",        "mQN7zFab390", "mQN7zFab390","mQN7zFab390"] }
     ]
 };
 
@@ -454,11 +444,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     imageViewer.innerHTML = "";
     if(!reverse) {
-        console.log(messageData);
-        console.log(secondSeleted);
-        console.log(firstSeleted);
         seletedSec = secondSeleted.replace(firstSeleted, "");
-        console.log(seletedSec);
         imageViewer.innerHTML = `
         <img id="view-img">
         <p id="img-description">${messageData[seletedSec].messageInternal}</p>
@@ -469,7 +455,6 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
         imageViewer.innerHTML = `
             <img id="view-img">
-           
             <p id="img-description">${messageData[firstSeleted].messageInternal}</p>
         `;
         
@@ -480,7 +465,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
 
         if (item.name === auxSecondSeleted) {
-            console.log(item.content);
+            intitialLength = item.content.length;
             createSliderBoxes(item.content,sliderFilter);
 
             /*item.content.forEach((contentData,index) => {
@@ -599,7 +584,6 @@ function prevImage() {
         
         selectedData[currentFirstSeleted].forEach(item => {
             if (item.name === currentSecondSeleted) {
-                console.log(currentIndex);
                 viewImg.src = item.content[currentIndex];
             }
         });
@@ -611,13 +595,11 @@ function prevImage() {
 
 
 function nextImage(){
-    console.log(currentIndex);
     const viewImg = document.getElementById("view-img");
     currentIndex = parseInt(currentIndex) + 1;
     selectedData[currentFirstSeleted].forEach(item => {
 
         if (item.name === currentSecondSeleted && currentIndex < item.content.length) {
-            console.log(currentIndex);
             viewImg.src = item.content[currentIndex];
         } 
         else if(currentIndex === item.content.length - 1)
@@ -649,6 +631,7 @@ function rightArrowOpacity(){
     leftArrow.style.color = "#FFFFFF";
     leftArrow.style.opacity = "1"; 
 }
+
 
 function bothArrowsColored(){
     const leftArrow = document.querySelector(".left-arrow");
@@ -730,13 +713,14 @@ toggleSocialsOnScroll("#contact", ".redes-sociais-top");
 function createSliderBoxes(images, sliderFilter) {
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
-                if (imgUrl.includes("assets")) {
-                   
+                if (imgUrl.includes("assets")) {   
+
                     const box = document.createElement('div');
                     box.className = `box${index + 1}`;
-                    
+
                     const img = document.createElement('img');
                     img.src = imgUrl;
+                    
                     img.alt = `Slide ${index + 1}`;
                     img.style.width = '100%';
                     img.style.height = '100%';
@@ -747,7 +731,6 @@ function createSliderBoxes(images, sliderFilter) {
                     img.setAttribute('data-first', firstSeleted);   
                     img.setAttribute('data-second', auxSecondSeleted);
                     box.appendChild(img);
-                    console.log(sliderFilter);
                     sliderFilter.appendChild(box);
             
                     
@@ -769,27 +752,29 @@ function createSliderBoxes(images, sliderFilter) {
                         }
                     });
               
-                    
+                
                     positionBoxes();
-                    
                 } else {
+                    const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
+
                     const box = document.createElement('div');
                     box.className = `box${index + 1}`;
                     
-                    const img = document.createElement('iframe');
-                    img.src = imgUrl;
-                    img.alt = `Slide ${index + 1}`;
-                    img.style.width = '100%';
-                    img.style.height = '100%';
-                    img.style.objectFit = 'cover';
-                    
-                    img.setAttribute('ondblclick', 'openImage(this)');
+                    const iframe = document.createElement('iframe');
 
-                    img.setAttribute('data-index', index);
-                    img.setAttribute('data-first', firstSeleted);   
-                    img.setAttribute('data-second', auxSecondSeleted);
-                    box.appendChild(img);
-                    console.log(sliderFilter);
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'autoplay');
+                    iframe.setAttribute('autoplay', '1');
+                    iframe.setAttribute('alt', `Slide ${index + 1}`);
+                   
+                    iframe.src = videoUrl;
+    
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.objectFit = 'cover';
+                    
+                    
+                    box.appendChild(iframe);
                     sliderFilter.appendChild(box);
             
                     
@@ -797,21 +782,23 @@ function createSliderBoxes(images, sliderFilter) {
                         moveToIndex(index);
                     });
             
-                    img.addEventListener('mouseenter', function() {
+                    iframe.addEventListener('mouseenter', function() {
                         if (!wheelHandler) {
                             wheelHandler = handleWheel;
-                            img.addEventListener('wheel', wheelHandler, { passive: false });
+                            iframe.addEventListener('wheel', wheelHandler, { passive: false });
                         }
                     });
             
-                    img.addEventListener('mouseleave', function() {
+                    iframe.addEventListener('mouseleave', function() {
                         if (wheelHandler) {
-                            img.removeEventListener('wheel', wheelHandler);
+                            iframe.removeEventListener('wheel', wheelHandler);
                             wheelHandler = null;
                         }
                     });
-                                        
+
+                    positionBoxes();                  
                 }
+                
 
     });
         
@@ -887,11 +874,10 @@ function positionBoxes() {
 
 
 function moveToIndex(targetIndex) {
-    if (isAnimating || targetIndex === currentInd) return;
+    if (isAnimating || targetIndex === currentInd /*|| targetIndex > intitialLength - 1 || targetIndex < 0*/) return;
     isAnimating = true;
     
     const steps = calculateSteps(targetIndex);
-    
     const stepFunction = steps > 0 ? rotateForward : rotateBackward;
     
     let stepsCompleted = 0;
@@ -913,15 +899,22 @@ function moveToIndex(targetIndex) {
 
 function calculateSteps(targetIndex) {
     const diff = targetIndex - currentInd;
+
     // circular slider
-    if (diff > images.length / 2) return diff - images.length;
-    if (diff < -images.length / 2) return diff + images.length;
+    if (diff > intitialLength / 2) {
+        console.log(diff);  
+        return diff - (intitialLength/2);
+    }
+    if (diff < - intitialLength / 2) {
+        console.log(diff);  
+        return diff + intitialLength;
+    }
     return diff;
 }
 
 // (next slide)
 function rotateForward() {
-    currentInd = (currentInd + 1) % images.length;
+    currentInd = (currentInd + 1) % intitialLength;
     
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
@@ -945,7 +938,7 @@ function rotateForward() {
 
 // (previous slide)
 function rotateBackward() {
-    currentInd = (currentInd - 1 + images.length) % images.length;
+    currentInd = (currentInd - 1 + intitialLength) % intitialLength
     
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
@@ -968,6 +961,8 @@ function rotateBackward() {
 }
 
 function updateSlidePosition(slide, positionIndex) {
+
+
     const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
     const scales = [0.2, 0.4, 0.6, 1, 0.6, 0.4, 0.2];
     const tops = ['15%', '20%', '25%', '35%', '25%', '20%', '15%'];
