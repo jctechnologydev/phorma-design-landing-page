@@ -549,16 +549,9 @@ function toggleSocialsOnScroll(contactSelector, socialsSelector) {
 function closeImage() {
     const container = document.querySelector(".container-portfolio-slider");
     const overlay = document.querySelector(".img-background");
-    //const closeBtn = document.querySelector(".closebtn");
     const viewImg = document.getElementById("view-img");
-
-
     viewImg.style.display = "none";
-    container.style.display = "block";
     overlay.style.display = "none";
-    //closeBtn.style.display = "none";
-
-
     document.body.style.overflow = "auto";
     document.body.style.pointerEvents = "auto"; 
 }
@@ -580,7 +573,6 @@ function openImage(imgs) {
    if(parseInt(currentIndex) === 0){
         leftArrowOpacity();
    }
-
     src = "";
     selectedData[imgs.dataset.first].forEach(item => {
 
@@ -594,14 +586,8 @@ function openImage(imgs) {
             }
         }});
     viewImg.src = src;
-    
-
     overlay.style.display = "flex"; 
-    container.style.display = "none";
-
-
     document.body.style.overflow = "hidden";
- 
 }
 
 function prevImage() {
@@ -755,8 +741,8 @@ function createSliderBoxes(images, sliderFilter) {
                     img.style.width = '100%';
                     img.style.height = '100%';
                     img.style.objectFit = 'cover';
-                    
-                    img.setAttribute('onclick', 'openImage(this)');
+                    img.setAttribute('onclick', 'showToast("Double click to open the image")');
+                    img.setAttribute('ondblclick', 'openImage(this)');
                     img.setAttribute('data-index', index);
                     img.setAttribute('data-first', firstSeleted);   
                     img.setAttribute('data-second', auxSecondSeleted);
@@ -797,7 +783,8 @@ function createSliderBoxes(images, sliderFilter) {
                     img.style.height = '100%';
                     img.style.objectFit = 'cover';
                     
-                    img.setAttribute('onclick', 'openImage(this)');
+                    img.setAttribute('ondblclick', 'openImage(this)');
+
                     img.setAttribute('data-index', index);
                     img.setAttribute('data-first', firstSeleted);   
                     img.setAttribute('data-second', auxSecondSeleted);
@@ -829,6 +816,31 @@ function createSliderBoxes(images, sliderFilter) {
     });
         
 };
+
+
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = message;
+    
+    toast.style.position = 'fixed';
+    toast.style.bottom = '20px';
+    toast.style.left = '50%';
+    toast.style.transform = 'translateX(-50%)';
+    toast.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    toast.style.color = 'white';
+    toast.style.padding = '10px 20px';
+    toast.style.borderRadius = '5px';
+    toast.style.zIndex = '1000';
+    toast.style.transition = 'opacity 0.3s';
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+    }, 1000);
+}
 
 function positionBoxes() {
     const boxes = document.querySelectorAll('.portifolio-slider > div');
