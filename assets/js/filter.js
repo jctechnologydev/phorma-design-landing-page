@@ -21,6 +21,10 @@ let currentSecondSeleted = "";
 let currentIndex = 0;
 let reverse = false;
 
+let left = 0;
+let center = 1;
+let right = 2;
+
 let selectedData = {};
 
 const messageData = {
@@ -194,8 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 
-
-
+        
 
 
 
@@ -465,7 +468,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
 
         if (item.name === auxSecondSeleted) {
-            intitialLength = item.content.length;
+            intitialLength = item.content.length + 1;
             createSliderBoxes(item.content,sliderFilter);
 
             /*item.content.forEach((contentData,index) => {
@@ -501,6 +504,9 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
         }
 
     });
+
+
+ 
 
 }
 
@@ -711,11 +717,29 @@ toggleSocialsOnScroll("#contact", ".redes-sociais-top");
 
 
 function createSliderBoxes(images, sliderFilter) {
+    const nextButton = document.querySelector(".nextButton");
+    const prevButton = document.querySelector(".prevButton");
+
+    console.log(nextButton);
+    console.log(prevButton);
+
+    prevButton.addEventListener('click', function() {
+        console.log("click");
+        rotateBackward();
+        
+    });
+
+    nextButton.addEventListener('click', function() {
+        console.log("click");
+        rotateForward();
+    });
+
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
                 if (imgUrl.includes("assets")) {   
 
                     const box = document.createElement('div');
+
                     box.className = `box${index + 1}`;
 
                     const img = document.createElement('img');
@@ -733,10 +757,6 @@ function createSliderBoxes(images, sliderFilter) {
                     box.appendChild(img);
                     sliderFilter.appendChild(box);
             
-                    
-                    box.addEventListener('click', function() {
-                        moveToIndex(index);
-                    });
             
                     img.addEventListener('mouseenter', function() {
                         if (!wheelHandler) {
@@ -777,10 +797,7 @@ function createSliderBoxes(images, sliderFilter) {
                     box.appendChild(iframe);
                     sliderFilter.appendChild(box);
             
-                    
-                    box.addEventListener('click', function() {
-                        moveToIndex(index);
-                    });
+                
             
                     iframe.addEventListener('mouseenter', function() {
                         if (!wheelHandler) {
@@ -874,43 +891,12 @@ function positionBoxes() {
 
 
 function moveToIndex(targetIndex) {
-    if (isAnimating || targetIndex === currentInd /*|| targetIndex > intitialLength - 1 || targetIndex < 0*/) return;
-    isAnimating = true;
     
-    const steps = calculateSteps(targetIndex);
-    const stepFunction = steps > 0 ? rotateForward : rotateBackward;
-    
-    let stepsCompleted = 0;
-    const totalSteps = Math.abs(steps);
-    
-    function performStep() {
-        if (stepsCompleted < totalSteps) {
-            stepFunction();
-            stepsCompleted++;
-            setTimeout(performStep, 100); 
-        } else {
-            isAnimating = false;
-        }
-    }
-    
-    performStep();
 }
 
 
-function calculateSteps(targetIndex) {
-    const diff = targetIndex - currentInd;
 
-    // circular slider
-    if (diff > intitialLength / 2) {
-        console.log(diff);  
-        return diff - (intitialLength/2);
-    }
-    if (diff < - intitialLength / 2) {
-        console.log(diff);  
-        return diff + intitialLength;
-    }
-    return diff;
-}
+
 
 // (next slide)
 function rotateForward() {
@@ -923,7 +909,7 @@ function rotateForward() {
         
         if (index === 0) {
             slide.classList.add('lastSlide');
-            setTimeout(() => slide.classList.remove('lastSlide'), 10);
+            setTimeout(() => slide.classList.remove('lastSlide'), 100);
         }
         
         updateSlidePosition(slide, newPos);
@@ -933,10 +919,10 @@ function rotateForward() {
     sliderFilterGeneral.appendChild(firstSlide.cloneNode(true));
     sliderFilterGeneral.removeChild(firstSlide);
     
-    updateClickEvents();
+    //updateClickEvents();
 }
 
-// (previous slide)
+
 function rotateBackward() {
     currentInd = (currentInd - 1 + intitialLength) % intitialLength
     
@@ -947,7 +933,7 @@ function rotateBackward() {
         
         if (index === slides.length - 1) {
             slide.classList.add('firstSlide');
-            setTimeout(() => slide.classList.remove('firstSlide'), 10);
+            setTimeout(() => slide.classList.remove('firstSlide'), 100);
         }
         
         updateSlidePosition(slide, newPos);
@@ -957,7 +943,7 @@ function rotateBackward() {
     sliderFilterGeneral.insertBefore(lastSlide.cloneNode(true), sliderFilterGeneral.firstChild);
     sliderFilterGeneral.removeChild(lastSlide);
     
-    updateClickEvents();
+    //updateClickEvents();
 }
 
 function updateSlidePosition(slide, positionIndex) {
