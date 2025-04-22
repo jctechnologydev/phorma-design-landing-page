@@ -7,8 +7,9 @@ let sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
 let isAnimating = false;
 let wheelTimeout;
-let currentInd = 3; 
+
 let wheelHandler = null;
+let currentInd = 3; 
 let intitialLength = 7;
 
 
@@ -20,6 +21,10 @@ let currentSecondSeleted = "";
 
 let currentIndex = 0;
 let reverse = false;
+
+let left = 0;
+let center = 1;
+let right = 2;
 
 let selectedData = {};
 
@@ -193,26 +198,6 @@ for (const category in filtersDataAll) {
 document.addEventListener("DOMContentLoaded", () => {
 
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     const filterTabContainer = document.getElementById('filter-category');
     const subcategoryContainer = document.getElementById('filter-subcategory');
     const filterButtonContainer = document.getElementById('main-filter');
@@ -235,14 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
             selectedData[category].length);
         filterTabContainer.appendChild(button);
         i++;
-
-        /*selectedData[category].forEach((subcategory, index) => {
-            const buttonActive = i === 0 ? "tablinks  active" : "tablinks";
-            const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name, buttonActive, category + subcategory.name, subcategory.count);
-            subcategoryContainer.appendChild(subcategoryButton);
-            const imgContens = createImgGallery("w-33 element", category + subcategory.name, "assets/img/img1.webp");
-            filterSubcategories.appendChild(imgContens);
-        });*/
     }
 
     // 2 Query the filter tab buttons after append to DOM
@@ -264,14 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     //renderGallery(selectedData, firstSeleted, secondSeleted);
-
-
-
-
-
-
-
-
 
 });
 
@@ -359,7 +328,6 @@ function filterSubcategories(event) {
 
 
 function mainFilter(event) {
-
     document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
     event.target.classList.add("active");
 
@@ -465,42 +433,17 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
 
         if (item.name === auxSecondSeleted) {
-            intitialLength = item.content.length;
+            intitialLength = item.content.length + 1;
+            
             createSliderBoxes(item.content,sliderFilter);
 
-            /*item.content.forEach((contentData,index) => {
-                if (contentData.includes("assets")) {
-                    //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
-                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                        <div class="grid">
-                            <div class="col-12 height-100%">
-                                <img class="block width-100% height-100% object-cover" src="${contentData}" onclick="openImage(this);" alt="Image description",
-                                data-index="${parseInt(index)}" 
-                                data-first="${firstSeleted}" 
-                                data-second="${auxSecondSeleted}">
-                            </div>
-                        </div>
-                    </li>`;
-
-                    
-                } else {
-                    //stack-cards__item bg radius-lg shadow-md js-stack-cards__item
-                    const videoUrl = `https://www.youtube.com/embed/${contentData}?rel=0&controls=0&showinfo=0&modestbranding=0`;
-                    cardContainer.innerHTML = cardContainer.innerHTML + `<li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
-                    <div class="grid">
-                        <div class="col-12 height-100%">
-                            <iframe src="${videoUrl}" height="100%" width="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
-                    </li>`;
-                }
-
-            });*/
-        
         
         }
 
     });
+
+
+ 
 
 }
 
@@ -711,11 +654,29 @@ toggleSocialsOnScroll("#contact", ".redes-sociais-top");
 
 
 function createSliderBoxes(images, sliderFilter) {
+    const nextButton = document.querySelector(".nextButton");
+    const prevButton = document.querySelector(".prevButton");
+
+    console.log(nextButton);
+    console.log(prevButton);
+
+    prevButton.addEventListener('click', function() {
+        console.log("click");
+        rotateBackward();
+        
+    });
+
+    nextButton.addEventListener('click', function() {
+        console.log("click");
+        rotateForward();
+    });
+
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
                 if (imgUrl.includes("assets")) {   
 
                     const box = document.createElement('div');
+
                     box.className = `box${index + 1}`;
 
                     const img = document.createElement('img');
@@ -733,10 +694,6 @@ function createSliderBoxes(images, sliderFilter) {
                     box.appendChild(img);
                     sliderFilter.appendChild(box);
             
-                    
-                    box.addEventListener('click', function() {
-                        moveToIndex(index);
-                    });
             
                     img.addEventListener('mouseenter', function() {
                         if (!wheelHandler) {
@@ -753,7 +710,7 @@ function createSliderBoxes(images, sliderFilter) {
                     });
               
                 
-                    positionBoxes();
+                    positionBoxes(images.length);
                 } else {
                     const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
 
@@ -777,10 +734,7 @@ function createSliderBoxes(images, sliderFilter) {
                     box.appendChild(iframe);
                     sliderFilter.appendChild(box);
             
-                    
-                    box.addEventListener('click', function() {
-                        moveToIndex(index);
-                    });
+                
             
                     iframe.addEventListener('mouseenter', function() {
                         if (!wheelHandler) {
@@ -796,7 +750,7 @@ function createSliderBoxes(images, sliderFilter) {
                         }
                     });
 
-                    positionBoxes();                  
+                    positionBoxes(images.length);                  
                 }
                 
 
@@ -829,7 +783,7 @@ function showToast(message) {
     }, 1000);
 }
 
-function positionBoxes() {
+function positionBoxes(length) {
     const boxes = document.querySelectorAll('.portifolio-slider > div');
     boxes.forEach((box, index) => {
         box.style.position = 'absolute';
@@ -837,83 +791,107 @@ function positionBoxes() {
         box.style.borderRadius = '20px';
         box.style.transition = 'all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
         box.style.cursor = 'pointer';
+        if(length >= 5  ) {
+            if (index === 0 || index === 6) { 
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.2) translate(-50%,-50%)';
+                box.style.top = '15%';
+                box.style.zIndex = '1';
+            } 
+            else if (index === 1 || index === 5) {
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.4) translate(-50%,-50%)';
+                box.style.top = '20%';
+                box.style.zIndex = '2';
+            }
+            else if (index === 2 || index === 4) {
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.6) translate(-50%,-50%)';
+                box.style.top = '25%';
+                box.style.zIndex = '3';
+            }
+            else if (index === 3) { 
+                box.style.width = '60vw';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(1) translate(-50%,-50%)';
+                box.style.top = '35%';
+                box.style.zIndex = '4';
+            }
 
-        if (index === 0 || index === 6) { 
-            box.style.width = '100vh';
-            box.style.height = '60vh';
-            box.style.transform = 'scale(0.2) translate(-50%,-50%)';
-            box.style.top = '15%';
-            box.style.zIndex = '1';
-        } 
-        else if (index === 1 || index === 5) {
-            box.style.width = '100vh';
-            box.style.height = '60vh';
-            box.style.transform = 'scale(0.4) translate(-50%,-50%)';
-            box.style.top = '20%';
-            box.style.zIndex = '2';
+            const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+            box.style.left = positions[index];
         }
-        else if (index === 2 || index === 4) {
-            box.style.width = '100vh';
-            box.style.height = '60vh';
-            box.style.transform = 'scale(0.6) translate(-50%,-50%)';
-            box.style.top = '25%';
-            box.style.zIndex = '3';
+        else if(length === 5) {
+            if (index === 4) {
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.4) translate(-50%,-50%)';
+                box.style.top = '20%';
+                box.style.zIndex = '2';
+                box.style.left = "-13%";
+            }
+            else if (index === 1 || index === 3) {
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.6) translate(-50%,-50%)';
+                box.style.top = '25%';
+                box.style.zIndex = '3';
+                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+                box.style.left = index === 1 ? positions[2]: positions[5];
+            }
+            else if (index === 2) { 
+                box.style.width = '60vw';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(1) translate(-50%,-50%)';
+                box.style.top = '35%';
+                box.style.zIndex = '4';
+                box.style.left = '50%';
+            }        
         }
-        else if (index === 3) { 
+        else if(length === 3 || length === 4) {
+            if (index === 0 || index === 2) {
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.6) translate(-50%,-50%)';
+                box.style.top = '25%';
+                box.style.zIndex = '3';
+                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+                box.style.left = index  === 0 ? positions[2]: positions[4];
+            }
+            else if (index === 1) { 
+                box.style.width = '60vw';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(1) translate(-50%,-50%)';
+                box.style.top = '35%';
+                box.style.zIndex = '4';
+                box.style.left = '50%';
+                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+                box.style.left =  positions[3];
+            }
+        }
+        else if (length === 1) { 
             box.style.width = '60vw';
             box.style.height = '60vh';
             box.style.transform = 'scale(1) translate(-50%,-50%)';
             box.style.top = '35%';
             box.style.zIndex = '4';
+            box.style.left = '50%';
         }
-
-        const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
-        box.style.left = positions[index];
+        
     });
 }
 
 
-function moveToIndex(targetIndex) {
-    if (isAnimating || targetIndex === currentInd /*|| targetIndex > intitialLength - 1 || targetIndex < 0*/) return;
-    isAnimating = true;
-    
-    const steps = calculateSteps(targetIndex);
-    const stepFunction = steps > 0 ? rotateForward : rotateBackward;
-    
-    let stepsCompleted = 0;
-    const totalSteps = Math.abs(steps);
-    
-    function performStep() {
-        if (stepsCompleted < totalSteps) {
-            stepFunction();
-            stepsCompleted++;
-            setTimeout(performStep, 100); 
-        } else {
-            isAnimating = false;
-        }
-    }
-    
-    performStep();
-}
 
 
-function calculateSteps(targetIndex) {
-    const diff = targetIndex - currentInd;
-
-    // circular slider
-    if (diff > intitialLength / 2) {
-        console.log(diff);  
-        return diff - (intitialLength/2);
-    }
-    if (diff < - intitialLength / 2) {
-        console.log(diff);  
-        return diff + intitialLength;
-    }
-    return diff;
-}
 
 // (next slide)
 function rotateForward() {
+    console.log(intitialLength);
+    if((intitialLength-1) <= 3) return;
     currentInd = (currentInd + 1) % intitialLength;
     
     const slides = Array.from(sliderFilterGeneral.children);
@@ -923,7 +901,7 @@ function rotateForward() {
         
         if (index === 0) {
             slide.classList.add('lastSlide');
-            setTimeout(() => slide.classList.remove('lastSlide'), 10);
+            setTimeout(() => slide.classList.remove('lastSlide'), 100);
         }
         
         updateSlidePosition(slide, newPos);
@@ -933,11 +911,12 @@ function rotateForward() {
     sliderFilterGeneral.appendChild(firstSlide.cloneNode(true));
     sliderFilterGeneral.removeChild(firstSlide);
     
-    updateClickEvents();
+    //updateClickEvents();
 }
 
-// (previous slide)
+
 function rotateBackward() {
+    if((intitialLength-1) <= 3) return;
     currentInd = (currentInd - 1 + intitialLength) % intitialLength
     
     const slides = Array.from(sliderFilterGeneral.children);
@@ -947,7 +926,7 @@ function rotateBackward() {
         
         if (index === slides.length - 1) {
             slide.classList.add('firstSlide');
-            setTimeout(() => slide.classList.remove('firstSlide'), 10);
+            setTimeout(() => slide.classList.remove('firstSlide'), 100);
         }
         
         updateSlidePosition(slide, newPos);
@@ -957,7 +936,7 @@ function rotateBackward() {
     sliderFilterGeneral.insertBefore(lastSlide.cloneNode(true), sliderFilterGeneral.firstChild);
     sliderFilterGeneral.removeChild(lastSlide);
     
-    updateClickEvents();
+    //updateClickEvents();
 }
 
 function updateSlidePosition(slide, positionIndex) {
