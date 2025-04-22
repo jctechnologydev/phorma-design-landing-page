@@ -1389,6 +1389,7 @@ button {
 
 .map {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .contact iframe {
@@ -1409,6 +1410,11 @@ button {
   padding: 0.4rem 1rem;
   border-radius: 1rem;
   transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-family: montserrat-g, sans-serif;
+  font-size: small;
+  font-weight: 700;
 }
 
 .send-btn:hover {
