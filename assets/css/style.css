@@ -94,7 +94,7 @@ header a:hover {
   color: white;
 }
 .redes-sociais-top a.facebook-top {
-  background: linear-gradient(225deg, #ffffff8a 30%, #3b5998 35%, #3b5998 50%);
+  background: linear-gradient(225deg, #ffffff 30%, #3b5998 35%, #3b5998 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -105,7 +105,7 @@ header a:hover {
   transition: background-position 0.3s ease-in-out;
 }
 .redes-sociais-top a.instagram-top {
-  background: linear-gradient(225deg, #ffffff8a 30%, #bc2a8d 40%, #fccc63 50%);
+  background: linear-gradient(225deg, #ffffff 30%, #bc2a8d 40%, #fccc63 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -116,7 +116,7 @@ header a:hover {
   transition: background-position 0.3s ease-in-out;
 }
 .redes-sociais-top a.youtube-top {
-  background: linear-gradient(225deg, #ffffff8a 30%, #c4302b 35%, #c4302b 50%);
+  background: linear-gradient(225deg, #ffffff 30%, #c4302b 35%, #c4302b 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -127,7 +127,7 @@ header a:hover {
   transition: background-position 0.3s ease-in-out;
 }
 .redes-sociais-top a.pinterest-top {
-  background: linear-gradient(225deg, #ffffff8a 30%, #c4422b 35%, #c4352b 50%);
+  background: linear-gradient(225deg, #ffffff 30%, #c4422b 35%, #c4352b 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
