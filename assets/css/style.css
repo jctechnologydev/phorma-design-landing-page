@@ -87,11 +87,14 @@ header a:hover {
   flex-direction: column !important;
   font-size: xx-large;
   margin-left: 3%;
-  width: 80px;
-  height: 400px;
+  width: 50px;
+  height: 300px;
   z-index: 9999999999999999999999;
   text-decoration: none;
-  color: white;
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  box-shadow: #000000 0px 0px 10px 3px;
+  color: rgb(255, 255, 255);
 }
 .redes-sociais-top a.facebook-top {
   background: linear-gradient(225deg, #ffffff 30%, #3b5998 35%, #3b5998 50%);
