@@ -30,6 +30,7 @@
 }
 
 .flex-center {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +93,34 @@
      margin-top: 1.5rem !important;
  }
 
+
  .mt-20 {
+    margin-top: 2rem !important;
+ }
+
+ .ml-1 {
+    margin-top: 1rem !important;
+ }
+
+ .ml-15 {
+     margin-top: 1.5rem !important;
+ }
+ 
+
+ .ml-20 {
+    margin-top: 2rem !important;
+ }
+
+ .mr-1 {
+    margin-top: 1rem !important;
+ }
+
+ .mr-15 {
+     margin-top: 1.5rem !important;
+ }
+ 
+
+ .mr-20 {
     margin-top: 2rem !important;
  }
 
