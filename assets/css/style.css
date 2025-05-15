@@ -583,23 +583,109 @@ input:checked + label .descriptionrow {
 
 .services-grid {
   display: flex;
+  height: 800px;
   flex-wrap: wrap;
-  margin-top: 3%;
+  margin-top: 9%;
   gap: 20px;
   justify-content: center;
 }
 
-.card-grid {
-  background: var(--linearred--);
-  padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  transition: 0.3s;
+.cardservice {
+  width: 350px;
+  height: 200px;
+  background: #222;
+  border-radius: 5px;
+  gap: 10%;
+  position: relative;
+  border-color: rgb(77, 0, 0);
+  border-style: none none inset;
+  transition: 400ms;
+  border-radius: 55px 10px;
+  backdrop-filter: blur(10px);
+}
+.cardservice:hover {
+  transition: 400ms;
+  height: 300px;
 }
 
-.card-grid:hover {
-  transform: translateY(-10px);
+.cardservice .img-box {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: 0px;
+  transition: 400ms;
+  align-items: center;
+  left: 15%;
+}
+.cardservice:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  transition: 400ms;
+}
+
+.cardservice .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60%;
+  width: 88%;
+  padding: 0px 30px 1px 0px;
+  text-align: center;
+  height: 63px;
+  overflow: hidden;
+  transition: 400ms;
+  background-color: transparent;
+}
+.content p {
+  padding-left: 55px;
+}
+.content h3 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px #0004;
+  padding-left: 55px;
+}
+.cardservice:hover .content {
+  top: 10%;
+  height: 250px;
+}
+
+.cardservice .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 400ms;
+}
+.img-box img {
+  -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.8));
+}
+
+.cardservice:hover .img-box img {
+  scale: 1.2;
+  transition: 400ms;
+}
+.service .cardservice i {
+  font-size: 100px;
+  justify-content: center;
+}
+.service :nth-child(2) {
+  transition-delay: 100ms;
+}
+.service :nth-child(3) {
+  transition-delay: 200ms;
+}
+.service :nth-child(4) {
+  transition-delay: 300ms;
+}
+.service :nth-child(5) {
+  transition-delay: 400ms;
+}
+.service :nth-child(6) {
+  transition-delay: 500ms;
 }
 
 .service-icon {
