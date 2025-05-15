@@ -299,11 +299,27 @@ nav a:nth-child(5):hover ~ .animation {
 
 .logo-top img {
   position: absolute;
-  max-width: 200px;
-  width: 100%;
-  margin: 2.5% 15% 1% 10%;
+  max-width: 300px;
+  width: 50%;
+  margin-top: 1.5%;
+  margin-left: 10%;
   height: auto;
+  transition: 0.5s;
+  -webkit-backdrop-filter: drop-shadow(0px 150px 130px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 150px 140px rgba(0, 0, 0, 0.8));
   z-index: 999999;
+}
+.logo-top :hover {
+  position: absolute;
+  max-width: 300px;
+  width: 50%;
+  margin-top: 1.5%;
+  margin-left: 10%;
+  transform: scale(1.4);
+  transition: 0.5s;
+  transform: ease-in-out;
+  -webkit-backdrop-filter: drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 50px 40px rgba(0, 0, 0, 0.8));
 }
 /* potifolio section*/
 .portifolio-center a {
@@ -639,6 +655,7 @@ input:checked + label .descriptionrow {
 }
 .content p {
   padding-left: 55px;
+  padding-top: 8%;
 }
 .content h3 {
   color: #fff;
