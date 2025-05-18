@@ -6,7 +6,7 @@
 }
 @import "/HTML/css/anim-menu-btn.css";
 :root {
-  --linearred--: linear-gradient(135deg, #3b0202, #910d0d);
+  --linearred--: linear-gradient(80deg, #000, #910d0d);
   --alternativeback--: linear-gradient(120deg, #000000, #a30a0a);
   --bgcolor--: black;
   --colorbgmaster--: linear-gradient(135deg, #fffcfc, #d4bbaf);
@@ -152,6 +152,7 @@ header a:hover {
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  user-select: none;
 }
 .titles2 h1 {
   font-size: 10em;
@@ -162,6 +163,7 @@ header a:hover {
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
   z-index: -2;
   animation: animeimg 2s ease-in-out infinite alternate;
+  user-select: none;
 }
 @keyframes animeimg {
   0% {
@@ -184,6 +186,7 @@ header a:hover {
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  user-select: none;
 }
 .stitle {
   background: var(--alternativeback--);
@@ -193,6 +196,7 @@ header a:hover {
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  user-select: none;
 }
 .stitle-service {
   background: var(--alternativeback--);
@@ -305,6 +309,7 @@ nav a:nth-child(5):hover ~ .animation {
   margin-left: 10%;
   height: auto;
   transition: 0.5s;
+  -webkit-user-drag: none;
   -webkit-filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.8));
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.8));
   z-index: 999999;
@@ -447,6 +452,7 @@ nav a:nth-child(5):hover ~ .animation {
   overflow: visible;
   position: relative;
   z-index: 4;
+  user-select: none;
 }
 
 .container-wrapper {
@@ -455,6 +461,7 @@ nav a:nth-child(5):hover ~ .animation {
   flex-wrap: nowrap;
   justify-content: start;
   overflow: visible;
+  margin-left: 2%;
 }
 
 .titles2 {
@@ -462,6 +469,12 @@ nav a:nth-child(5):hover ~ .animation {
   filter: blur(15px);
   transition: all 1s;
   transform: translateX(25%);
+}
+.wrapper .titles2 p {
+  margin-left: 27%;
+}
+.wrapper .stitle {
+  margin-left: 12%;
 }
 .stitles2 {
   opacity: 1;
@@ -582,6 +595,7 @@ input:checked + label .descriptionrow {
   padding: 50px 20px;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 .container-portifolio {
   max-width: 100vw;
@@ -591,6 +605,7 @@ input:checked + label .descriptionrow {
   margin-top: 4rem;
   /*margin-top: 18%;*/
   text-align: center;
+  user-select: none;
 }
 
 .section-description {
@@ -604,6 +619,7 @@ input:checked + label .descriptionrow {
   margin-top: 9%;
   gap: 20px;
   justify-content: center;
+  user-select: none;
 }
 
 .cardservice {
@@ -618,6 +634,7 @@ input:checked + label .descriptionrow {
   transition: 400ms;
   border-radius: 55px 10px;
   backdrop-filter: blur(10px);
+  box-shadow: #000000 0px 0px 10px 3px;
 }
 .cardservice:hover {
   transition: 400ms;
@@ -779,16 +796,18 @@ section.carousel h1 {
 
 .slider .list .item .content .title,
 .slider .list .item .content .type {
-  font-size: 10em;
+  font-size: 9em;
   line-height: 0.7em;
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 25px 0 35px rgba(0 0 0 / 0.4);
+  text-align: center;
 }
 .slider .list .item .type {
-  background: var(--alternativeback--);
+  background: var(--linearred--);
   -webkit-background-clip: text;
   color: transparent;
+  height: 10em;
 }
 .slider .list .item .button {
   display: grid;
@@ -1022,6 +1041,7 @@ section.about {
   background: var(--alternativeback--);
   box-shadow: 0 0 20px 2px #3b0202, 0 0 40px 1px #910d0d;
   z-index: 2;
+  user-select: none;
 }
 video {
   width: 50%;
@@ -1035,7 +1055,7 @@ video {
 .container-about {
   width: 1300px;
   max-width: 1300px;
-  height: 650px;
+  height: 600px;
   gap: 10px;
   border-radius: 55px 10px;
   background: var(--linearred--) !important;
@@ -1045,6 +1065,7 @@ video {
 .logophorma {
   margin-bottom: 5%;
   width: 300px;
+  -webkit-user-drag: none;
 }
 .movie {
   gap: 10px;
@@ -1064,7 +1085,7 @@ video {
   gap: 10%;
   margin-left: 16%;
   padding-right: 3%;
- 
+  padding-top: 5%;
   border-radius: 0px 0px;
   color: rgb(255, 250, 250);
   font-size: 1.05em;
@@ -1079,6 +1100,7 @@ video {
   filter: blur(15px);
   transition: all 1.25s;
   transform: translateX(50%);
+  user-select: none;
 }
 .scontainerabout {
   opacity: 1;
@@ -1364,6 +1386,7 @@ nav a {
   height: 400px;
   overflow: hidden;
   position: relative;
+  user-select: none;
 }
 
 .slideshow {
@@ -1488,7 +1511,9 @@ button {
   border: 1px solid #ff7557;
 }
 
-
+.contact {
+  margin-bottom: 4rem;
+}
 
 .contact-form {
   width: 90%;
@@ -1539,6 +1564,7 @@ button {
   color: #fff;
   z-index: 1;
   letter-spacing: 0.8px;
+  user-select: none;
 }
 
 .filter-btn-all {
@@ -1612,6 +1638,7 @@ button {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  user-select: none;
 }
 
 .btn:hover {
@@ -1640,6 +1667,7 @@ button {
 
 .gallery-bg {
   padding: 20px 0 120px 0;
+  user-select: none;
 }
 
 .gallery-center {
@@ -1947,158 +1975,6 @@ footer .redes-sociais a:hover {
   background-position: 0% 35%;
 }
 
-
-footer .footer-address ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 120px;
-  
-}
-
-footer .footer-address {
-
-  color: #eeeeee;
-  font-weight: 600;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  @media (max-width: 768px) {
-    margin-right: auto;
-    padding-left: 64px;
-  }
-}
-
-footer .footer-address ul {
-  display: flex;
-  font-size: 0.8rem;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  padding-left: 0;
-}
-
-
-
-footer .footer-address ul li {
-  list-style: none;
-}
-
-
-hr {
-  unset: all;
-  content: "";
-  height: 1px;
-  width: 100%;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 40%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 1) 60%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-hr.line-left-to-right {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 15%,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 255, 255, 0.3) 70%
-  );
-}
-
-
-footer {
-  margin: auto;
-  width: 60%;
-  padding: 32px 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start; 
-  
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 56px;
-    width: 100%;
-    align-items: center; 
-  }
-}
-
-.footer-logo, 
-.footer-links, 
-.footer-address {
-  align-self: flex-start; 
-}
-
-footer .footer-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
-  gap: 16px;
-  
-  @media (max-width: 768px) {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-footer .footer-links {
-  color: #eeeeee;
-  font-weight: 600;
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  gap: 16px;
-  
-  @media (max-width: 768px) {
-    margin-right: auto;
-    padding-left: 64px;
-  }
-}
-
-
-.footer-address {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  gap: 16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer .footer-links {
   color: #eeeeee;
   font-weight: 600;
@@ -2106,7 +1982,7 @@ footer .footer-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50px;
+  gap: 16px;
   @media (max-width: 768px) {
     margin-right: auto;
     padding-left: 64px;
@@ -2117,18 +1993,17 @@ footer .footer-links ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 8px;
   padding-left: 0;
 }
 
-
-
 footer .footer-links ul li {
-  list-style:none;
+  list-style: none;
 }
 footer .footer-links ul li a {
   text-align: left;
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
