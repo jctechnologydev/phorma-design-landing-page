@@ -1,0 +1,13 @@
+{
+    "slider": {
+        "title": "Imagens Animações",
+        "type": "3D" 
+    },
+    "nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "services": "Serviços",
+        "contacts": "Contatos",
+        "portfolio": "Portfolio"
+    }
+}

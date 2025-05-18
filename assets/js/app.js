@@ -1,3 +1,7 @@
+loadTranslations().then(() => {
+  translateAll()
+});
+
 let nextBtn = document.querySelector('.next');
 let prevBtn = document.querySelector('.prev');
 
@@ -6,15 +10,12 @@ let sliderList = slider.querySelector('.slider .list');
 let thumbnail = document.querySelector('.slider .thumbnail');
 let thumbnailItems = thumbnail.querySelectorAll('.item');
 
-
-
 thumbnail.appendChild(thumbnailItems[0])
 
 // Function for next button 
 nextBtn.onclick = function () {
   moveSlider('next')
 }
-
 
 // Function for prev button 
 prevBtn.onclick = function () {

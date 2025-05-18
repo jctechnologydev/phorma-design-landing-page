@@ -305,8 +305,8 @@ nav a:nth-child(5):hover ~ .animation {
   margin-left: 10%;
   height: auto;
   transition: 0.5s;
-  -webkit-backdrop-filter: drop-shadow(0px 150px 130px rgba(0, 0, 0, 0.8));
-  filter: drop-shadow(0px 150px 140px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.8));
   z-index: 999999;
 }
 .logo-top :hover {
@@ -748,6 +748,7 @@ section.carousel h1 {
   width: 100vw;
   overflow: hidden;
   position: relative;
+  user-select: none;
 }
 .slider .list .item {
   width: 100%;
@@ -759,7 +760,9 @@ section.carousel h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-user-drag: none;
 }
+
 .slider .list .item .content {
   position: absolute;
   top: 20%;
@@ -771,6 +774,7 @@ section.carousel h1 {
   box-sizing: border-box;
   color: #fff;
   text-shadow: 0 5px 10px #0004;
+  transition-timing-function: ease-in;
 }
 
 .slider .list .item .content .title,
@@ -783,7 +787,6 @@ section.carousel h1 {
 }
 .slider .list .item .type {
   background: var(--alternativeback--);
-  -webkit-background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -837,6 +840,7 @@ section.carousel h1 {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-user-drag: none;
 }
 
 /* nextPrevArrows Section  */
@@ -914,7 +918,7 @@ section.carousel h1 {
   bottom: 50px;
   left: 50%;
   border-radius: 30px;
-  animation: showImage 0.5s linear 1 forwards;
+  animation: showImage 0.5s ease-in-out 1 forwards;
 }
 
 @keyframes showImage {
@@ -2267,12 +2271,12 @@ footer .footer-links ul li a:hover {
   }
 }
 @media screen and (max-width: 1024px) {
-  * {
+  /* * {
     overflow-x: hidden !important;
   }
   body {
     overflow-x: hidden !important;
-  }
+  } */
   nav {
     display: none;
   }
