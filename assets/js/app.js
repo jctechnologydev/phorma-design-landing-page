@@ -155,6 +155,38 @@ btnMenu.addEventListener('click', () => {
 
 
 
+// work script section //
+const cards = document.querySelectorAll('.cardservice');
+const overlay = document.getElementById('overlay');
+
+// Captura e move o fullcardservice para dentro da overlay
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const fullCard = card.querySelector('.fullcardservice').cloneNode(true);
+    overlay.innerHTML = ''; // limpa
+    overlay.appendChild(fullCard); // agora com clone
+
+    fullCard.classList.add('show');
+    overlay.classList.add('show');
+    overlay.removeAttribute('hidden');
+  });
+});
+
+// Fecha ao clicar fora do card
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) {
+    const fullCard = overlay.querySelector('.fullcardservice');
+    fullCard.classList.remove('show');
+    overlay.classList.remove('show');
+
+    setTimeout(() => {
+      overlay.setAttribute('hidden', true);
+    }, 400);
+  }
+});
+
+
+
 
 //teste scroll//
 
