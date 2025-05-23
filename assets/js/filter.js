@@ -9,7 +9,7 @@ let isAnimating = false;
 let wheelTimeout;
 
 let wheelHandler = null;
-let currentInd = 3; 
+let currentInd = 3;
 let intitialLength = 7;
 
 
@@ -54,35 +54,78 @@ const filtersDataAll = {
     "Imagens 3D": [
         {
             name: "Modelagem 3D", count: 7, content: [
-                "../assets/Imagens/Imagens3D/Cozinha Esmeralda - Composição 01_Lâmina Mel - Cinza Supremo_Amb_ok copy.jpg",
-                "./assets/Imagens/Imagens3D/Cozinha Ibiza_Lamina Mel - Ripado - Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Comp 03_Montana-Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Completa_Comp 01_Montana-Grafite_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha KIT LIVIA 2MT 8P 2G_Amb_ok.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Prisma_Amb_ok.jpg"]
-        },
-        {
-            name: "Fotofusão", count: 2, content: [ 
-                "../assets/Imagens/Imagens3D/Cozinha Esmeralda - Composição 01_Lâmina Mel - Cinza Supremo_Amb_ok copy.jpg",
-                "./assets/Imagens/Imagens3D/Cozinha Ibiza_Lamina Mel - Ripado - Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Esmeralda - Composição 01_Lâmina Mel - Cinza Supremo_Amb_ok copy.jpg",
-                "./assets/Imagens/Imagens3D/Cozinha Ibiza_Lamina Mel - Ripado - Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Comp 03_Montana-Branco_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Innova_Completa_Comp 01_Montana-Grafite_Amb_ok copy.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha KIT LIVIA 2MT 8P 2G_Amb_ok.jpg",
-                "../assets/Imagens/Imagens3D/Cozinha Prisma_Amb_ok.jpg"
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 01.jpg",
+                "./assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 04.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 06.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 07.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 10.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 11.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 04.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 06.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 04.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 05.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Poltrona 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Poltrona 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Prateleiras 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Quarto Completo.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 05.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 07.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 08.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 09.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 10.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 11.jpg",
+
             ]
         },
-        
+        {
+            name: "Fotofusão", count: 2, content: [
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Balanço - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Banquetas - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 04.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 05.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Mesa Bistrô com Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Mesa com Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Poltrona - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Poltrona e Mesinha - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 02.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 03.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 04.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 05.jpg",
+                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá 01.jpg",
+            ]
+        },
+
     ],
     "Animações Digitais": [
-        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0","7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM","SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA","JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390", "mQN7zFab390",        "mQN7zFab390", "mQN7zFab390","mQN7zFab390"] }
+        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390"] }
 
     ],
     "Design Gráfico": [
         { name: "Images", count: 1, content: ["../assets/Imagens/Imagens Fotofusão/Banqueta Home_Amb_ok"] },
     ]
-    
+
 };
 
 /*"Videos": [
@@ -115,7 +158,7 @@ for (const category in filtersDataAll) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-   
+
     const filterTabContainer = document.getElementById('filter-category');
     const subcategoryContainer = document.getElementById('filter-subcategory');
     const filterButtonContainer = document.getElementById('main-filter');
@@ -157,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("No filter tab buttons found.");
     }
-    
+
     //renderGallery(selectedData, firstSeleted, secondSeleted);
 
 });
@@ -252,10 +295,10 @@ function mainFilter(event) {
     activeFilter = event.target.dataset.filter;
     selectedData = activeFilter === "category" ? groupedByCategory : filtersDataAll;
 
-    if(activeFilter === "category"){
+    if (activeFilter === "category") {
         reverse = false;
     }
-    else{
+    else {
         reverse = true;
     }
 
@@ -278,15 +321,15 @@ function renderFilters(data) {
 
 
         selectedData[category].forEach((subcategory, index) => {
-            const buttonActive = index === 0 && i === 0 ? "tablinks active" : "tablinks";   
+            const buttonActive = index === 0 && i === 0 ? "tablinks active" : "tablinks";
             const subcategoryButton = createSubcategoryButtonWithCount(subcategory.name,
                 buttonActive, category + subcategory.name, subcategory.count);
-                if(selectedData[category].length === 1){
-    
-                }else{
-                    subcategoryContainer.appendChild(subcategoryButton);
-                }
-            
+            if (selectedData[category].length === 1) {
+
+            } else {
+                subcategoryContainer.appendChild(subcategoryButton);
+            }
+
         });
     }
 
@@ -319,7 +362,7 @@ function renderFilters(data) {
 
 
 function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
- 
+
     const galleryContainer = document.getElementById("filter-items");
     const sliderFilter = document.querySelector('.portifolio-slider');
 
@@ -334,66 +377,65 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     //cardContainer.innerHTML = "";
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     imageViewer.innerHTML = "";
-    if(!reverse) {
+    if (!reverse) {
         seletedSec = secondSeleted.replace(firstSeleted, "");
         imageViewer.innerHTML = `
         <img id="view-img">
         <p id="img-description">${messageData[seletedSec].messageInternal}</p>
     `;
     }
-    else
-    {
+    else {
 
         imageViewer.innerHTML = `
             <img id="view-img">
             <p id="img-description">${messageData[firstSeleted].messageInternal}</p>
         `;
-        
+
     }
- 
+
 
     filteredVideos[firstSeleted].forEach(item => {
 
 
         if (item.name === auxSecondSeleted) {
             intitialLength = item.content.length + 1;
-            
-            createSliderBoxes(item.content,sliderFilter);
 
-        
+            createSliderBoxes(item.content, sliderFilter);
+
+
         }
 
     });
 
 
- 
+
 
 }
 
 
 function toggleSocialsOnScroll(contactSelector, socialsSelector) {
-  $(document).ready(function() {
-    var $contact = $(contactSelector);
-    var $socials = $(socialsSelector);
+    $(document).ready(function () {
+        var $contact = $(contactSelector);
+        var $socials = $(socialsSelector);
 
-    if ($contact.length === 0) {
-      console.error(`Element ${contactSelector} not found!`);
-      return;
-    }
+        if ($contact.length === 0) {
+            console.error(`Element ${contactSelector} not found!`);
+            return;
+        }
 
-    $(window).on("scroll", function() {
-      var top_of_element = $contact.offset().top;
-      var bottom_of_element = top_of_element + $contact.outerHeight();
-      var top_of_screen = $(window).scrollTop();
-      var bottom_of_screen = top_of_screen + $(window).innerHeight();
+        $(window).on("scroll", function () {
+            var top_of_element = $contact.offset().top;
+            var bottom_of_element = top_of_element + $contact.outerHeight();
+            var top_of_screen = $(window).scrollTop();
+            var bottom_of_screen = top_of_screen + $(window).innerHeight();
 
-      if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
-        $socials.hide();
-      } else {
-        $socials.show();
-      }
+            if (bottom_of_screen > top_of_element && top_of_screen < bottom_of_element) {
+                $socials.hide();
+            } else {
+                $socials.show();
+            }
+        });
     });
-  });
 }
 
 
@@ -404,7 +446,7 @@ function closeImage() {
     viewImg.style.display = "none";
     overlay.style.display = "none";
     document.body.style.overflow = "auto";
-    document.body.style.pointerEvents = "auto"; 
+    document.body.style.pointerEvents = "auto";
 }
 
 function openImage(imgs) {
@@ -421,96 +463,96 @@ function openImage(imgs) {
     currentSecondSeleted = imgs.dataset.second;
     currentIndex = imgs.dataset.index;
 
-   if(parseInt(currentIndex) === 0){
+    if (parseInt(currentIndex) === 0) {
         leftArrowOpacity();
-   }
+    }
     src = "";
     selectedData[imgs.dataset.first].forEach(item => {
 
         if (item.name === imgs.dataset.second) {
             src = item.content[imgs.dataset.index];
-            if(parseInt(currentIndex) === selectedData[imgs.dataset.first].length - 1){
+            if (parseInt(currentIndex) === selectedData[imgs.dataset.first].length - 1) {
                 rightArrowOpacity();
             }
-            else if(parseInt(currentIndex) > 0 &&  parseInt(currentIndex) < selectedData[imgs.dataset.first].length ){
+            else if (parseInt(currentIndex) > 0 && parseInt(currentIndex) < selectedData[imgs.dataset.first].length) {
                 bothArrowsColored();
             }
-        }});
+        }
+    });
     viewImg.src = src;
-    overlay.style.display = "flex"; 
+    overlay.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
 
 function prevImage() {
-    
-    if (parseInt(currentIndex) - 1 >= 0) {  
+
+    if (parseInt(currentIndex) - 1 >= 0) {
 
         const viewImg = document.getElementById("view-img");
-        currentIndex = parseInt(currentIndex) - 1; 
-        
+        currentIndex = parseInt(currentIndex) - 1;
+
         selectedData[currentFirstSeleted].forEach(item => {
             if (item.name === currentSecondSeleted) {
                 viewImg.src = item.content[currentIndex];
             }
         });
-        
+
     } else {
         leftArrowOpacity();
     }
 }
 
 
-function nextImage(){
+function nextImage() {
     const viewImg = document.getElementById("view-img");
     currentIndex = parseInt(currentIndex) + 1;
     selectedData[currentFirstSeleted].forEach(item => {
 
         if (item.name === currentSecondSeleted && currentIndex < item.content.length) {
             viewImg.src = item.content[currentIndex];
-        } 
-        else if(currentIndex === item.content.length - 1)
-        {
+        }
+        else if (currentIndex === item.content.length - 1) {
             rightArrowOpacity();
         }
     });
 }
 
-function leftArrowOpacity(){
+function leftArrowOpacity() {
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
 
     rightArrow.style.color = "#FFFFFF";
-    rightArrow.style.opacity = "1"; 
+    rightArrow.style.opacity = "1";
 
     leftArrow.style.color = "#808080";
-    leftArrow.style.opacity = "0.5"; 
+    leftArrow.style.opacity = "0.5";
 }
 
 
-function rightArrowOpacity(){
+function rightArrowOpacity() {
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
 
     rightArrow.style.color = "#808080";
-    rightArrow.style.opacity = "0.5"; 
+    rightArrow.style.opacity = "0.5";
 
     leftArrow.style.color = "#FFFFFF";
-    leftArrow.style.opacity = "1"; 
+    leftArrow.style.opacity = "1";
 }
 
 
-function bothArrowsColored(){
+function bothArrowsColored() {
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
 
     rightArrow.style.color = "#FFFFFF";
-    rightArrow.style.opacity = "1"; 
+    rightArrow.style.opacity = "1";
 
     leftArrow.style.color = "#FFFFFF";
-    leftArrow.style.opacity = "1"; 
+    leftArrow.style.opacity = "1";
 }
 
-function zoomInImage(){
+function zoomInImage() {
     const viewImg = document.getElementById("view-img");
     const zoomInBtn = document.getElementById("zoom-in");
     const zoomOutBtn = document.getElementById("zoom-out");
@@ -521,7 +563,7 @@ function zoomInImage(){
 
 }
 
-function zoomOutImage(){
+function zoomOutImage() {
     const viewImg = document.getElementById("view-img");
     const zoomInBtn = document.getElementById("zoom-in");
     const zoomOutBtn = document.getElementById("zoom-out");
@@ -537,7 +579,7 @@ function toggleFullscreen() {
     const viewImg = document.getElementById("view-img");
     const textDescription = document.getElementById("img-description");
     const container = viewImg.parentElement;
-    
+
     if (!document.fullscreenElement) {
         if (container.requestFullscreen) {
             container.requestFullscreen()
@@ -566,7 +608,7 @@ document.addEventListener('fullscreenchange', () => {
     }
 
 
-    
+
 });
 
 
@@ -583,102 +625,102 @@ function createSliderBoxes(images, sliderFilter) {
     console.log(nextButton);
     console.log(prevButton);
 
-    prevButton.addEventListener('click', function() {
+    prevButton.addEventListener('click', function () {
         console.log("click");
         rotateBackward();
-        
+
     });
 
-    nextButton.addEventListener('click', function() {
+    nextButton.addEventListener('click', function () {
         console.log("click");
         rotateForward();
     });
 
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
-                if (imgUrl.includes("assets")) {   
+        if (imgUrl.includes("assets")) {
 
-                    const box = document.createElement('div');
+            const box = document.createElement('div');
 
-                    box.className = `box${index + 1}`;
+            box.className = `box${index + 1}`;
 
-                    const img = document.createElement('img');
-                    img.src = imgUrl;
-                    
-                    img.alt = `Slide ${index + 1}`;
-                    img.style.width = '100%';
-                    img.style.height = '100%';
-                    img.style.objectFit = 'cover';
-                    img.setAttribute('onclick', 'showToast("Double click to open the image")');
-                    img.setAttribute('ondblclick', 'openImage(this)');
-                    img.setAttribute('data-index', index);
-                    img.setAttribute('data-first', firstSeleted);   
-                    img.setAttribute('data-second', auxSecondSeleted);
-                    box.appendChild(img);
-                    sliderFilter.appendChild(box);
-            
-            
-                    img.addEventListener('mouseenter', function() {
-                        if (!wheelHandler) {
-                            wheelHandler = handleWheel;
-                            img.addEventListener('wheel', wheelHandler, { passive: false });
-                        }
-                    });
-            
-                    img.addEventListener('mouseleave', function() {
-                        if (wheelHandler) {
-                            img.removeEventListener('wheel', wheelHandler);
-                            wheelHandler = null;
-                        }
-                    });
-              
-                
-                    positionBoxes(images.length);
-                } else {
-                    const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
+            const img = document.createElement('img');
+            img.src = imgUrl;
 
-                    const box = document.createElement('div');
-                    box.className = `box${index + 1}`;
-                    
-                    const iframe = document.createElement('iframe');
+            img.alt = `Slide ${index + 1}`;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.setAttribute('onclick', 'showToast("Double click to open the image")');
+            img.setAttribute('ondblclick', 'openImage(this)');
+            img.setAttribute('data-index', index);
+            img.setAttribute('data-first', firstSeleted);
+            img.setAttribute('data-second', auxSecondSeleted);
+            box.appendChild(img);
+            sliderFilter.appendChild(box);
 
-                    iframe.setAttribute('frameborder', '0');
-                    iframe.setAttribute('allow', 'autoplay');
-                    iframe.setAttribute('autoplay', '1');
-                    iframe.setAttribute('alt', `Slide ${index + 1}`);
-                   
-                    iframe.src = videoUrl;
-    
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    iframe.style.objectFit = 'cover';
-                    
-                    
-                    box.appendChild(iframe);
-                    sliderFilter.appendChild(box);
-            
-                
-            
-                    iframe.addEventListener('mouseenter', function() {
-                        if (!wheelHandler) {
-                            wheelHandler = handleWheel;
-                            iframe.addEventListener('wheel', wheelHandler, { passive: false });
-                        }
-                    });
-            
-                    iframe.addEventListener('mouseleave', function() {
-                        if (wheelHandler) {
-                            iframe.removeEventListener('wheel', wheelHandler);
-                            wheelHandler = null;
-                        }
-                    });
 
-                    positionBoxes(images.length);                  
+            img.addEventListener('mouseenter', function () {
+                if (!wheelHandler) {
+                    wheelHandler = handleWheel;
+                    img.addEventListener('wheel', wheelHandler, { passive: false });
                 }
-                
+            });
+
+            img.addEventListener('mouseleave', function () {
+                if (wheelHandler) {
+                    img.removeEventListener('wheel', wheelHandler);
+                    wheelHandler = null;
+                }
+            });
+
+
+            positionBoxes(images.length);
+        } else {
+            const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
+
+            const box = document.createElement('div');
+            box.className = `box${index + 1}`;
+
+            const iframe = document.createElement('iframe');
+
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'autoplay');
+            iframe.setAttribute('autoplay', '1');
+            iframe.setAttribute('alt', `Slide ${index + 1}`);
+
+            iframe.src = videoUrl;
+
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.objectFit = 'cover';
+
+
+            box.appendChild(iframe);
+            sliderFilter.appendChild(box);
+
+
+
+            iframe.addEventListener('mouseenter', function () {
+                if (!wheelHandler) {
+                    wheelHandler = handleWheel;
+                    iframe.addEventListener('wheel', wheelHandler, { passive: false });
+                }
+            });
+
+            iframe.addEventListener('mouseleave', function () {
+                if (wheelHandler) {
+                    iframe.removeEventListener('wheel', wheelHandler);
+                    wheelHandler = null;
+                }
+            });
+
+            positionBoxes(images.length);
+        }
+
 
     });
-        
+
 };
 
 
@@ -686,7 +728,7 @@ function showToast(message) {
     const toast = document.createElement('div');
     toast.className = 'toast-notification';
     toast.textContent = message;
-    
+
     toast.style.position = 'fixed';
     toast.style.bottom = '20px';
     toast.style.left = '50%';
@@ -697,9 +739,9 @@ function showToast(message) {
     toast.style.borderRadius = '5px';
     toast.style.zIndex = '1000';
     toast.style.transition = 'opacity 0.3s';
-    
+
     document.body.appendChild(toast);
-    
+
     setTimeout(() => {
         toast.style.opacity = '0';
         setTimeout(() => toast.remove(), 300);
@@ -714,14 +756,14 @@ function positionBoxes(length) {
         box.style.borderRadius = '20px';
         box.style.transition = 'all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
         box.style.cursor = 'pointer';
-        if(length >= 5  ) {
-            if (index === 0 || index === 6) { 
+        if (length >= 5) {
+            if (index === 0 || index === 6) {
                 box.style.width = '100vh';
                 box.style.height = '60vh';
                 box.style.transform = 'scale(0.2) translate(-50%,-50%)';
                 box.style.top = '15%';
                 box.style.zIndex = '1';
-            } 
+            }
             else if (index === 1 || index === 5) {
                 box.style.width = '100vh';
                 box.style.height = '60vh';
@@ -736,7 +778,7 @@ function positionBoxes(length) {
                 box.style.top = '25%';
                 box.style.zIndex = '3';
             }
-            else if (index === 3) { 
+            else if (index === 3) {
                 box.style.width = '60vw';
                 box.style.height = '60vh';
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
@@ -745,14 +787,14 @@ function positionBoxes(length) {
             }
 
             const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '85%'];
-            if (index > 6){
+            if (index > 6) {
                 box.style.left = "100%"
-            }else{
+            } else {
                 box.style.left = positions[index];
             }
-            
+
         }
-        else if(length === 5) {
+        else if (length === 5) {
             if (index === 4) {
                 box.style.width = '100vh';
                 box.style.height = '60vh';
@@ -768,18 +810,18 @@ function positionBoxes(length) {
                 box.style.top = '25%';
                 box.style.zIndex = '3';
                 const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
-                box.style.left = index === 1 ? positions[2]: positions[5];
+                box.style.left = index === 1 ? positions[2] : positions[5];
             }
-            else if (index === 2) { 
+            else if (index === 2) {
                 box.style.width = '60vw';
                 box.style.height = '60vh';
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
                 box.style.zIndex = '4';
                 box.style.left = '50%';
-            }        
+            }
         }
-        else if(length === 3 || length === 4) {
+        else if (length === 3 || length === 4) {
             if (index === 0 || index === 2) {
                 box.style.width = '100vh';
                 box.style.height = '60vh';
@@ -787,9 +829,9 @@ function positionBoxes(length) {
                 box.style.top = '25%';
                 box.style.zIndex = '3';
                 const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
-                box.style.left = index  === 0 ? positions[2]: positions[4];
+                box.style.left = index === 0 ? positions[2] : positions[4];
             }
-            else if (index === 1) { 
+            else if (index === 1) {
                 box.style.width = '60vw';
                 box.style.height = '60vh';
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
@@ -797,10 +839,10 @@ function positionBoxes(length) {
                 box.style.zIndex = '4';
                 box.style.left = '50%';
                 const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
-                box.style.left =  positions[3];
+                box.style.left = positions[3];
             }
         }
-        else if (length === 1) { 
+        else if (length === 1) {
             box.style.width = '60vw';
             box.style.height = '60vh';
             box.style.transform = 'scale(1) translate(-50%,-50%)';
@@ -808,7 +850,7 @@ function positionBoxes(length) {
             box.style.zIndex = '4';
             box.style.left = '50%';
         }
-        
+
     });
 }
 
@@ -819,51 +861,51 @@ function positionBoxes(length) {
 // (next slide)
 function rotateForward() {
     console.log(intitialLength);
-    if((intitialLength-1) <= 3) return;
+    if ((intitialLength - 1) <= 3) return;
     currentInd = (currentInd + 1) % intitialLength;
-    
+
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
         let newPos = (index - 1 + slides.length) % slides.length;
-        
+
         if (index === 0) {
             slide.classList.add('lastSlide');
             setTimeout(() => slide.classList.remove('lastSlide'), 100);
         }
-        
+
         updateSlidePosition(slide, newPos);
     });
-    
+
     const firstSlide = sliderFilterGeneral.firstElementChild;
     sliderFilterGeneral.appendChild(firstSlide.cloneNode(true));
     sliderFilterGeneral.removeChild(firstSlide);
-    
+
     //updateClickEvents();
 }
 
 
 function rotateBackward() {
-    if((intitialLength-1) <= 3) return;
+    if ((intitialLength - 1) <= 3) return;
     currentInd = (currentInd - 1 + intitialLength) % intitialLength
-    
+
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
         let newPos = (index + 1) % slides.length;
-        
+
         if (index === slides.length - 1) {
             slide.classList.add('firstSlide');
             setTimeout(() => slide.classList.remove('firstSlide'), 100);
         }
-        
+
         updateSlidePosition(slide, newPos);
     });
-    
+
     const lastSlide = sliderFilterGeneral.lastElementChild;
     sliderFilterGeneral.insertBefore(lastSlide.cloneNode(true), sliderFilterGeneral.firstChild);
     sliderFilterGeneral.removeChild(lastSlide);
-    
+
     //updateClickEvents();
 }
 
@@ -874,7 +916,7 @@ function updateSlidePosition(slide, positionIndex) {
     const scales = [0.2, 0.4, 0.6, 1, 0.6, 0.4, 0.2];
     const tops = ['15%', '20%', '25%', '35%', '25%', '20%', '15%'];
     const zIndexes = [1, 2, 3, 4, 3, 2, 1];
-    
+
     slide.style.left = positions[positionIndex];
     slide.style.transform = `scale(${scales[positionIndex]}) translate(-50%, -50%)`;
     slide.style.top = tops[positionIndex];
@@ -884,7 +926,7 @@ function updateSlidePosition(slide, positionIndex) {
 function updateClickEvents() {
     const boxes = document.querySelectorAll('.portifolio-slider > div');
     boxes.forEach((box, index) => {
-        box.addEventListener('click', function() {
+        box.addEventListener('click', function () {
             moveToIndex(index);
         });
     });
@@ -901,7 +943,7 @@ function handleWheel(e) {
 
 
 
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight') rotateForward();
     else if (e.key === 'ArrowLeft') rotateBackward();
 });
