@@ -123,7 +123,33 @@ const filtersDataAll = {
 
     ],
     "Design Gráfico": [
-        { name: "Images", count: 1, content: ["../assets/Imagens/Imagens Fotofusão/Banqueta Home_Amb_ok"] },
+        {
+            name: "Images", count: 1, content: [
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/01 - Mockup Catálogo A4 - Yalith 1.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/01 - Mockup Catálogo A4 - Yalith 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/03 - Mockup Catálogo A4 Aberto - Yalith 3.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/04 - Mockup Catálogo A4 - Aberto - Pluma 1.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/05 - Mockup Catálogo A4 - Aberto - Pluma 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/06 - Mockup Catálogo A4 - Aberto - Pluma 3.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/07 - Mockup Catálogo A4 - Madine.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/08 - Mockup Catálogo A4 - Aberto - Pluma 4.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/09 - Mockup Catálogo A4 Aberto - Madine 1.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/10 - Mockup Catálogo A4 Aberto - Madine 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/11 - Mockup Catálogo A4 - Aberto - Caemmun.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/12 - Mockup Catálogo A4 Aberto - Caemmun 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/13 - Mockup Catálogo A4 Aberto - Caemmun 3.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/14 - Mockup Quadrado.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/15 - Mockup Catálogo A4 Aberto - Anjos 1.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/17 - Mockup Catálogo A4 - Aberto - Perfan 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/18 - Mockup Catálogo A4 Aberto - Perfan.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/19 - Mockup Catálogo A4 - vários.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/20 - Mockup Catálogo A4 - Aberto - Adrian.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/21 - Mockup Catálogo A4 - Aberto - Molufan.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/22 - Mockup Catálogo A4 - Aberto - Vivano.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/23 - Mockup Catálogo A4 Aberto - Vivano.jpg",
+
+            ]
+        },
     ]
 
 };

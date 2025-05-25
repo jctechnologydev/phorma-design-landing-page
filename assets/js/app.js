@@ -10,6 +10,9 @@ let sliderList = slider.querySelector('.slider .list');
 let thumbnail = document.querySelector('.slider .thumbnail');
 let thumbnailItems = thumbnail.querySelectorAll('.item');
 
+
+
+
 thumbnail.appendChild(thumbnailItems[0])
 
 // Function for next button 
@@ -45,21 +48,29 @@ function moveSlider(direction) {
       slider.classList.remove('prev')
     }
   }, { once: true }) // Remove the event listener after it's triggered once
+
 }
 
 
-
-
-
-
+// Swiper Slider //
 
 
 const swiper = new Swiper('.slider-wrapper', {
   loop: true,
   grabCursor: true,
   spaceBetween: 30,
+  speed: 900, // ← SUAVIZA a transição dos slides
+
+
 
   // Pagination bullets
+  autoplay: {
+    delay: 500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+
+  },
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
