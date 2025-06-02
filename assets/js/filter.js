@@ -1,7 +1,7 @@
 const filterTab = document.querySelectorAll("#filter-category button");
 const filterSubcategory = document.querySelectorAll("#filter-subcategory .tablinks");
 const filterableItems = document.querySelectorAll("#filter-items .element");
-const filterMain = document.querySelectorAll("#main-filter button");
+
 let sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
 
@@ -186,9 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const filterTabContainer = document.getElementById('filter-category');
-    const subcategoryContainer = document.getElementById('filter-subcategory');
     const filterButtonContainer = document.getElementById('main-filter');
-    const filterSubcategories = document.getElementById('filter-items');
     const zoomInBtn = document.getElementById("zoom-in");
     const zoomOutBtn = document.getElementById("zoom-out");
 
@@ -196,9 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
     zoomOutBtn.style.display = "none";
 
     const allButton = createButton("All", "filter-btn filter-btn-all", "all", "all");
-    const byCategoryButton = createButton("By Category", "filter-btn-category", "category", "category");
+
     filterButtonContainer.appendChild(allButton);
-    filterButtonContainer.appendChild(byCategoryButton);
 
     let i = 0;
     for (const category in selectedData) {
@@ -294,6 +291,12 @@ function filterCategories(event) {
     firstSeleted = selectedCategory;
 
 
+    filterSubcategories
+
+    console.log(selectedData[firstSeleted].length);
+    if (selectedData[firstSeleted].length === 1) {
+        renderGallery(selectedData, firstSeleted, "none");
+    }
 
 }
 
@@ -309,6 +312,7 @@ function filterSubcategories(event) {
     secondSeleted = event.target.dataset.name;
 
     // Render the filtered gallery items
+    console.log(selectedData[firstSeleted].length);
     renderGallery(selectedData, firstSeleted, secondSeleted);
 }
 
@@ -320,13 +324,6 @@ function mainFilter(event) {
 
     activeFilter = event.target.dataset.filter;
     selectedData = activeFilter === "category" ? groupedByCategory : filtersDataAll;
-
-    if (activeFilter === "category") {
-        reverse = false;
-    }
-    else {
-        reverse = true;
-    }
 
     renderFilters(selectedData);
 }
@@ -378,12 +375,12 @@ function renderFilters(data) {
         console.error("No filter tab buttons found.");
     }
 
-    if (filter.length > 0) {
-        filter.forEach(tab => tab.addEventListener("click", mainFilter));
-    } else {
-        console.error("No filter tab buttons found.");
-
-    }
+    /* if (filter.length > 0) {
+         filter.forEach(tab => tab.addEventListener("click", mainFilter));
+     } else {
+         console.error("No filter tab buttons found.");
+ 
+     }*/
 }
 
 
@@ -403,21 +400,13 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     //cardContainer.innerHTML = "";
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     imageViewer.innerHTML = "";
-    if (!reverse) {
-        seletedSec = secondSeleted.replace(firstSeleted, "");
-        imageViewer.innerHTML = `
+
+    imageViewer.innerHTML = `
         <img id="view-img">
-        <p id="img-description">${messageData[seletedSec].messageInternal}</p>
+        <p id="img-description">${messageData[firstSeleted].messageInternal}</p>
     `;
-    }
-    else {
 
-        imageViewer.innerHTML = `
-            <img id="view-img">
-            <p id="img-description">${messageData[firstSeleted].messageInternal}</p>
-        `;
 
-    }
 
 
     filteredVideos[firstSeleted].forEach(item => {
@@ -425,10 +414,11 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
         if (item.name === auxSecondSeleted) {
             intitialLength = item.content.length + 1;
-
             createSliderBoxes(item.content, sliderFilter);
 
-
+        } else if (auxSecondSeleted === "none") {
+            intitialLength = item.content.length + 1;
+            createSliderBoxes(item.content, sliderFilter);
         }
 
     });
@@ -646,8 +636,8 @@ function createSliderBoxes(images, sliderFilter) {
     const nextButton = document.querySelector(".nextButton");
     const prevButton = document.querySelector(".prevButton");
 
-    console.log(nextButton);
-    console.log(prevButton);
+    //console.log(nextButton);
+    //console.log(prevButton);
 
     prevButton.addEventListener('click', function () {
         console.log("click");
