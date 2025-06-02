@@ -887,7 +887,7 @@ function rotateForward() {
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
-        let newPos = (index - 1 + slides.length) % slides.length;
+        let newPos = (index  + slides.length) % slides.length;
 
         if (index === 0) {
             slide.classList.add('lastSlide');
@@ -912,7 +912,7 @@ function rotateBackward() {
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
-        let newPos = (index + 1) % slides.length;
+        let newPos = (index ) % slides.length;
 
         if (index === slides.length - 1) {
             slide.classList.add('firstSlide');
