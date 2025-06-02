@@ -53,7 +53,7 @@ const messageData = {
 const filtersDataAll = {
     "Imagens 3D": [
         {
-            name: "Modelagem 3D", count: 7, content: [
+            name: "Modelagem 3D", count: 38, content: [
                 "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 01.jpg",
                 "./assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 02.jpg",
                 "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 03.jpg",
@@ -96,7 +96,7 @@ const filtersDataAll = {
             ]
         },
         {
-            name: "Fotofusão", count: 2, content: [
+            name: "Fotofusão", count: 17, content: [
                 "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Balanço - 01.jpg",
                 "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Banquetas - 01.jpg",
                 "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Cadeiras - 01.jpg",
@@ -599,8 +599,6 @@ function zoomOutImage() {
     viewImg.style.transform = "scale(1)";
 }
 
-
-
 function toggleFullscreen() {
     const viewImg = document.getElementById("view-img");
     const textDescription = document.getElementById("img-description");
@@ -677,7 +675,7 @@ function createSliderBoxes(images, sliderFilter) {
             img.style.width = '100%';
             img.style.height = '100%';
             img.style.objectFit = 'cover';
-            img.setAttribute('onclick', 'showToast("Double click to open the image")');
+            img.setAttribute('onclick', 'showToast("Clique duas vezes para abrir a imagem")');
             img.setAttribute('ondblclick', 'openImage(this)');
             img.setAttribute('data-index', index);
             img.setAttribute('data-first', firstSeleted);
