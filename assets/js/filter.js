@@ -54,66 +54,66 @@ const filtersDataAll = {
     "Imagens 3D": [
         {
             name: "Modelagem 3D", count: 38, content: [
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 01.jpg",
-                "./assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Banheiro 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 04.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 06.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 07.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 10.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Colchão 11.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Cozinha 04.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Guarda Roupa 06.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Infantil 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 04.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 05.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Poltrona 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Poltrona 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Prateleiras 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Quarto Completo.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 05.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 07.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 08.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 09.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 10.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/01 - Modelagem 3D/Sofá 11.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Banheiro 01.jpg",
+                "./assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Banheiro 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Banheiro 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 04.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 06.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 07.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 10.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Colchão 11.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Cozinha 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Cozinha 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Cozinha 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Cozinha 04.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Guarda Roupa 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Guarda Roupa 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Guarda Roupa 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Guarda Roupa 06.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Infantil 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Infantil 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Infantil 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 04.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Mesa com Cadeiras 05.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Poltrona 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Poltrona 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Prateleiras 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Quarto Completo.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 05.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 07.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 08.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 09.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 10.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/01 - Modelagem 3D/Sofá 11.jpg",
 
             ]
         },
         {
-            name: "Fotofusão", count: 17, content: [
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Balanço - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Banquetas - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Cadeiras - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 04.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Colchão - 05.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Mesa Bistrô com Cadeiras - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Mesa com Cadeiras - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Poltrona - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Poltrona e Mesinha - 01.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 02.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 03.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 04.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá - 05.jpg",
-                "../assets/Imagens/Portifolio/1 - imagens 3D/02 - Fotofusão/Sofá 01.jpg",
+            name: "Fotofusão", count: 2, content: [
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Balanço - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Banquetas - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Colchão - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Colchão - 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Colchão - 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Colchão - 04.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Colchão - 05.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Mesa Bistrô com Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Mesa com Cadeiras - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Poltrona - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Poltronas e Mesinha - 01.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Sofá - 02.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Sofá - 03.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Sofá - 04.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Sofá - 05.jpg",
+                "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Sofá 01.jpg",
             ]
         },
 
@@ -126,7 +126,7 @@ const filtersDataAll = {
         {
             name: "Images", count: 1, content: [
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/01 - Mockup Catálogo A4 - Yalith 1.jpg",
-                "../assets/Imagens/Portifolio/3 - Design Gráfico/01 - Mockup Catálogo A4 - Yalith 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/02 - Mockup Catálogo A4 - Yalith 2.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/03 - Mockup Catálogo A4 Aberto - Yalith 3.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/04 - Mockup Catálogo A4 - Aberto - Pluma 1.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/05 - Mockup Catálogo A4 - Aberto - Pluma 2.jpg",
@@ -136,8 +136,8 @@ const filtersDataAll = {
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/09 - Mockup Catálogo A4 Aberto - Madine 1.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/10 - Mockup Catálogo A4 Aberto - Madine 2.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/11 - Mockup Catálogo A4 - Aberto - Caemmun.jpg",
-                "../assets/Imagens/Portifolio/3 - Design Gráfico/12 - Mockup Catálogo A4 Aberto - Caemmun 2.jpg",
-                "../assets/Imagens/Portifolio/3 - Design Gráfico/13 - Mockup Catálogo A4 Aberto - Caemmun 3.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/12 - Mockup Catálogo A4 - Aberto - Caemmun 2.jpg",
+                "../assets/Imagens/Portifolio/3 - Design Gráfico/13 - Mockup Catálogo A4 - Aberto - Caemmun 3.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/14 - Mockup Quadrado.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/15 - Mockup Catálogo A4 Aberto - Anjos 1.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/17 - Mockup Catálogo A4 - Aberto - Perfan 2.jpg",
@@ -291,7 +291,7 @@ function filterCategories(event) {
     firstSeleted = selectedCategory;
 
 
-    filterSubcategories
+    
 
     console.log(selectedData[firstSeleted].length);
     if (selectedData[firstSeleted].length === 1) {
@@ -688,7 +688,7 @@ function createSliderBoxes(images, sliderFilter) {
                 }
             });
 
-
+            console.log(images.length);
             positionBoxes(images.length);
         } else {
             const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
@@ -798,10 +798,16 @@ function positionBoxes(length) {
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
                 box.style.zIndex = '4';
+            }else{
+                box.style.width = '100vh';
+                box.style.height = '60vh';
+                box.style.transform = 'scale(0.2) translate(-50%,-50%)';
+                box.style.top = '15%';
+                box.style.zIndex = '1';
             }
 
             const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '85%'];
-            if (index > 6) {
+            if (index > 5) {
                 box.style.left = "100%"
             } else {
                 box.style.left = positions[index];
