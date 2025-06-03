@@ -96,7 +96,7 @@ const filtersDataAll = {
             ]
         },
         {
-            name: "Fotofusão", count: 2, content: [
+            name: "Fotofusão", count: 17, content: [
                 "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Balanço - 01.jpg",
                 "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Banquetas - 01.jpg",
                 "../assets/Imagens/Portifolio/1 - Imagens 3D/02 - Fotofusão/Cadeiras - 01.jpg",
@@ -119,12 +119,12 @@ const filtersDataAll = {
 
     ],
     "Animações Digitais": [
-        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390", "mQN7zFab390"] }
+        { name: "Home and Rack", count: 10, content: ["K8xgn58vX_o", "AT8VS7d-B94", "2uxaGPSy6e0", "d6S8J4b5Xf4", "SIZgYfPeNlE", "QwPRSOC5ADo", "kKWFr5HQsv4", "hNLUaZ7z2LY", "2G1dRcqwL6A", "5zJPaZ1qh7I"] }
 
     ],
     "Design Gráfico": [
         {
-            name: "Images", count: 1, content: [
+            name: "Images", count: 23, content: [
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/01 - Mockup Catálogo A4 - Yalith 1.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/02 - Mockup Catálogo A4 - Yalith 2.jpg",
                 "../assets/Imagens/Portifolio/3 - Design Gráfico/03 - Mockup Catálogo A4 Aberto - Yalith 3.jpg",
@@ -291,7 +291,7 @@ function filterCategories(event) {
     firstSeleted = selectedCategory;
 
 
-    
+
 
     console.log(selectedData[firstSeleted].length);
     if (selectedData[firstSeleted].length === 1) {
@@ -798,7 +798,7 @@ function positionBoxes(length) {
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
                 box.style.zIndex = '4';
-            }else{
+            } else {
                 box.style.width = '100vh';
                 box.style.height = '60vh';
                 box.style.transform = 'scale(0.2) translate(-50%,-50%)';
@@ -887,7 +887,7 @@ function rotateForward() {
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
-        let newPos = (index  + slides.length) % slides.length;
+        let newPos = (index + slides.length) % slides.length;
 
         if (index === 0) {
             slide.classList.add('lastSlide');
@@ -912,7 +912,7 @@ function rotateBackward() {
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
         slide.classList.remove('firstSlide', 'lastSlide');
-        let newPos = (index ) % slides.length;
+        let newPos = (index) % slides.length;
 
         if (index === slides.length - 1) {
             slide.classList.add('firstSlide');
