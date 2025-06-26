@@ -2315,6 +2315,8 @@ footer .footer-links ul li a:hover {
     z-index: -1;
   }
 }
+
+/* Media Screen smart phones*/
 @media screen and (max-width: 1024px) {
   /* * {
     overflow-x: hidden !important;
@@ -2428,5 +2430,22 @@ footer .footer-links ul li a:hover {
     margin: 0px 10px 10px 10px;
     padding: 45px 15px 10px 10px;
     font-size: 0.8em;
+  }
+  .container-services {
+    width: 100%;
+    height: auto;
+    margin-bottom: 80%;
+  }
+  .carousel {
+    width: 100%;
+    height: auto;
+    margin-top: 0%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-services {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15%;
   }
 }
