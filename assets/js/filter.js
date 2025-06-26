@@ -2,6 +2,7 @@ const filterTab = document.querySelectorAll("#filter-category button");
 const filterSubcategory = document.querySelectorAll("#filter-subcategory .tablinks");
 const filterableItems = document.querySelectorAll("#filter-items .element");
 
+
 let sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
 
@@ -649,7 +650,7 @@ function createSliderBoxes(images, sliderFilter) {
         console.log("click");
         rotateForward();
     });
-
+    const innerWidith = $(window).innerWidth;
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
         if (imgUrl.includes("assets")) {
@@ -664,6 +665,11 @@ function createSliderBoxes(images, sliderFilter) {
             img.alt = `Slide ${index + 1}`;
             img.style.width = '100%';
             img.style.height = '100%';
+            if($(window).width()  < 768) {
+                img.style.width = '50%';
+                img.style.height = '50%';
+            }
+
             img.style.objectFit = 'cover';
             img.setAttribute('onclick', 'showToast("Clique duas vezes para abrir a imagem")');
             img.setAttribute('ondblclick', 'openImage(this)');
@@ -690,7 +696,9 @@ function createSliderBoxes(images, sliderFilter) {
 
             console.log(images.length);
             positionBoxes(images.length);
+
         } else {
+
             const videoUrl = `https://www.youtube.com/embed/${imgUrl}?rel=0&controls=0&showinfo=0&modestbranding=0`;
 
             const box = document.createElement('div');
@@ -707,13 +715,15 @@ function createSliderBoxes(images, sliderFilter) {
 
             iframe.style.width = '100%';
             iframe.style.height = '100%';
-            iframe.style.objectFit = 'cover';
+            if($(window).width()  < 768) {
 
+                  iframe.style.width = '20%';
+                iframe.style.height = '20%';
+            }
+            iframe.style.objectFit = 'cover';
 
             box.appendChild(iframe);
             sliderFilter.appendChild(box);
-
-
 
             iframe.addEventListener('mouseenter', function () {
                 if (!wheelHandler) {
@@ -731,10 +741,7 @@ function createSliderBoxes(images, sliderFilter) {
 
             positionBoxes(images.length);
         }
-
-
     });
-
 };
 
 
@@ -762,7 +769,53 @@ function showToast(message) {
     }, 1000);
 }
 
+function updateSlidePosition(slide, positionIndex) {
+
+
+    let positions = ['-13%', '-5%', '10%', '50%', '62%', '65%', '100%'];
+    const scales = [0.2, 0.4, 0.6, 1, 0.6, 0.4, 0.2];
+    let tops = ['15%', '20%', '25%', '35%', '25%', '20%', '15%']; // pc
+
+    const zIndexes = [1, 2, 3, 4, 3, 2, 1];
+    const xOffsets = ['-60%', '-40%', '-20%', '0%', '20%', '40%', '60%'];
+
+    if ($(window).width()  < 768) {
+        positions = ['-13%', '-5%', '10%', '50%', '57%', '56%', '100%'];
+        tops =  ['5%', '10%', '25%', '52%', '25%', '10%', '5%'];//mobile//mobile
+    }
+
+   
+    slide.style.left = positions[positionIndex];
+    //slide.style.left = "20%"
+   
+    slide.style.transform = `scale(${scales[positionIndex]}) translate(-50%, -50%)`;
+    slide.style.top = tops[positionIndex];
+    slide.style.zIndex = zIndexes[positionIndex];
+}
+
+
+
+
+
 function positionBoxes(length) {
+
+    let tops = ['15%', '20%', '25%', '35%', '25%', '20%', '15%'];
+    let positions = ['-13%', '-5%', '10%', '50%', '62%', '65%', '100%']
+    let vw = "60vw"
+    let vh = "60vh"
+    if($(window).width()  < 768){
+          tops =  ['5%', '10%', '25%', '52%', '25%', '10%', '5%'];//mobile
+          positions = ['-13%', '-5%', '10%', '50%', '57%', '56%', '100%']
+          vw = "80vw"
+          vh = "20vh"
+    }
+
+     /*tops =  ['32%', '37%', '40%', '52%', '40%', '37%', '32%'];//mobile
+           const vw= "80vw"
+            const vh = "20vh"*/
+  
+
+    
     const boxes = document.querySelectorAll('.portifolio-slider > div');
     boxes.forEach((box, index) => {
         box.style.position = 'absolute';
@@ -772,41 +825,42 @@ function positionBoxes(length) {
         box.style.cursor = 'pointer';
         if (length >= 5) {
             if (index === 0 || index === 6) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+                box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.2) translate(-50%,-50%)';
-                box.style.top = '15%';
+                box.style.top = tops[0];//'15%';
                 box.style.zIndex = '1';
             }
             else if (index === 1 || index === 5) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+          box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.4) translate(-50%,-50%)';
-                box.style.top = '20%';
+                box.style.top = tops[1];//'20%';
                 box.style.zIndex = '2';
             }
             else if (index === 2 || index === 4) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+          box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.6) translate(-50%,-50%)';
-                box.style.top = '25%';
+                box.style.top = tops[2];//'52%';
                 box.style.zIndex = '3';
             }
             else if (index === 3) {
-                box.style.width = '60vw';
-                box.style.height = '60vh';
+            box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
-                box.style.top = '35%';
+                //box.style.top = '35%';
+                 box.style.top = tops[3];//'52%';
                 box.style.zIndex = '4';
             } else {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+              box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.2) translate(-50%,-50%)';
-                box.style.top = '15%';
+                box.style.top = tops[1];//'15%';
                 box.style.zIndex = '1';
             }
 
-            const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '85%'];
+           
             if (index > 5) {
                 box.style.left = "100%"
             } else {
@@ -816,25 +870,25 @@ function positionBoxes(length) {
         }
         else if (length === 5) {
             if (index === 4) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+          box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.4) translate(-50%,-50%)';
                 box.style.top = '20%';
                 box.style.zIndex = '2';
                 box.style.left = "-13%";
             }
             else if (index === 1 || index === 3) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+               box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(0.6) translate(-50%,-50%)';
                 box.style.top = '25%';
                 box.style.zIndex = '3';
-                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+
                 box.style.left = index === 1 ? positions[2] : positions[5];
             }
             else if (index === 2) {
-                box.style.width = '60vw';
-                box.style.height = '60vh';
+          box.style.width = vw;
+                box.style.height = vh;
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
                 box.style.zIndex = '4';
@@ -843,28 +897,27 @@ function positionBoxes(length) {
         }
         else if (length === 3 || length === 4) {
             if (index === 0 || index === 2) {
-                box.style.width = '100vh';
-                box.style.height = '60vh';
+         box.style.width = '80vw';
+                box.style.height = '20vh';
                 box.style.transform = 'scale(0.6) translate(-50%,-50%)';
                 box.style.top = '25%';
-                box.style.zIndex = '3';
-                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+
                 box.style.left = index === 0 ? positions[2] : positions[4];
             }
             else if (index === 1) {
-                box.style.width = '60vw';
-                box.style.height = '60vh';
+         box.style.width = '20vw';
+                box.style.height = '20vh';
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
                 box.style.zIndex = '4';
                 box.style.left = '50%';
-                const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
+
                 box.style.left = positions[3];
             }
         }
         else if (length === 1) {
-            box.style.width = '60vw';
-            box.style.height = '60vh';
+         box.style.width = '20vw';
+                box.style.height = '20vh';
             box.style.transform = 'scale(1) translate(-50%,-50%)';
             box.style.top = '35%';
             box.style.zIndex = '4';
@@ -873,7 +926,6 @@ function positionBoxes(length) {
 
     });
 }
-
 
 
 
@@ -929,19 +981,7 @@ function rotateBackward() {
     //updateClickEvents();
 }
 
-function updateSlidePosition(slide, positionIndex) {
 
-
-    const positions = ['-13%', '-5%', '10%', '50%', '71%', '85%', '100%'];
-    const scales = [0.2, 0.4, 0.6, 1, 0.6, 0.4, 0.2];
-    const tops = ['15%', '20%', '25%', '35%', '25%', '20%', '15%'];
-    const zIndexes = [1, 2, 3, 4, 3, 2, 1];
-
-    slide.style.left = positions[positionIndex];
-    slide.style.transform = `scale(${scales[positionIndex]}) translate(-50%, -50%)`;
-    slide.style.top = tops[positionIndex];
-    slide.style.zIndex = zIndexes[positionIndex];
-}
 
 function updateClickEvents() {
     const boxes = document.querySelectorAll('.portifolio-slider > div');

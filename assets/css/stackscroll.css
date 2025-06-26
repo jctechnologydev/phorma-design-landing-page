@@ -4,6 +4,13 @@ svg {
   max-width: 100%;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --space-unit: 1em;
   --space-xxxxs: calc(0.125 * var(--space-unit));
