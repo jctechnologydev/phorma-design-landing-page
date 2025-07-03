@@ -1604,6 +1604,7 @@ button {
 }
 
 .filter-btn-all {
+  display: none;
   justify-content: center;
   background: var(--linearred--);
   color: white;

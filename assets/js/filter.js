@@ -5,13 +5,11 @@ const filterableItems = document.querySelectorAll("#filter-items .element");
 
 let sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
-
 let isAnimating = false;
 let wheelTimeout;
 
 let wheelHandler = null;
-let currentInd = 3;
-let intitialLength = 7;
+let isRotating = false;
 
 
 let firstSeleted = "3D Environment";
@@ -21,11 +19,6 @@ let currentFirstSeleted = "";
 let currentSecondSeleted = "";
 
 let currentIndex = 0;
-let reverse = false;
-
-let left = 0;
-let center = 1;
-let right = 2;
 
 let selectedData = {};
 
@@ -155,13 +148,6 @@ const filtersDataAll = {
 
 };
 
-/*"Videos": [
-        { name: "Home and Rack", count: 1, content: ["mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0", "mkLuv2DpCV0"] },
-        { name: "Living Room", count: 1, content: ["_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0", "_avjE_AQbN0"] },
-        { name: "Dining Room", count: 1, content: ["7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM", "7X8p4VyUUSM"] },
-        { name: "Kitchen", count: 1, content: ["SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA", "SHoLLLgNonA"] },
-        { name: "Others", count: 3, content: ["JXUVVpe9l-E", "gq2kBAcVo9I", "mQN7zFab390", "mQN7zFab390",        "mQN7zFab390", "mQN7zFab390","mQN7zFab390"] }
-    ]*/
 
 selectedData = filtersDataAll;
 
@@ -291,10 +277,6 @@ function filterCategories(event) {
     const selectedCategory = event.target.dataset.filter;
     firstSeleted = selectedCategory;
 
-
-
-
-    console.log(selectedData[firstSeleted].length);
     if (selectedData[firstSeleted].length === 1) {
         renderGallery(selectedData, firstSeleted, "none");
     }
@@ -311,9 +293,6 @@ function filterSubcategories(event) {
     }
     event.target.classList.add("active");
     secondSeleted = event.target.dataset.name;
-
-    // Render the filtered gallery items
-    console.log(selectedData[firstSeleted].length);
     renderGallery(selectedData, firstSeleted, secondSeleted);
 }
 
@@ -372,16 +351,9 @@ function renderFilters(data) {
         filterSubcategory.forEach(tab => tab.addEventListener("click", filterSubcategories));
         filterSubcategory[0].click();
     } else {
-        // renderGallery(selectedData, firstSeleted, secondSeleted);
         console.error("No filter tab buttons found.");
     }
 
-    /* if (filter.length > 0) {
-         filter.forEach(tab => tab.addEventListener("click", mainFilter));
-     } else {
-         console.error("No filter tab buttons found.");
- 
-     }*/
 }
 
 
@@ -390,7 +362,6 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     const galleryContainer = document.getElementById("filter-items");
     const sliderFilter = document.querySelector('.portifolio-slider');
 
-    //sliderFilter = document.querySelector('.portifolio-slider');
     sliderFilterGeneral = document.querySelector('.portifolio-slider');
 
     const cardContainer = document.getElementById("filter-content-card");
@@ -398,7 +369,7 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
 
     galleryContainer.innerHTML = "";
     sliderFilter.innerHTML = "";
-    //cardContainer.innerHTML = "";
+
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     imageViewer.innerHTML = "";
 
@@ -408,17 +379,12 @@ function renderGallery(filteredVideos, firstSeleted, secondSeleted) {
     `;
 
 
-
-
     filteredVideos[firstSeleted].forEach(item => {
 
-
         if (item.name === auxSecondSeleted) {
-            intitialLength = item.content.length + 1;
             createSliderBoxes(item.content, sliderFilter);
 
         } else if (auxSecondSeleted === "none") {
-            intitialLength = item.content.length + 1;
             createSliderBoxes(item.content, sliderFilter);
         }
 
@@ -637,19 +603,15 @@ function createSliderBoxes(images, sliderFilter) {
     const nextButton = document.querySelector(".nextButton");
     const prevButton = document.querySelector(".prevButton");
 
-    //console.log(nextButton);
-    //console.log(prevButton);
-
     prevButton.addEventListener('click', function () {
-        console.log("click");
         rotateBackward();
 
     });
 
     nextButton.addEventListener('click', function () {
-        console.log("click");
         rotateForward();
     });
+
     const innerWidith = $(window).innerWidth;
     let auxSecondSeleted = secondSeleted.replace(firstSeleted, "");
     images.forEach((imgUrl, index) => {
@@ -665,6 +627,7 @@ function createSliderBoxes(images, sliderFilter) {
             img.alt = `Slide ${index + 1}`;
             img.style.width = '100%';
             img.style.height = '100%';
+
             if($(window).width()  < 768) {
                 img.style.width = '50%';
                 img.style.height = '50%';
@@ -694,7 +657,6 @@ function createSliderBoxes(images, sliderFilter) {
                 }
             });
 
-            console.log(images.length);
             positionBoxes(images.length);
 
         } else {
@@ -710,15 +672,17 @@ function createSliderBoxes(images, sliderFilter) {
             iframe.setAttribute('allow', 'autoplay');
             iframe.setAttribute('autoplay', '1');
             iframe.setAttribute('alt', `Slide ${index + 1}`);
+            iframe.setAttribute('data-index', index);
 
             iframe.src = videoUrl;
 
             iframe.style.width = '100%';
             iframe.style.height = '100%';
-            if($(window).width()  < 768) {
 
-                  iframe.style.width = '20%';
-                iframe.style.height = '20%';
+
+            if($(window).width()  < 768) {
+                iframe.style.width = '50%';
+                iframe.style.height = '50%';
             }
             iframe.style.objectFit = 'cover';
 
@@ -781,13 +745,11 @@ function updateSlidePosition(slide, positionIndex) {
 
     if ($(window).width()  < 768) {
         positions = ['-13%', '-5%', '10%', '50%', '57%', '56%', '100%'];
-        tops =  ['5%', '10%', '25%', '52%', '25%', '10%', '5%'];//mobile//mobile
+        tops =  ['5%', '10%', '25%', '52%', '25%', '10%', '5%'];//mobile
     }
 
    
     slide.style.left = positions[positionIndex];
-    //slide.style.left = "20%"
-   
     slide.style.transform = `scale(${scales[positionIndex]}) translate(-50%, -50%)`;
     slide.style.top = tops[positionIndex];
     slide.style.zIndex = zIndexes[positionIndex];
@@ -809,12 +771,6 @@ function positionBoxes(length) {
           vw = "80vw"
           vh = "20vh"
     }
-
-     /*tops =  ['32%', '37%', '40%', '52%', '40%', '37%', '32%'];//mobile
-           const vw= "80vw"
-            const vh = "20vh"*/
-  
-
     
     const boxes = document.querySelectorAll('.portifolio-slider > div');
     boxes.forEach((box, index) => {
@@ -905,7 +861,7 @@ function positionBoxes(length) {
                 box.style.left = index === 0 ? positions[2] : positions[4];
             }
             else if (index === 1) {
-         box.style.width = '20vw';
+                box.style.width = '20vw';
                 box.style.height = '20vh';
                 box.style.transform = 'scale(1) translate(-50%,-50%)';
                 box.style.top = '35%';
@@ -915,26 +871,21 @@ function positionBoxes(length) {
                 box.style.left = positions[3];
             }
         }
-        else if (length === 1) {
-         box.style.width = '20vw';
-                box.style.height = '20vh';
-            box.style.transform = 'scale(1) translate(-50%,-50%)';
-            box.style.top = '35%';
-            box.style.zIndex = '4';
-            box.style.left = '50%';
-        }
-
     });
 }
 
 
 
 
-// (next slide)
+
 function rotateForward() {
-    console.log(intitialLength);
-    if ((intitialLength - 1) <= 3) return;
-    currentInd = (currentInd + 1) % intitialLength;
+
+    if (isRotating) return;
+    isRotating = true;
+
+    setTimeout(() => {
+        isRotating = false;
+    }, 120);
 
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
@@ -952,14 +903,16 @@ function rotateForward() {
     const firstSlide = sliderFilterGeneral.firstElementChild;
     sliderFilterGeneral.appendChild(firstSlide.cloneNode(true));
     sliderFilterGeneral.removeChild(firstSlide);
-
-    //updateClickEvents();
 }
 
 
 function rotateBackward() {
-    if ((intitialLength - 1) <= 3) return;
-    currentInd = (currentInd - 1 + intitialLength) % intitialLength
+    if (isRotating) return;
+        isRotating = true;
+
+    setTimeout(() => {
+        isRotating = false;
+    }, 120);
 
     const slides = Array.from(sliderFilterGeneral.children);
     slides.forEach((slide, index) => {
@@ -977,8 +930,6 @@ function rotateBackward() {
     const lastSlide = sliderFilterGeneral.lastElementChild;
     sliderFilterGeneral.insertBefore(lastSlide.cloneNode(true), sliderFilterGeneral.firstChild);
     sliderFilterGeneral.removeChild(lastSlide);
-
-    //updateClickEvents();
 }
 
 
