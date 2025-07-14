@@ -2508,18 +2508,18 @@ footer .footer-links ul li a:hover {
     margin-top: 0%;
   }
   .container-about {
-    width: 400px;
+    width: 800px;
     height: 1500px;
   }
   .movie video {
-    width: 300px;
+    width: 550px;
     max-width: 740px;
-    margin-top: 105%;
-    margin-left: 9%;
+    margin-top: 38%;
+    margin-left: 15%;
     border-radius: 10px 55px;
   }
   .descmovie-top {
-    width: 340px;
+    width: 680px;
     margin-left: 10%;
     margin-top: 5%;
     font-family: montserrat-g;
@@ -2530,7 +2530,7 @@ footer .footer-links ul li a:hover {
   }
   .descmovie {
     position: absolute;
-    width: 345px;
+    width: 680px;
     height: 460px;
     text-indent: 1em;
     border-radius: 0px 0px;
@@ -2546,18 +2546,18 @@ footer .footer-links ul li a:hover {
 @media screen and (max-width: 768px) {
   .container-about {
     width: 600px;
-    height: 1500px;
+    height: 1600px;
   }
   .movie video {
-    width: 440px;
+    width: 330px;
     max-width: 740px;
-    margin-top: 40%;
-    margin-left: 9%;
+    margin-top: 120%;
+    margin-left: 5%;
     border-radius: 10px 55px;
   }
   .descmovie-top {
-    width: 515px;
-    margin-left: 10%;
+    width: 320px;
+    margin-left: 5%;
     margin-top: 5%;
     font-family: montserrat-g;
     text-align: justify;
@@ -2567,14 +2567,14 @@ footer .footer-links ul li a:hover {
   }
   .descmovie {
     position: absolute;
-    width: 525px;
+    width: 330px;
     height: 460px;
     text-indent: 1em;
     border-radius: 0px 0px;
     color: rgb(255, 250, 250);
     font-size: 0.9em;
     font-weight: bolder;
-    margin-left: 10%;
+    margin-left: 5%;
     font-family: montserrat-g;
     text-align: justify;
     text-shadow: 0 5px 10px #0004;
