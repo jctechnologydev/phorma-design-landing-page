@@ -150,7 +150,27 @@ elementums.forEach((element) => sovers.observe(element));
 
 let btnMenu = document.getElementById('btn-abrirmenu')
 let menu = document.getElementById('menu-mobile')
+let menuall =document.querySelectorAll('.mbshow');
 let checkfirstime = false;
+
+
+menuall.forEach(item => {
+  item.addEventListener('click', () => {
+  if (checkfirstime === true) {
+      menu.classList.remove('abrir-menu')
+      btnMenu.classList.remove('anim-menu-btn--state-b')
+      checkfirstime = false;
+    }
+    else {
+      menu.classList.add('abrir-menu')
+       btnMenu.classList.remove('anim-menu-btn--state-b')
+      checkfirstime = true;
+    }
+  });
+});
+
+
+
 
 btnMenu.addEventListener('click', () => {
   if (checkfirstime === true) {
@@ -161,6 +181,7 @@ btnMenu.addEventListener('click', () => {
     menu.classList.add('abrir-menu')
     checkfirstime = true;
   }
+
 });
 
 
