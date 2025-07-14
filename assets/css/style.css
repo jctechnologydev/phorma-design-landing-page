@@ -2043,7 +2043,7 @@ footer .footer-address {
   gap: 16px;
   @media (max-width: 768px) {
     margin-left: auto;
-    padding-right: 64px;
+    text-align: left;
   }
 }
 .footer-address {
@@ -2053,10 +2053,6 @@ footer .footer-address {
 
 .footer-address h2 {
   text-align: center;
-  @media (max-width: 768px) {
-    text-align: end;
-    margin-right: 2rem;
-  }
 }
 
 footer .footer-links ul {
@@ -2064,7 +2060,7 @@ footer .footer-links ul {
   text-align: left !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   gap: 8px;
   padding-left: 0;
   @media (max-width: 768px) {
