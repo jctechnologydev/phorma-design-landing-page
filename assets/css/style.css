@@ -301,6 +301,12 @@ nav a:nth-child(5):hover ~ .animation {
   --anim-menu-btn-gap: 0.195em;
   --anim-menu-btn-width: 1.08em;
 }
+@media screen and (min-width: 1024px) {
+  #btn-abrirmenu {
+    display: none;
+    cursor: none;
+  }
+}
 
 .logo-top img {
   position: absolute;
@@ -2389,6 +2395,9 @@ footer .footer-links ul li a:hover {
   } */
   nav {
     display: none;
+  }
+  #btn-abrirmenu {
+    display: show;
   }
   .anim-menu-btn {
     position: absolute; /* ou absolute, dependendo do layout */
