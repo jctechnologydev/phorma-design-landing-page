@@ -3,6 +3,7 @@
 *.psd
 *.zip
 *.rar
+.env
 
 # Ignorar pasta com assets pesados (exemplo)
 /assets/video/Video TV Phorma.mp4

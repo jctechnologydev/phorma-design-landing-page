@@ -220,6 +220,13 @@ overlay.addEventListener('click', e => {
 
 
 
+document.querySelectorAll('.modal-close').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.modal-overlay').style.display = 'none';
+  });
+});
+
+
 //teste scroll//
 
 //gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
