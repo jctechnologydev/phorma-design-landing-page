@@ -7,3 +7,4 @@
 
 # Ignorar pasta com assets pesados (exemplo)
 /assets/video/Video TV Phorma.mp4
+node_modules/

@@ -2599,19 +2599,22 @@ footer .footer-links ul li a:hover {
 
 .modal-overlay {
   position: fixed;
-  top: 0;
+
   left: 0;
+  top:0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,0.6);
   display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center;  /* horizontal center */
+  align-items: center;      
+  justify-content: center;  
   z-index: 9999;
 }
 
 .modal-close {
-  position: absolute;
+  position: fixed;
+  width: 50vw;
+  height: 50vh;
   top: 12px;
   right: 16px;
   background: transparent;
@@ -2629,14 +2632,29 @@ footer .footer-links ul li a:hover {
 
 .modal-content {
   position: relative; 
-  background: white;
-  padding: 2rem 3rem;
+  margin: 0 auto;
+  background: rgb(131, 10, 10);
+  align-items: center;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  max-width: 90vw;
-  min-width: 300px;
+  max-width: 50vw;
+  max-height: 50vh;
+  min-width: 50vw;
+  min-height: 50vh;
 }
+
+#modal-error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15%;
+
+  @media screen and (max-width: 678px) {
+    padding-top: 65%;
+  }
+  }
+
 
 .checkmark {
   width: 56px;
