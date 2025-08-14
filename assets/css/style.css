@@ -2613,8 +2613,8 @@ footer .footer-links ul li a:hover {
 
 .modal-close {
   position: fixed;
-  width: 50vw;
-  height: 50vh;
+  width: 100vw;
+  height: 100vh;
   top: 12px;
   right: 16px;
   background: transparent;
@@ -2631,9 +2631,10 @@ footer .footer-links ul li a:hover {
 
 
 .modal-content {
+  justify-content: center;
   position: relative; 
   margin: 0 auto;
-  background: rgb(131, 10, 10);
+  background: #1f1f1f;
   align-items: center;
   border-radius: 10px;
   text-align: center;
@@ -2642,6 +2643,10 @@ footer .footer-links ul li a:hover {
   max-height: 50vh;
   min-width: 50vw;
   min-height: 50vh;
+}
+
+.modal-content p{
+  font-size: 1.5rem;
 }
 
 #modal-error{
