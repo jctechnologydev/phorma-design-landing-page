@@ -1,5 +1,23 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
+
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['ok' => false, 'message' => 'Method Not Allowed']);
+    exit();
+}
+
+
 require __DIR__ . '/vendor/autoload.php'; // After running: composer require phpmailer/phpmailer vlucas/phpdotenv
 
 
@@ -7,7 +25,6 @@ require __DIR__ . '/vendor/autoload.php'; // After running: composer require php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-header('Content-Type: application/json');
 
 // Verify vendor autoload path
 $autoloadPath = __DIR__ . '/vendor/autoload.php';
@@ -28,21 +45,12 @@ if (!file_exists($envPath . '/.env')) {
 }
 
 try {
-    // Initialize Dotenv - use createUnsafeImmutable if you're having permission issues
-    $dotenv = Dotenv::createImmutable($envPath);
-    $dotenv->load();
+
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->safeLoad();
 } catch (Exception $e) {
     die(json_encode(['error' => 'Dotenv initialization failed: ' . $e->getMessage()]));
 }
-
-// Rest of your existing code...
-
-// Load environment variables from .env
-//$dotenv = Dotenv::createImmutable(__DIR__);
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-//$dotenv->load();
-$dotenv->safeLoad();
 
 // Simple rate limiting using PHP sessions
 session_start();
@@ -62,8 +70,9 @@ if (count($_SESSION['requests']) >= $maxRequests) {
 }
 $_SESSION['requests'][] = time();
 
-// Validate payload
-$data = json_decode(file_get_contents('php://input'), true);
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
+
 if (!$data) {
     http_response_code(400);
     echo json_encode(['ok' => false, 'error' => 'Invalid JSON']);
@@ -95,6 +104,8 @@ $safeMessage = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // Send email to site owner
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
 try {
     $mail->isSMTP();
     $mail->Host = $_ENV['SMTP_HOST'];
@@ -104,14 +115,16 @@ try {
     $mail->SMTPSecure = ($_ENV['SMTP_SECURE'] === 'true') ? PHPMailer::ENCRYPTION_SMTPS : PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = $_ENV['SMTP_PORT'] ?? 587;
 
-    $mail->setFrom($_ENV['SMTP_FROM'], 'Site Contact');
+    $mail->setFrom($_ENV['SMTP_FROM'], 'Portfolio Phorma Design');
     $mail->addAddress($_ENV['OWNER_EMAIL']);
-    $mail->Subject = "Contato de $name";
+    $mail->Subject = "Contacto de $name";
     $mail->Body = "Nome: $name\nEmail: $email\n\nMensagem:\n$safeMessage";
     $mail->send();
 
     // Confirmation email to sender
     $mail2 = new PHPMailer(true);
+    $mail2->CharSet = 'UTF-8';
+    $mail2->Encoding = 'base64';
     $mail2->isSMTP();
     $mail2->Host = $_ENV['SMTP_HOST'];
     $mail2->SMTPAuth = true;
@@ -122,9 +135,10 @@ try {
 
     $mail2->setFrom($_ENV['SMTP_FROM'], $_ENV['SITE_NAME']);
     $mail2->addAddress($email);
-    $mail2->Subject = "Recebemos sua mensagem";
-    $mail2->Body = "Olá $name,\n\nRecebemos sua mensagem e responderemos em breve.\n\n— Equipa";
+    $mail2->Subject = "Confirmação de Receção [Phorma Design]";
+    $mail2->Body = "Olá $name,\n\nAgradecemos o seu contacto com a Phorma Design.\nA sua mensagem foi recebida com sucesso e a nossa equipa irá analisá-la cuidadosamente.\nEm breve, entraremos em contacto para dar seguimento à sua solicitação.\n\nCom os melhores cumprimentos,\nA equipe da Phorma Design";
     $mail2->send();
+
 
     echo json_encode(['ok' => true]);
 } catch (Exception $e) {
