@@ -1,0 +1,20 @@
+{
+  "name": "my-node-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "nodemailer": "^7.0.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
