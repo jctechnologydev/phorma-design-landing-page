@@ -1,6 +1,6 @@
-loadTranslations().then(() => {
+/*loadTranslations().then(() => {
   translateAll()
-});
+});*/
 
 let nextBtn = document.querySelector('.next');
 let prevBtn = document.querySelector('.prev');

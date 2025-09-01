@@ -24,12 +24,17 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
+
   try {
-    const res = await fetch('http://localhost:3000/api/contact', {
+    // const res = await fetch('https://www.phormadesign.com/api/server.php', {
+    // for local testing: 'http://localhost:3000/api/'
+    const res = await fetch('https://www.phormadesign.com/api/server.php', {
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+    console.log(res);
     const data = await res.json();
     if (res.ok && data.ok) {
       document.getElementById('modal-success').style.display = 'block';

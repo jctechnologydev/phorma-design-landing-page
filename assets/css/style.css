@@ -2661,6 +2661,17 @@ footer .footer-links ul li a:hover {
   }
 
 
+#modal-success{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15%;
+
+  @media screen and (max-width: 678px) {
+    padding-top: 65%;
+  }
+  }
+
 .checkmark {
   width: 56px;
   height: 56px;
